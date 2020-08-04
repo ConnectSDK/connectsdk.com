@@ -57,6 +57,13 @@
    :caption: GUIDES FOR IOS
 
    /guide-ios/index
+   /guide-ios/ios-beam-media
+   /guide-ios/ios-beam-web-apps
+   /guide-ios/ios-launch-app
+   /guide-ios/ios-discovery-manager
+   /guide-ios/ios-checking-capabilities
+   /guide-ios/ios-resuming-apps
+   /guide-and/and-faq
 
 .. toctree::
    :maxdepth: 2
