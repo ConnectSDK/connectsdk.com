@@ -102,4 +102,4 @@ protocols.
 
   DiscoveryManager.getInstance().setCapabilityFilters(videoFilter, imageCapabilities);
 
-Check out the article on :doc:`capabilities </and-checking-capabilities>` for more depth on this topic.
+Check out the article on :doc:`capabilities <and-checking-capabilities>` for more depth on this topic.

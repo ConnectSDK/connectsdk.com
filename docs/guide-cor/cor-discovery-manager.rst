@@ -45,17 +45,18 @@ playback AND any media controls AND volume up/down) OR (image display).
 .. code-block:: javascript
 
    var videoFilter = new ConnectSDK.CapabilityFilter([
-       ConnectSDK.Capabilities.MediaPlayer.Play.Video",
+       ConnectSDK.Capabilities.MediaPlayer.Play.Video,
        ConnectSDK.Capabilities.MediaControl.Any,
        ConnectSDK.Capabilities.VolumeControl.UpDown
-   ]);
+       ]);
 
    var imageFilter = new ConnectSDK.CapabilityFilter([
        ConnectSDK.Capabilities.MediaPlayer.Display.Image
-   ]);
+       ]);
 
    ConnectSDK.discoveryManager.setCapabilityFilters([videoFilter, imageFilter]);
    app.setupDiscovery();
+
 
 Pairing level
 ~~~~~~~~~~~~~
@@ -77,11 +78,11 @@ before DiscoveryManager is started for the first time.
 
 .. code-block:: javascript
 
- // Include capabilities that require pairing
- ConnectSDK.discoveryManager.setPairingLevel(ConnectSDK.PairingLevel.ON);
+   // Include capabilities that require pairing
+   ConnectSDK.discoveryManager.setPairingLevel(ConnectSDK.PairingLevel.ON);
 
- // Exclude capabilities that require pairing (this is the default)
- ConnectSDK.discoveryManager.setPairingLevel(ConnectSDK.PairingLevel.OFF);
+   // Exclude capabilities that require pairing (this is the default)
+   ConnectSDK.discoveryManager.setPairingLevel(ConnectSDK.PairingLevel.OFF);
 
 Automatic stop/resume on app state change
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,9 +93,5 @@ to prevent battery drain on the user's device.
 
 .. seealso::
 
-  * `DiscoveryManager`_
-  * `CapabilityFilter`_
-
-
-.. _DiscoveryManager: /apis/1-2/cordova/discoverymanager/
-.. _CapabilityFilter: /apis/1-2/cordova/capabilityfilter/
+  * :doc:`DiscoveryManager <../apis-cor/cor-discovery-manager>`
+  * :doc:`CapabilityFilter <../apis-cor/cor-capabilityfilter>`

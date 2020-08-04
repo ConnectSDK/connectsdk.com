@@ -113,6 +113,7 @@ Metadata for application tag
 This metadata tag is necessary to enable Chromecast support.
 
 .. code-block:: xml
+   :force:
 
    <application ... >
        ...

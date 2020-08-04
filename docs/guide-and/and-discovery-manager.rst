@@ -110,12 +110,7 @@ DiscoveryManager when startDiscovery is called.
 
 .. seealso::
 
-  * `DiscoveryManager`_
-  * `CapabilityFilter`_
-  * `PairingLevel`_
-  * `ConnectableDeviceStore`_
-
-.. _DiscoveryManager: /apis/1-5-0/android/discoverymanager/
-.. _CapabilityFilter: /apis/1-5-0/android/capabilityfilter/
-.. _PairingLevel: /apis/1-5-0/android/pairinglevel/
-.. _ConnectableDeviceStore: /apis/1-5-0/android/connectabledevicestore/
+  * :doc:`DiscoveryManager <../apis-and/and-discoverymanager>`
+  * :doc:`CapabilityFilter <../apis-and/and-capabilityfilter>`
+  * :doc:`PairingLevel <../apis-and/and-pairinglevel>`
+  * :doc:`ConnectableDeviceStore <../apis-and/and-connectabledevicestore>`
