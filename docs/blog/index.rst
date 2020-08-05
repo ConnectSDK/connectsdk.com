@@ -4,10 +4,18 @@ Release
 .. toctree::
    :maxdepth: 2
 
-   connectsdk-v160-released
-
+   release-v160
+   release-v150
+   release-v144
+   release-v142
+   release-v140
 
 Article
 =======
 
-To be published
+.. toctree::
+   :maxdepth: 2
+
+   article-smarthome-demo
+   article-launch-apps
+   article-support-appletv

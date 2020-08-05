@@ -63,7 +63,7 @@
    /guide-ios/ios-discovery-manager
    /guide-ios/ios-checking-capabilities
    /guide-ios/ios-resuming-apps
-   /guide-and/and-faq
+   /guide-ios/ios-faq
 
 .. toctree::
    :maxdepth: 2
@@ -107,3 +107,4 @@
 
    terms-and-conditions
    privacy-policy
+   contact
