@@ -82,10 +82,8 @@ ConnectableDevice has. Certain devices, although they may support the
 features you are filtering for, may not pass your CapabilityFilter if
 pairing is disabled.
 
-See the `Supported Features`_ list for information on what devices
+See the :doc:`Supported Features <../fundamentals/supported-feature>` list for information on what devices
 require pairing for certain capabilities.
-
-.. _Supported Features: /SupportedFeatures/
 
 For the best user experience, Connect SDK has disabled pairing by
 default. Pairing can be enabled very easily, but it must be enabled

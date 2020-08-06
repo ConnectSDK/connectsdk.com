@@ -75,9 +75,7 @@ Beam media to web app
 A common use case for web apps is the playback and control of media
 files. Connect SDK provides capabilities for directly
 playing/controlling media on a WebAppSession, provided that web app has
-integrated the `Connect SDK JavaScript Bridge`_.
-
-.. _Connect SDK JavaScript Bridge: /docs/1-6-0/tv-web-app/
+integrated the :doc:`Connect SDK JavaScript Bridge <../guide-web/index>`.
 
 Rather than calling playMedia on your device's mediaPlayer,
 webAppSession provides its own mediaPlayer. After media has been beamed

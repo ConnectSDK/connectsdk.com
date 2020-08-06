@@ -2,11 +2,9 @@ Discover & Connect to Device
 ============================
 
 This guide assumes you're working with a brand new Cordova app as
-described in the `Setup Instructions`_. It will show you how to add a
+described in the :doc:`Setup Instructions <cor-setup-instructions>`. It will show you how to add a
 button that selects a supported smart TV on your local WiFi network and
 displays a video.
-
-.. _Setup Instructions: cor-setup-instructions
 
 Adding a device picker button
 -----------------------------

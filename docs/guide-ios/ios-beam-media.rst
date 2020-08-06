@@ -157,6 +157,6 @@ Control a playlist
 
 .. note::
    For beaming media to AirPlay devices, you must set the
-   :doc:`AirPlayServiceMode <../api-ios/airplayservicemode>` to
+   :doc:`AirPlayServiceMode <../api-ios/ios-airplayservicemode>` to
    AirPlayServiceModeMedia. See the :doc:`API
-   docs <../api-ios/airplayservice>` for more information.
+   docs <../api-ios/ios-airplayservice>` for more information.
