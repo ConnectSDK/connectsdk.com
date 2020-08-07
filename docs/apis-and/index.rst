@@ -61,14 +61,14 @@ Capability Listeners
    :maxdepth: 1
 
    and-appinfolistener.rst
-   and-applauncherlistener.rst
+   and-applaunchlistener.rst
    and-applistlistener.rst
    and-appstatelistener.rst
    and-channellistlistener.rst
    and-channellistener.rst
    and-durationlistener.rst
    and-errorlistener.rst
-   and-externalinputlistener.rst
+   and-externalinputlistlistener.rst
    and-mediainfolistener.rst
    and-mediaplayer-launchListener.rst
    and-mutelistener.rst

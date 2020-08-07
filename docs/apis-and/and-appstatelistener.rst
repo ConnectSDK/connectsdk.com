@@ -1,7 +1,8 @@
-AppStateListener com.connectsdk.service.capability.Launcher.AppStateListener
-============================================================================
+AppStateListener
+================
+``com.connectsdk.service.capability.Launcher.AppStateListener``
 
-*extends*\ `ResponseListener </apis/1-6-0/android/ResponseListener>`__
+*extends* :doc:`ResponseListener <and-responselistener>`
 
 Success block that is called upon successfully getting an app's state.
 
@@ -12,25 +13,16 @@ Inherited Methods
 -----------------
 
 void **onSuccess** (T *object*)
-   Returns the success of the call of type T.
+    Returns the success of the call of type T.
 
-   .. rubric:: Parameters:
-      :name: parameters
-      :class: method-detail-label
+    **Parameters:**
 
-   -  object –
+    -  object – Response object, can be any number of object types, depending on the protocol/capability/etc
 
-      Response object, can be any number of object types, depending on
-      the protocol/capability/etc
+void **onError** (:doc:`ServiceCommandError <and-servicecommandrrror>` *error*)
+    Method to return the error that was generated. Will pass an error
+    object with a helpful status code and error message.
 
-void **onError** (`ServiceCommandError </apis/1-6-0/android/ServiceCommandError>`__ *error*)
-   Method to return the error that was generated. Will pass an error
-   object with a helpful status code and error message.
+    **Parameters:**
 
-   .. rubric:: Parameters:
-      :name: parameters-1
-      :class: method-detail-label
-
-   -  error –
-
-      ServiceCommandError describing the error
+    -  error – ServiceCommandError describing the error

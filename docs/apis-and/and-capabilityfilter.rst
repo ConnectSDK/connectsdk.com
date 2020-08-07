@@ -1,5 +1,5 @@
 CapabilityFilter
-==========================================================
+================
 ``com.connectsdk.discovery.CapabilityFilter``
 
 CapabilityFilter is an object that wraps a List of required
@@ -39,90 +39,88 @@ controls AND volume up/down.
 
 .. code-block:: java
 
-  List<String> capabilities = new ArrayList<String>();
-     capabilities.add(MediaPlayer.Display_Video);
-     capabilities.add(MediaControl.Any);
-     capabilities.add(VolumeControl.Volume_Up_Down);
+    List<String> capabilities = new ArrayList<String>();
+        capabilities.add(MediaPlayer.Display_Video);
+        capabilities.add(MediaControl.Any);
+        capabilities.add(VolumeControl.Volume_Up_Down);
 
-  CapabilityFilter filter =
-         new CapabilityFilter(capabilities);
-  DiscoveryManager.getInstance().setCapabilityFilters(filter);
+    CapabilityFilter filter =
+        new CapabilityFilter(capabilities);
+    DiscoveryManager.getInstance().setCapabilityFilters(filter);
 
 Filter for all devices that support (video playback AND any media
 controls AND volume up/down) OR (image display).
 
 .. code-block:: java
 
-   CapabilityFilter videoFilter =
-           new CapabilityFilter(
-                   MediaPlayer.Display_Video,
-                   MediaControl.Any,
-                   VolumeControl.Volume_Up_Down);
+    CapabilityFilter videoFilter =
+        new CapabilityFilter(
+            MediaPlayer.Display_Video,
+            MediaControl.Any,
+            VolumeControl.Volume_Up_Down);
 
-   CapabilityFilter imageFilter =
-           new CapabilityFilter(
-                   MediaPlayer.Display_Image);
+    CapabilityFilter imageFilter =
+        new CapabilityFilter(
+            MediaPlayer.Display_Image);
 
-   DiscoveryManager.getInstance().setCapabilityFilters(videoFilter, imageFilter);
+    DiscoveryManager.getInstance().setCapabilityFilters(videoFilter, imageFilter);
 
 Properties
 ----------
 
 List<String> capabilities = new ArrayList<String>()
 
-     List of capabilities required by this filter. This property is
-     readonly use the addCapability or addCapabilities to build this
-     object.
+    List of capabilities required by this filter. This property is
+    readonly use the addCapability or addCapabilities to build this
+    object.
 
 Methods
 -------
 
 **CapabilityFilter** ()
 
-     Create an empty CapabilityFilter.
+    Create an empty CapabilityFilter.
 
 **CapabilityFilter** (String... *capabilities*)
 
-     Create a CapabilityFilter with the given array of required
-     capabilities.
+    Create a CapabilityFilter with the given array of required
+    capabilities.
 
-     **Parameters:**
+    **Parameters:**
 
-     * capabilities – Capabilities to be added to the new filter
+    * capabilities – Capabilities to be added to the new filter
 
 **CapabilityFilter** (List<String> *capabilities*)
 
-     Create a CapabilityFilter with the given array of required
-     capabilities.
+    Create a CapabilityFilter with the given array of required
+    capabilities.
 
-     **Parameters:**
+    **Parameters:**
 
-     * capabilities – List of capability names (see capability class
-       files for String constants)
+    * capabilities – List of capability names (see capability class files for String constants)
 
 void **addCapability** (String *capability*)
 
-     Add a required capability to the filter.
+    Add a required capability to the filter.
 
-     **Parameters:**
+    **Parameters:**
 
-     * capability – Capability name to add (see capability class
-       files for String constants)
+    * capability – Capability name to add (see capability class files for String constants)
 
 void **addCapabilities** (List<String> *capabilities*)
 
-     Add array of required capabilities to the filter. (see capability
-     class files for String constants)
+    Add array of required capabilities to the filter. (see capability
+    class files for String constants)
 
-     **Parameters:**
+    **Parameters:**
 
-     * capabilities – List of capability names
+    * capabilities – List of capability names
 
 void **addCapabilities** (String... *capabilities*)
 
-     Add array of required capabilities to the filter. (see capability
-     classes files for String constants)
+    Add array of required capabilities to the filter. (see capability
+    classes files for String constants)
 
-     **Parameters:**
+    **Parameters:**
 
-     * capabilities – String[] of capability names
+    * capabilities – String[] of capability names

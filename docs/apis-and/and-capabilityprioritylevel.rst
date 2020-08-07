@@ -1,5 +1,6 @@
-CapabilityPriorityLevel com.connectsdk.service.capability.CapabilityMethods.CapabilityPriorityLevel
-===================================================================================================
+CapabilityPriorityLevel 
+=======================
+``com.connectsdk.service.capability.CapabilityMethods.CapabilityPriorityLevel``
 
 CapabilityPriorityLevel values are used by ConnectableDevice to find the
 most suitable DeviceService capability to be presented to the user.
@@ -16,20 +17,23 @@ Properties
 ----------
 
 NOT_SUPPORTED = (0)
+
 VERY_LOW = (1)
+
 LOW = (25)
+
 NORMAL = (50)
+
 HIGH = (75)
+
 VERY_HIGH = (100)
 
 Methods
 -------
 
 **CapabilityPriorityLevel** (int *value*)
-   .. rubric:: Parameters:
-      :name: parameters
-      :class: method-detail-label
+    **Parameters:**
 
-   -  value
+    -  value
 
 int **getValue** ()

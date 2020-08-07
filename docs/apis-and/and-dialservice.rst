@@ -1,7 +1,8 @@
-DIALService com.connectsdk.service.DIALService
-==============================================
+DIALService
+===========
+``com.connectsdk.service.DIALService``
 
-*extends*\ `DeviceService </apis/1-6-0/android/DeviceService>`__
+*extends* :doc:`DeviceService <and-deviceservice>`
 
 DIALService is a full implementation of the DIscover And Launch (DIAL)
 protocol specification. DIALService is used to launch & close apps on
@@ -21,239 +22,132 @@ Methods
 -------
 
 static void **registerApp** (String *appId*)
-   Registers an app ID to be checked upon discovery of this device. If
-   the app is found on the target device, the DIALService will gain the
-   "Launcher." capability, where is the value of the appId parameter.
+    Registers an app ID to be checked upon discovery of this device. If
+    the app is found on the target device, the DIALService will gain the
+    "Launcher." capability, where is the value of the appId parameter.
 
-   This method must be called before starting DiscoveryManager for the
-   first time.
+    This method must be called before starting DiscoveryManager for the
+    first time.
 
-   .. rubric:: Parameters:
-      :name: parameters
-      :class: method-detail-label
+    **Parameters:**
 
-   -  appId –
-
-      ID of the app to be checked for
+    -  appId - ID of the app to be checked for
 
 static DiscoveryFilter **discoveryFilter** ()
 
 **DIALService** (ServiceDescription *serviceDescription*, ServiceConfig *serviceConfig*)
-   .. rubric:: Parameters:
-      :name: parameters-1
-      :class: method-detail-label
+    **Parameters:**
 
-   -  serviceDescription
-   -  serviceConfig
+    -  serviceDescription
+    -  serviceConfig
 
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getPriorityLevel** (Class<?extends CapabilityMethods > *clazz*)
-   .. rubric:: Parameters:
-      :name: parameters-2
-      :class: method-detail-label
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getPriorityLevel** (Class<?extends CapabilityMethods > *clazz*)
+    **Parameters:**
 
-   -  clazz
+    -  clazz
 
 void **setServiceDescription** (ServiceDescription *serviceDescription*)
-   .. rubric:: Parameters:
-      :name: parameters-3
-      :class: method-detail-label
+    **Parameters:**
 
-   -  serviceDescription
+    -  serviceDescription
 
-`Launcher </apis/1-6-0/android/Launcher>`__ **getLauncher** ()
+:doc:`Launcher <and-launcher>` **getLauncher** ()
 
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getLauncherCapabilityLevel** ()
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getLauncherCapabilityLevel** ()
 
-void **launchApp** (String *appId*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-4
-      :class: method-detail-label
+void **launchApp** (String *appId*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    **Parameters:**
 
-   -  appId
+    -  appId
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-   -  listener –
+void **launchAppWithInfo** (:doc:`AppInfo <appinfo>` *appInfo*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    **Parameters:**
 
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
+    -  appInfo
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-void **launchAppWithInfo** (`AppInfo </apis/1-6-0/android/AppInfo>`__ *appInfo*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-5
-      :class: method-detail-label
+void **launchAppWithInfo** (final :doc:`AppInfo <appinfo>` *appInfo*, Object *params*, final :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    **Parameters:**
 
-   -  appInfo
+    -  appInfo
+    -  params
+    -  listener – (optional) final AppLaunchListener with methods to be called on success or failure
 
-   -  listener –
+void **launchBrowser** (String *url*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    **Parameters:**
 
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
+    -  url
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-void **launchAppWithInfo** (final `AppInfo </apis/1-6-0/android/AppInfo>`__ *appInfo*, Object *params*, final `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-6
-      :class: method-detail-label
+void **closeApp** (final :doc:`LaunchSession <and-launchsession>` *launchSession*, final :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-   -  appInfo
+    -  launchSession
+    -  listener – (optional) final ResponseListener< Object > with methods to be called on success or failure
 
-   -  params
+void **launchYouTube** (String *contentId*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    **Parameters:**
 
-   -  listener –
+    -  contentId
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-      (optional) final AppLaunchListener with methods to be called on
-      success or failure
+void **launchYouTube** (String *contentId*, float *startTime*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    **Parameters:**
 
-void **launchBrowser** (String *url*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-7
-      :class: method-detail-label
+    -  contentId
+    -  startTime
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-   -  url
+void **launchHulu** (String *contentId*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    **Parameters:**
 
-   -  listener –
+    -  contentId
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
+void **launchNetflix** (final String *contentId*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    **Parameters:**
+    -  contentId
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-void **closeApp** (final `LaunchSession </apis/1-6-0/android/LaunchSession>`__ *launchSession*, final `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-8
-      :class: method-detail-label
+void **launchAppStore** (String *appId*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    **Parameters:**
 
-   -  launchSession
+    -  appId
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-   -  listener –
+void **getAppList** (:doc:`AppListListener <and-applistlistener>` *listener*)
+    **Parameters:**
 
-      (optional) final ResponseListener< Object > with methods to be
-      called on success or failure
+    -  listener – (optional) AppListListener with methods to be called on success or failure
 
-void **launchYouTube** (String *contentId*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-9
-      :class: method-detail-label
+void **getRunningApp** (:doc:`AppInfoListener <and-appinfolistener>` *listener*)
+    **Parameters:**
 
-   -  contentId
+    -  listener – (optional) AppInfoListener with methods to be called on success or failure
 
-   -  listener –
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`AppInfoListener <and-appinfolistener>`> **subscribeRunningApp** (:doc:`AppInfoListener <and-appinfolistener>` *listener*)
+    **Parameters:**
 
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
+    -  listener – (optional) AppInfoListener with methods to be called on success or failure
 
-void **launchYouTube** (String *contentId*, float *startTime*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-10
-      :class: method-detail-label
+void **getAppState** (:doc:`LaunchSession <and-launchsession>` *launchSession*, :doc:`AppStateListener <and-appstatelistener>` *listener*)
+    **Parameters:**
 
-   -  contentId
+    -  launchSession
+    -  listener – (optional) AppStateListener with methods to be called on success or failure
 
-   -  startTime
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`AppStateListener <and-appstatelistener>`> **subscribeAppState** (:doc:`LaunchSession <and-launchsession>` *launchSession*, com.connectsdk.service.capability.\ :doc:`Launcher <and-launcher>`.\ :doc:`AppStateListener <and-appstatelistener>` *listener*)
+    **Parameters:**
 
-   -  listener –
+    -  launchSession
+    -  listener – (optional) com.connectsdk.service.capability.Launcher.AppStateListener with methods to be called on success or failure
 
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
+void **closeLaunchSession** (:doc:`LaunchSession <and-launchsession>` *launchSession*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-void **launchHulu** (String *contentId*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-11
-      :class: method-detail-label
-
-   -  contentId
-
-   -  listener –
-
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
-
-void **launchNetflix** (final String *contentId*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-12
-      :class: method-detail-label
-
-   -  contentId
-
-   -  listener –
-
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
-
-void **launchAppStore** (String *appId*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-13
-      :class: method-detail-label
-
-   -  appId
-
-   -  listener –
-
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
-
-void **getAppList** (`AppListListener </apis/1-6-0/android/AppListListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-14
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) AppListListener with methods to be called on success or
-      failure
-
-void **getRunningApp** (`AppInfoListener </apis/1-6-0/android/AppInfoListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-15
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) AppInfoListener with methods to be called on success or
-      failure
-
-`ServiceSubscription </apis/1-6-0/android/ServiceSubscription>`__\ <`AppInfoListener </apis/1-6-0/android/AppInfoListener>`__> **subscribeRunningApp** (`AppInfoListener </apis/1-6-0/android/AppInfoListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-16
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) AppInfoListener with methods to be called on success or
-      failure
-
-void **getAppState** (`LaunchSession </apis/1-6-0/android/LaunchSession>`__ *launchSession*, `AppStateListener </apis/1-6-0/android/AppStateListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-17
-      :class: method-detail-label
-
-   -  launchSession
-
-   -  listener –
-
-      (optional) AppStateListener with methods to be called on success
-      or failure
-
-`ServiceSubscription </apis/1-6-0/android/ServiceSubscription>`__\ <`AppStateListener </apis/1-6-0/android/AppStateListener>`__> **subscribeAppState** (`LaunchSession </apis/1-6-0/android/LaunchSession>`__ *launchSession*, com.connectsdk.service.capability.\ `Launcher </apis/1-6-0/android/Launcher>`__.\ `AppStateListener </apis/1-6-0/android/AppStateListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-18
-      :class: method-detail-label
-
-   -  launchSession
-
-   -  listener –
-
-      (optional)
-      com.connectsdk.service.capability.Launcher.AppStateListener with
-      methods to be called on success or failure
-
-void **closeLaunchSession** (`LaunchSession </apis/1-6-0/android/LaunchSession>`__ *launchSession*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-19
-      :class: method-detail-label
-
-   -  launchSession
-
-   -  listener –
-
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    -  launchSession
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
 boolean **isConnectable** ()
 
@@ -264,108 +158,86 @@ void **connect** ()
 void **disconnect** ()
 
 void **onLoseReachability** (DeviceServiceReachability *reachability*)
-   .. rubric:: Parameters:
-      :name: parameters-20
-      :class: method-detail-label
+    **Parameters:**
 
-   -  reachability
+    -  reachability
 
 void **sendCommand** (final ServiceCommand<?> *mCommand*)
-   .. rubric:: Parameters:
-      :name: parameters-21
-      :class: method-detail-label
+    **Parameters:**
 
-   -  mCommand
+    -  mCommand
 
 Inherited Methods
 -----------------
 
 void **connect** ()
-   Will attempt to connect to the DeviceService. The failure/success
-   will be reported back to the DeviceServiceListener. If the connection
-   attempt reveals that pairing is required, the DeviceServiceListener
-   will also be notified in that event.
+    Will attempt to connect to the DeviceService. The failure/success
+    will be reported back to the DeviceServiceListener. If the connection
+    attempt reveals that pairing is required, the DeviceServiceListener
+    will also be notified in that event.
 
 void **disconnect** ()
-   Will attempt to disconnect from the DeviceService. The
-   failure/success will be reported back to the DeviceServiceListener.
+    Will attempt to disconnect from the DeviceService. The
+    failure/success will be reported back to the DeviceServiceListener.
 
 boolean **isConnected** ()
-   Whether the DeviceService is currently connected
+    Whether the DeviceService is currently connected
 
 boolean **isConnectable** ()
 
 void **cancelPairing** ()
-   Explicitly cancels pairing in services that require pairing. In some
-   services, this will hide a prompt that is displaying on the device.
+    Explicitly cancels pairing in services that require pairing. In some
+    services, this will hide a prompt that is displaying on the device.
 
 void **sendPairingKey** (String *pairingKey*)
-   Will attempt to pair with the DeviceService with the provided
-   pairingData. The failure/success will be reported back to the
-   DeviceServiceListener.
+    Will attempt to pair with the DeviceService with the provided
+    pairingData. The failure/success will be reported back to the
+    DeviceServiceListener.
 
-   .. rubric:: Parameters:
-      :name: parameters-22
-      :class: method-detail-label
+    **Parameters:**
 
-   -  pairingKey –
-
-      Data to be used for pairing. The type of this parameter will vary
-      depending on what type of pairing is required, but is likely to be
-      a string (pin code, pairing key, etc).
+    -  pairingKey – Data to be used for pairing. The type of this parameter will vary depending on what type of pairing is required, but is likely to be a string (pin code, pairing key, etc).
 
 List<String> **getCapabilities** ()
 
 boolean **hasCapability** (String *capability*)
-   Test to see if the capabilities array contains a given capability.
-   See the individual Capability classes for acceptable capability
-   values.
+    Test to see if the capabilities array contains a given capability.
+    See the individual Capability classes for acceptable capability
+    values.
 
-   It is possible to append a wildcard search term ``.Any`` to the end
-   of the search term. This method will return true for capabilities
-   that match the term up to the wildcard.
+    It is possible to append a wildcard search term ``.Any`` to the end
+    of the search term. This method will return true for capabilities
+    that match the term up to the wildcard.
 
-   Example: ``Launcher.App.Any``
+    Example: ``Launcher.App.Any``
 
-   .. rubric:: Parameters:
-      :name: parameters-23
-      :class: method-detail-label
+    **Parameters:**
 
-   -  capability –
-
-      Capability to test against
+    -  capability – Capability to test against
 
 boolean **hasAnyCapability** (String... *capabilities*)
-   Test to see if the capabilities array contains at least one
-   capability in a given set of capabilities. See the individual
-   Capability classes for acceptable capability values.
+    Test to see if the capabilities array contains at least one
+    capability in a given set of capabilities. See the individual
+    Capability classes for acceptable capability values.
 
-   See hasCapability: for a description of the wildcard feature provided
-   by this method.
+    See hasCapability: for a description of the wildcard feature provided
+    by this method.
 
-   .. rubric:: Parameters:
-      :name: parameters-24
-      :class: method-detail-label
+    **Parameters:**
 
-   -  capabilities –
-
-      Set of capabilities to test against
+    -  capabilities – Set of capabilities to test against
 
 boolean **hasCapabilities** (List<String> *capabilities*)
-   Test to see if the capabilities array contains a given set of
-   capabilities. See the individual Capability classes for acceptable
-   capability values.
+    Test to see if the capabilities array contains a given set of
+    capabilities. See the individual Capability classes for acceptable
+    capability values.
 
-   See hasCapability: for a description of the wildcard feature provided
-   by this method.
+    See hasCapability: for a description of the wildcard feature provided
+    by this method.
 
-   .. rubric:: Parameters:
-      :name: parameters-25
-      :class: method-detail-label
+    **Parameters:**
 
-   -  capabilities –
-
-      List of capabilities to test against
+    -  capabilities – List of capabilities to test against
 
 ServiceDescription **getServiceDescription** ()
 
@@ -374,348 +246,201 @@ ServiceConfig **getServiceConfig** ()
 JSONObject **toJSONObject** ()
 
 String **getServiceName** ()
-   Name of the DeviceService (webOS, Chromecast, etc)
+    Name of the DeviceService (webOS, Chromecast, etc)
 
-void **closeLaunchSession** (`LaunchSession </apis/1-6-0/android/LaunchSession>`__ *launchSession*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Closes the session on the first screen device. Depending on the
-   sessionType, the associated service will have different ways of
-   handling the close functionality.
+void **closeLaunchSession** (:doc:`LaunchSession <and-launchsession>` *launchSession*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Closes the session on the first screen device. Depending on the
+    sessionType, the associated service will have different ways of
+    handling the close functionality.
 
-   .. rubric:: Parameters:
-      :name: parameters-26
-      :class: method-detail-label
+    **Parameters:**
 
-   -  launchSession –
+    -  launchSession – LaunchSession to close
+    -  listener – (optional) listener to be called on success/failure
 
-      LaunchSession to close
+:doc:`Launcher <and-launcher>` **getLauncher** ()
 
-   -  listener –
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getLauncherCapabilityLevel** ()
 
-      (optional) listener to be called on success/failure
+void **launchAppWithInfo** (:doc:`AppInfo <appinfo>` *appInfo*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    Launch an application on the device.
 
-`Launcher </apis/1-6-0/android/Launcher>`__ **getLauncher** ()
+    **Related capabilities:**
 
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getLauncherCapabilityLevel** ()
+    -  ``Launcher.App``
+    -  ``Launcher.App.Params`` – if launching with params
 
-void **launchAppWithInfo** (`AppInfo </apis/1-6-0/android/AppInfo>`__ *appInfo*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   Launch an application on the device.
+    **Parameters:**
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities
-      :class: method-detail-label
+    -  appInfo – AppInfo object for the application
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-   -  ``Launcher.App``
+void **launchApp** (String *appId*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    Launch an application on the device.
 
-   -  ``Launcher.App.Params`` –
+    **Related capabilities:**
 
-      if launching with params
+    -  ``Launcher.App``
 
-   .. rubric:: Parameters:
-      :name: parameters-27
-      :class: method-detail-label
+    **Parameters:**
 
-   -  appInfo –
+    -  appId – ID of the application
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-      AppInfo object for the application
+void **closeApp** (:doc:`LaunchSession <and-launchsession>` *launchSession*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Close an application on the device.
 
-   -  listener –
+    **Related capabilities:**
 
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
+    -  ``Launcher.App.Close``
 
-void **launchApp** (String *appId*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   Launch an application on the device.
+    **Parameters:**
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-1
-      :class: method-detail-label
+    -  launchSession – LaunchSession of the target app
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   -  ``Launcher.App``
+void **getAppList** (:doc:`AppListListener <and-applistlistener>` *listener*)
+    Gets a list of all apps installed on the device.
 
-   .. rubric:: Parameters:
-      :name: parameters-28
-      :class: method-detail-label
+    **Related capabilities:**
 
-   -  appId –
+    -  ``Launcher.App.List``
 
-      ID of the application
+    **Parameters:**
 
-   -  listener –
+    -  listener – (optional) AppListListener with methods to be called on success or failure
 
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
+void **getRunningApp** (:doc:`AppInfoListener <and-appinfolistener>` *listener*)
+    Gets an AppInfo object for the current running app on the device.
 
-void **closeApp** (`LaunchSession </apis/1-6-0/android/LaunchSession>`__ *launchSession*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Close an application on the device.
+    **Related capabilities:**
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-2
-      :class: method-detail-label
+    -  ``Launcher.RunningApp``
 
-   -  ``Launcher.App.Close``
+    **Parameters:**
 
-   .. rubric:: Parameters:
-      :name: parameters-29
-      :class: method-detail-label
+    -  listener – (optional) AppInfoListener with methods to be called on success or failure
 
-   -  launchSession –
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`AppInfoListener <and-appinfolistener>`> **subscribeRunningApp** (:doc:`AppInfoListener <and-appinfolistener>` *listener*)
+    Subscribes to changes of the current running app. Every time the
+    running app changes, the success block will be called with an AppInfo
+    object for the current running app.
 
-      LaunchSession of the target app
+    **Related capabilities:**
 
-   -  listener –
+    -  ``Launcher.RunningApp.Subscribe``
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    **Parameters:**
 
-void **getAppList** (`AppListListener </apis/1-6-0/android/AppListListener>`__ *listener*)
-   Gets a list of all apps installed on the device.
+    -  listener – (optional) AppInfoListener with methods to be called on success or failure
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-3
-      :class: method-detail-label
+void **getAppState** (:doc:`LaunchSession <and-launchsession>` *launchSession*, :doc:`AppStateListener <and-appstatelistener>` *listener*)
+    Gets the target app's running status and on-screen visibility.
 
-   -  ``Launcher.App.List``
+    **Related capabilities:**
 
-   .. rubric:: Parameters:
-      :name: parameters-30
-      :class: method-detail-label
+    -  ``Launcher.AppState``
 
-   -  listener –
+    **Parameters:**
 
-      (optional) AppListListener with methods to be called on success or
-      failure
+    -  launchSession – LaunchSession of the target app
+    -  listener – (optional) AppStateListener with methods to be called on success or failure
 
-void **getRunningApp** (`AppInfoListener </apis/1-6-0/android/AppInfoListener>`__ *listener*)
-   Gets an AppInfo object for the current running app on the device.
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`AppStateListener <and-appstatelistener>`> **subscribeAppState** (:doc:`LaunchSession <and-launchsession>` *launchSession*, :doc:`AppStateListener <and-appstatelistener>` *listener*)
+    Subscribes to changes of the state of the target app. Every time the
+    app's state changes, the success block will be called with info on
+    the app's running status and on-screen visibility.
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-4
-      :class: method-detail-label
+    **Related capabilities:**
 
-   -  ``Launcher.RunningApp``
+    -  ``Launcher.AppState.Subscribe``
 
-   .. rubric:: Parameters:
-      :name: parameters-31
-      :class: method-detail-label
+    **Parameters:**
 
-   -  listener –
+    -  launchSession – LaunchSession of the target app
+    -  listener – (optional) AppStateListener with methods to be called on success or failure
 
-      (optional) AppInfoListener with methods to be called on success or
-      failure
+void **launchBrowser** (String *url*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    Launch the web browser. Will launch deep-linked to provided URL, if
+    supported on the target platform.
 
-`ServiceSubscription </apis/1-6-0/android/ServiceSubscription>`__\ <`AppInfoListener </apis/1-6-0/android/AppInfoListener>`__> **subscribeRunningApp** (`AppInfoListener </apis/1-6-0/android/AppInfoListener>`__ *listener*)
-   Subscribes to changes of the current running app. Every time the
-   running app changes, the success block will be called with an AppInfo
-   object for the current running app.
+    **Related capabilities:**
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-5
-      :class: method-detail-label
+    -  ``Launcher.Browser``
+    -  ``Launcher.Browser.Params`` – if launching with url
 
-   -  ``Launcher.RunningApp.Subscribe``
+    **Parameters:**
 
-   .. rubric:: Parameters:
-      :name: parameters-32
-      :class: method-detail-label
+    -  url
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-   -  listener –
+void **launchYouTube** (String *contentId*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    Launch YouTube app. Will launch deep-linked to provided contentId, if
+    supported on the target platform.
 
-      (optional) AppInfoListener with methods to be called on success or
-      failure
+    **Related capabilities:**
 
-void **getAppState** (`LaunchSession </apis/1-6-0/android/LaunchSession>`__ *launchSession*, `AppStateListener </apis/1-6-0/android/AppStateListener>`__ *listener*)
-   Gets the target app's running status and on-screen visibility.
+    -  ``Launcher.YouTube``
+    -  ``Launcher.YouTube.Params`` – if launching with contentId
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-6
-      :class: method-detail-label
+    **Parameters:**
 
-   -  ``Launcher.AppState``
+    -  contentId – Video id to open
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-   .. rubric:: Parameters:
-      :name: parameters-33
-      :class: method-detail-label
+void **launchNetflix** (String *contentId*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    Launch Netflix app. Will launch deep-linked to provided contentId, if
+    supported on the target platform.
 
-   -  launchSession –
+    **Related capabilities:**
 
-      LaunchSession of the target app
+    -  ``Launcher.Netflix``
+    -  ``Launcher.Netflix.Params`` – if launching with contentId
 
-   -  listener –
+    **Parameters:**
 
-      (optional) AppStateListener with methods to be called on success
-      or failure
+    -  contentId – Video id to open
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-`ServiceSubscription </apis/1-6-0/android/ServiceSubscription>`__\ <`AppStateListener </apis/1-6-0/android/AppStateListener>`__> **subscribeAppState** (`LaunchSession </apis/1-6-0/android/LaunchSession>`__ *launchSession*, `AppStateListener </apis/1-6-0/android/AppStateListener>`__ *listener*)
-   Subscribes to changes of the state of the target app. Every time the
-   app's state changes, the success block will be called with info on
-   the app's running status and on-screen visibility.
+void **launchHulu** (String *contentId*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    Launch Hulu app. Will launch deep-linked to provided contentId, if
+    supported on the target platform.
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-7
-      :class: method-detail-label
+    **Related capabilities:**
 
-   -  ``Launcher.AppState.Subscribe``
+    -  ``Launcher.Hulu``
+    -  ``Launcher.Hulu.Params`` – if launching with contentId
 
-   .. rubric:: Parameters:
-      :name: parameters-34
-      :class: method-detail-label
+    **Parameters:**
 
-   -  launchSession –
+    -  contentId – Video id to open
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-      LaunchSession of the target app
+void **launchAppStore** (String *appId*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    Launch the device's app store app, optionally deep-linked to a
+    specific app's page.
 
-   -  listener –
+    **Related capabilities:**
 
-      (optional) AppStateListener with methods to be called on success
-      or failure
+    -  ``Launcher.AppStore``
+    -  ``Launcher.AppStore.Params``
 
-void **launchBrowser** (String *url*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   Launch the web browser. Will launch deep-linked to provided URL, if
-   supported on the target platform.
+    **Parameters:**
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-8
-      :class: method-detail-label
-
-   -  ``Launcher.Browser``
-
-   -  ``Launcher.Browser.Params`` –
-
-      if launching with url
-
-   .. rubric:: Parameters:
-      :name: parameters-35
-      :class: method-detail-label
-
-   -  url
-
-   -  listener –
-
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
-
-void **launchYouTube** (String *contentId*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   Launch YouTube app. Will launch deep-linked to provided contentId, if
-   supported on the target platform.
-
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-9
-      :class: method-detail-label
-
-   -  ``Launcher.YouTube``
-
-   -  ``Launcher.YouTube.Params`` –
-
-      if launching with contentId
-
-   .. rubric:: Parameters:
-      :name: parameters-36
-      :class: method-detail-label
-
-   -  contentId –
-
-      Video id to open
-
-   -  listener –
-
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
-
-void **launchNetflix** (String *contentId*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   Launch Netflix app. Will launch deep-linked to provided contentId, if
-   supported on the target platform.
-
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-10
-      :class: method-detail-label
-
-   -  ``Launcher.Netflix``
-
-   -  ``Launcher.Netflix.Params`` –
-
-      if launching with contentId
-
-   .. rubric:: Parameters:
-      :name: parameters-37
-      :class: method-detail-label
-
-   -  contentId –
-
-      Video id to open
-
-   -  listener –
-
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
-
-void **launchHulu** (String *contentId*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   Launch Hulu app. Will launch deep-linked to provided contentId, if
-   supported on the target platform.
-
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-11
-      :class: method-detail-label
-
-   -  ``Launcher.Hulu``
-
-   -  ``Launcher.Hulu.Params`` –
-
-      if launching with contentId
-
-   .. rubric:: Parameters:
-      :name: parameters-38
-      :class: method-detail-label
-
-   -  contentId –
-
-      Video id to open
-
-   -  listener –
-
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
-
-void **launchAppStore** (String *appId*, `AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   Launch the device's app store app, optionally deep-linked to a
-   specific app's page.
-
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-12
-      :class: method-detail-label
-
-   -  ``Launcher.AppStore``
-   -  ``Launcher.AppStore.Params``
-
-   .. rubric:: Parameters:
-      :name: parameters-39
-      :class: method-detail-label
-
-   -  appId –
-
-      (optional) ID of the application to show in the app store
-
-   -  listener –
-
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
+    -  appId – (optional) ID of the application to show in the app store
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
 void **onLoseReachability** (DeviceServiceReachability *reachability*)
-   .. rubric:: Parameters:
-      :name: parameters-40
-      :class: method-detail-label
+    **Parameters:**
 
-   -  reachability
+    -  reachability
 
 void **unsubscribe** (URLServiceSubscription<?> *subscription*)
-   .. rubric:: Parameters:
-      :name: parameters-41
-      :class: method-detail-label
+    **Parameters:**
 
-   -  subscription
+    -  subscription
 
 void **sendCommand** (ServiceCommand<?> *command*)
-   .. rubric:: Parameters:
-      :name: parameters-42
-      :class: method-detail-label
+    **Parameters:**
 
-   -  command
+    -  command

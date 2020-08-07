@@ -1,5 +1,6 @@
-ErrorListener com.connectsdk.service.capability.listeners.ErrorListener
-=======================================================================
+ErrorListener
+=============
+``com.connectsdk.service.capability.listeners.ErrorListener``
 
 Generic asynchronous operation response error handler block. In all
 cases, you will get a valid ServiceCommandError object. Connect SDK will
@@ -25,14 +26,11 @@ ServiceCommandError generated during parsing of the XML.
 High-level error example
 ------------------------
 
-.. _situation-1:
-
 Situation
 ~~~~~~~~~
 
 An invalid value is passed to a device capability method
 
-.. _result-1:
 
 Result
 ~~~~~~
@@ -43,22 +41,18 @@ ConnectStatusCodeArgumentError.
 
 -  error
 
-   ServiceCommandError object describing the nature of the problem.
-   Error descriptions are not localized and mostly intended for
-   developer use. It is not recommended to display most error
-   descriptions in UI elements.
+    ServiceCommandError object describing the nature of the problem.
+    Error descriptions are not localized and mostly intended for
+    developer use. It is not recommended to display most error
+    descriptions in UI elements.
 
 Methods
 -------
 
-void **onError** (`ServiceCommandError </apis/1-6-0/android/ServiceCommandError>`__ *error*)
-   Method to return the error that was generated. Will pass an error
-   object with a helpful status code and error message.
+void **onError** (:doc:`ServiceCommandError <and-servicecommanderror>` *error*)
+    Method to return the error that was generated. Will pass an error
+    object with a helpful status code and error message.
 
-   .. rubric:: Parameters:
-      :name: parameters
-      :class: method-detail-label
+    **Parameters:**
 
-   -  error –
-
-      ServiceCommandError describing the error
+    -  error – ServiceCommandError describing the error

@@ -1,7 +1,8 @@
-DLNAService com.connectsdk.service.DLNAService
-==============================================
+DLNAService
+===========
+``com.connectsdk.service.DLNAService``
 
-*extends*\ `DeviceService </apis/1-6-0/android/DeviceService>`__
+*extends* :doc:`DeviceService <and-deviceservice>`
 
 DLNAService is a rough control implementation for the UPnP AVTransport,
 MediaRenderer, and RenderingControl services. DLNA commands & events
@@ -17,12 +18,9 @@ To learn more about the protocols in use by DLNAService, check out the
 following documents.
 
 -  `UPnP <http://upnp.org/>`__
--  `AVTransport
-   Service <http://upnp.org/specs/av/UPnP-av-AVTransport-v1-Service.pdf>`__
--  `MediaRenderer
-   Device <http://upnp.org/specs/av/UPnP-av-MediaRenderer-v1-Device.pdf>`__
--  `RenderingControl
-   Service <http://upnp.org/specs/av/UPnP-av-RenderingControl-v1-Service.pdf>`__
+-  `AVTransport Service <http://upnp.org/specs/av/UPnP-av-AVTransport-v1-Service.pdf>`__
+-  `MediaRenderer Device <http://upnp.org/specs/av/UPnP-av-MediaRenderer-v1-Device.pdf>`__
+-  `RenderingControl Service <http://upnp.org/specs/av/UPnP-av-RenderingControl-v1-Service.pdf>`__
 
 Properties
 ----------
@@ -44,378 +42,218 @@ Methods
 -------
 
 **DLNAService** (ServiceDescription *serviceDescription*, ServiceConfig *serviceConfig*)
-   .. rubric:: Parameters:
-      :name: parameters
-      :class: method-detail-label
+    **Parameters:**
 
-   -  serviceDescription
-   -  serviceConfig
+    -  serviceDescription
+    -  serviceConfig
 
 **DLNAService** (ServiceDescription *serviceDescription*, ServiceConfig *serviceConfig*, Context *context*, DLNAHttpServer *dlnaServer*)
-   .. rubric:: Parameters:
-      :name: parameters-1
-      :class: method-detail-label
+    **Parameters:**
 
-   -  serviceDescription
-   -  serviceConfig
-   -  context
-   -  dlnaServer
+    -  serviceDescription
+    -  serviceConfig
+    -  context
+    -  dlnaServer
 
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getPriorityLevel** (Class<?extends CapabilityMethods > *clazz*)
-   .. rubric:: Parameters:
-      :name: parameters-2
-      :class: method-detail-label
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getPriorityLevel** (Class<?extends CapabilityMethods > *clazz*)
+    **Parameters:**
 
-   -  clazz
+    -  clazz
 
 void **setServiceDescription** (ServiceDescription *serviceDescription*)
-   .. rubric:: Parameters:
-      :name: parameters-3
-      :class: method-detail-label
+    **Parameters:**
 
-   -  serviceDescription
+    -  serviceDescription
 
-`MediaPlayer </apis/1-6-0/android/MediaPlayer>`__ **getMediaPlayer** ()
+:doc:`MediaPlayer <and-mediaplayer>` **getMediaPlayer** ()
 
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getMediaPlayerCapabilityLevel** ()
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getMediaPlayerCapabilityLevel** ()
 
-void **getMediaInfo** (final `MediaInfoListener </apis/1-6-0/android/MediaInfoListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-4
-      :class: method-detail-label
+void **getMediaInfo** (final :doc:`MediaInfoListener <and-mediainfolistener>` *listener*)
+    **Parameters:**
 
-   -  listener –
+    -  listener – (optional) final MediaInfoListener with methods to be called on success or failure
 
-      (optional) final MediaInfoListener with methods to be called on
-      success or failure
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`MediaInfoListener <and-mediainfolistener>`> **subscribeMediaInfo** (:doc:`MediaInfoListener <and-mediainfolistener>` *listener*)
+    **Parameters:**
 
-`ServiceSubscription </apis/1-6-0/android/ServiceSubscription>`__\ <`MediaInfoListener </apis/1-6-0/android/MediaInfoListener>`__> **subscribeMediaInfo** (`MediaInfoListener </apis/1-6-0/android/MediaInfoListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-5
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) MediaInfoListener with methods to be called on success
-      or failure
+    -  listener – (optional) MediaInfoListener with methods to be called on success or failure
 
 void **displayMedia** (String *url*, String *mimeType*, String *title*, String *description*, String *iconSrc*, final LaunchListener *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-6
-      :class: method-detail-label
+    **Parameters:**
 
-   -  url
-
-   -  mimeType
-
-   -  title
-
-   -  description
-
-   -  iconSrc
-
-   -  listener –
-
-      (optional) final LaunchListener with methods to be called on
-      success or failure
+    -  url
+    -  mimeType
+    -  title
+    -  description
+    -  iconSrc
+    -  listener – (optional) final LaunchListener with methods to be called on success or failure
 
 void **displayImage** (String *url*, String *mimeType*, String *title*, String *description*, String *iconSrc*, LaunchListener *listener*)
-   This method is deprecated. Use
-   ``MediaPlayer::displayImage(MediaInfo mediaInfo, LaunchListener listener)``
-   instead.
+    This method is deprecated. Use
+    ``MediaPlayer::displayImage(MediaInfo mediaInfo, LaunchListener listener)``
+    instead.
 
-   .. rubric:: Parameters:
-      :name: parameters-7
-      :class: method-detail-label
+    **Parameters:**
 
-   -  url
+    -  url
+    -  mimeType
+    -  title
+    -  description
+    -  iconSrc
+    -  listener – (optional) LaunchListener with methods to be called on success or failure
 
-   -  mimeType
+void **displayImage** (:doc:`MediaInfo <and-mediainfo>` *mediaInfo*, LaunchListener *listener*)
+    **Parameters:**
 
-   -  title
-
-   -  description
-
-   -  iconSrc
-
-   -  listener –
-
-      (optional) LaunchListener with methods to be called on success or
-      failure
-
-void **displayImage** (`MediaInfo </apis/1-6-0/android/MediaInfo>`__ *mediaInfo*, LaunchListener *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-8
-      :class: method-detail-label
-
-   -  mediaInfo
-
-   -  listener –
-
-      (optional) LaunchListener with methods to be called on success or
-      failure
+    -  mediaInfo
+    -  listener – (optional) LaunchListener with methods to be called on success or failure
 
 void **playMedia** (String *url*, String *mimeType*, String *title*, String *description*, String *iconSrc*, boolean *shouldLoop*, LaunchListener *listener*)
-   This method is deprecated. Use
-   ``MediaPlayer::playMedia(MediaInfo mediaInfo, boolean shouldLoop, LaunchListener listener)``
-   instead.
+    This method is deprecated. Use
+    ``MediaPlayer::playMedia(MediaInfo mediaInfo, boolean shouldLoop, LaunchListener listener)``
+    instead.
 
-   .. rubric:: Parameters:
-      :name: parameters-9
-      :class: method-detail-label
+    **Parameters:**
 
-   -  url
+    -  url
+    -  mimeType
+    -  title
+    -  description
+    -  iconSrc
+    -  shouldLoop
+    -  listener – (optional) LaunchListener with methods to be called on success or failure
 
-   -  mimeType
+void **playMedia** (:doc:`MediaInfo <and-mediainfo>` *mediaInfo*, boolean *shouldLoop*, LaunchListener *listener*)
+    **Parameters:**
 
-   -  title
+    -  mediaInfo
+    -  shouldLoop
+    -  listener – (optional) LaunchListener with methods to be called on success or failure
 
-   -  description
+void **closeMedia** (:doc:`LaunchSession <and-launchsession>` *launchSession*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-   -  iconSrc
+    -  launchSession
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   -  shouldLoop
+:doc:`MediaControl <and-mediacontrol>` **getMediaControl** ()
+    Get MediaControl implementation
 
-   -  listener –
+    **Returns:** MediaControl
 
-      (optional) LaunchListener with methods to be called on success or
-      failure
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getMediaControlCapabilityLevel** ()
+    Get a capability priority for current implementation
 
-void **playMedia** (`MediaInfo </apis/1-6-0/android/MediaInfo>`__ *mediaInfo*, boolean *shouldLoop*, LaunchListener *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-10
-      :class: method-detail-label
+    **Returns:** CapabilityPriorityLevel
 
-   -  mediaInfo
+void **play** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-   -  shouldLoop
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   -  listener –
+void **pause** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-      (optional) LaunchListener with methods to be called on success or
-      failure
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-void **closeMedia** (`LaunchSession </apis/1-6-0/android/LaunchSession>`__ *launchSession*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-11
-      :class: method-detail-label
+void **stop** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-   -  launchSession
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   -  listener –
+void **rewind** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-`MediaControl </apis/1-6-0/android/MediaControl>`__ **getMediaControl** ()
-   Get MediaControl implementation
+void **fastForward** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-   .. rubric:: Returns:
-      :name: returns
-      :class: method-detail-label
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   MediaControl
+:doc:`PlaylistControl <and-playlistcontrol>` **getPlaylistControl** ()
 
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getMediaControlCapabilityLevel** ()
-   Get a capability priority for current implementation
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getPlaylistControlCapabilityLevel** ()
 
-   .. rubric:: Returns:
-      :name: returns-1
-      :class: method-detail-label
+void **previous** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    This method is deprecated. Use
+    ``PlaylistControl::previous(ResponseListener<Object> listener)``
+    instead.
 
-   CapabilityPriorityLevel
+    **Parameters:**
 
-void **play** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-12
-      :class: method-detail-label
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   -  listener –
+void **next** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    This method is deprecated. Use
+    ``PlaylistControl::next(ResponseListener<Object> listener)`` instead.
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    **Parameters:**
 
-void **pause** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-13
-      :class: method-detail-label
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   -  listener –
+void **jumpToTrack** (long *index*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Play a track specified by index in the playlist
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    **Parameters:**
 
-void **stop** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-14
-      :class: method-detail-label
+    -  index – index in the playlist, it starts from zero like index of array
+    -  listener – optional response listener
 
-   -  listener –
+void **setPlayMode** (:doc:`PlayMode <and-playmode>` *playMode*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Set order of playing tracks
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    **Parameters:**
 
-void **rewind** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-15
-      :class: method-detail-label
+    -  playMode
+    -  listener – optional response listener
 
-   -  listener –
+void **seek** (long *position*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    -  position – The new position, in milliseconds from the beginning of the stream
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-void **fastForward** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-16
-      :class: method-detail-label
+void **getDuration** (final :doc:`DurationListener <and-durationlistener>` *listener*)
+    **Parameters:**
 
-   -  listener –
+    -  listener – (optional) final DurationListener with methods to be called on success or failure
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+void **getPosition** (final :doc:`PositionListener <and-positionlistener>` *listener*)
+    **Parameters:**
 
-`PlaylistControl </apis/1-6-0/android/PlaylistControl>`__ **getPlaylistControl** ()
-
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getPlaylistControlCapabilityLevel** ()
-
-void **previous** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   This method is deprecated. Use
-   ``PlaylistControl::previous(ResponseListener<Object> listener)``
-   instead.
-
-   .. rubric:: Parameters:
-      :name: parameters-17
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
-
-void **next** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   This method is deprecated. Use
-   ``PlaylistControl::next(ResponseListener<Object> listener)`` instead.
-
-   .. rubric:: Parameters:
-      :name: parameters-18
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
-
-void **jumpToTrack** (long *index*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Play a track specified by index in the playlist
-
-   .. rubric:: Parameters:
-      :name: parameters-19
-      :class: method-detail-label
-
-   -  index –
-
-      index in the playlist, it starts from zero like index of array
-
-   -  listener –
-
-      optional response listener
-
-void **setPlayMode** (`PlayMode </apis/1-6-0/android/PlayMode>`__ *playMode*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Set order of playing tracks
-
-   .. rubric:: Parameters:
-      :name: parameters-20
-      :class: method-detail-label
-
-   -  playMode
-
-   -  listener –
-
-      optional response listener
-
-void **seek** (long *position*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-21
-      :class: method-detail-label
-
-   -  position –
-
-      The new position, in milliseconds from the beginning of the stream
-
-   -  listener –
-
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
-
-void **getDuration** (final `DurationListener </apis/1-6-0/android/DurationListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-22
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) final DurationListener with methods to be called on
-      success or failure
-
-void **getPosition** (final `PositionListener </apis/1-6-0/android/PositionListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-23
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) final PositionListener with methods to be called on
-      success or failure
+    -  listener – (optional) final PositionListener with methods to be called on success or failure
 
 void **sendCommand** (final ServiceCommand<?> *mCommand*)
-   .. rubric:: Parameters:
-      :name: parameters-24
-      :class: method-detail-label
+    **Parameters:**
 
-   -  mCommand
+    -  mCommand
 
-`LaunchSession </apis/1-6-0/android/LaunchSession>`__ **decodeLaunchSession** (String *type*, JSONObject *sessionObj*)
-   .. rubric:: Parameters:
-      :name: parameters-25
-      :class: method-detail-label
+:doc:`LaunchSession <and-launchsession>` **decodeLaunchSession** (String *type*, JSONObject *sessionObj*)
+    **Parameters:**
 
-   -  type
-   -  sessionObj
+    -  type
+    -  sessionObj
 
-void **getPlayState** (final `PlayStateListener </apis/1-6-0/android/PlayStateListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-26
-      :class: method-detail-label
+void **getPlayState** (final :doc:`PlayStateListener <and-playstatelistener>` *listener*)
+    **Parameters:**
 
-   -  listener –
+    -  listener – (optional) final PlayStateListener with methods to be called on success or failure
 
-      (optional) final PlayStateListener with methods to be called on
-      success or failure
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`PlayStateListener <and-playstatelistener>`> **subscribePlayState** (:doc:`PlayStateListener <and-playstatelistener>` *listener*)
+    Subscribe for playback state changes
 
-`ServiceSubscription </apis/1-6-0/android/ServiceSubscription>`__\ <`PlayStateListener </apis/1-6-0/android/PlayStateListener>`__> **subscribePlayState** (`PlayStateListener </apis/1-6-0/android/PlayStateListener>`__ *listener*)
-   Subscribe for playback state changes
+    **Parameters:**
 
-   .. rubric:: Parameters:
-      :name: parameters-27
-      :class: method-detail-label
+    -  listener – receives play state notifications
 
-   -  listener –
-
-      receives play state notifications
-
-   .. rubric:: Returns:
-      :name: returns-2
-      :class: method-detail-label
-
-   ServiceSubscription<PlayStateListener>
+    **Returns:** ServiceSubscription<PlayStateListener>
 
 void **unsubscribe** (URLServiceSubscription<?> *subscription*)
-   .. rubric:: Parameters:
-      :name: parameters-28
-      :class: method-detail-label
+    **Parameters:**
 
-   -  subscription
+    -  subscription
 
 boolean **isConnectable** ()
 
@@ -426,11 +264,9 @@ void **connect** ()
 void **disconnect** ()
 
 void **onLoseReachability** (DeviceServiceReachability *reachability*)
-   .. rubric:: Parameters:
-      :name: parameters-29
-      :class: method-detail-label
+    **Parameters:**
 
-   -  reachability
+    -  reachability
 
 void **subscribeServices** ()
 
@@ -438,93 +274,52 @@ void **resubscribeServices** ()
 
 void **unsubscribeServices** ()
 
-`VolumeControl </apis/1-6-0/android/VolumeControl>`__ **getVolumeControl** ()
+:doc:`VolumeControl <and-volumecontrol>` **getVolumeControl** ()
 
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getVolumeControlCapabilityLevel** ()
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getVolumeControlCapabilityLevel** ()
 
-void **volumeUp** (final `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-30
-      :class: method-detail-label
+void **volumeUp** (final :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-   -  listener –
+    -  listener – (optional) final ResponseListener< Object > with methods to be called on success or failure
 
-      (optional) final ResponseListener< Object > with methods to be
-      called on success or failure
+void **volumeDown** (final :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-void **volumeDown** (final `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-31
-      :class: method-detail-label
+    -  listener – (optional) final ResponseListener< Object > with methods to be called on success or failure
 
-   -  listener –
+void **setVolume** (float *volume*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-      (optional) final ResponseListener< Object > with methods to be
-      called on success or failure
+    -  volume
 
-void **setVolume** (float *volume*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-32
-      :class: method-detail-label
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   -  volume
+void **getVolume** (final :doc:`VolumeListener <and-volumelistener>` *listener*)
+    **Parameters:**
 
-   -  listener –
+    -  listener – (optional) final VolumeListener with methods to be called on success or failure
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+void **setMute** (boolean *isMute*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    **Parameters:**
 
-void **getVolume** (final `VolumeListener </apis/1-6-0/android/VolumeListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-33
-      :class: method-detail-label
+    -  isMute
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   -  listener –
+void **getMute** (final :doc:`MuteListener <and-mutelistener>` *listener*)
+    **Parameters:**
 
-      (optional) final VolumeListener with methods to be called on
-      success or failure
+    -  listener – (optional) final MuteListener with methods to be called on success or failure
 
-void **setMute** (boolean *isMute*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-34
-      :class: method-detail-label
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`VolumeListener <and-volumelistener>`> **subscribeVolume** (:doc:`VolumeListener <and-volumelistener>` *listener*)
+    **Parameters:**
 
-   -  isMute
+    -  listener – (optional) VolumeListener with methods to be called on success or failure
 
-   -  listener –
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`MuteListener <and-mutelistener>`> **subscribeMute** (:doc:`MuteListener <and-mutelistener>` *listener*)
+    **Parameters:**
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
-
-void **getMute** (final `MuteListener </apis/1-6-0/android/MuteListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-35
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) final MuteListener with methods to be called on success
-      or failure
-
-`ServiceSubscription </apis/1-6-0/android/ServiceSubscription>`__\ <`VolumeListener </apis/1-6-0/android/VolumeListener>`__> **subscribeVolume** (`VolumeListener </apis/1-6-0/android/VolumeListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-36
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) VolumeListener with methods to be called on success or
-      failure
-
-`ServiceSubscription </apis/1-6-0/android/ServiceSubscription>`__\ <`MuteListener </apis/1-6-0/android/MuteListener>`__> **subscribeMute** (`MuteListener </apis/1-6-0/android/MuteListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-37
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) MuteListener with methods to be called on success or
-      failure
+    -  listener – (optional) MuteListener with methods to be called on success or failure
 
 static DiscoveryFilter **discoveryFilter** ()
 
@@ -532,91 +327,73 @@ Inherited Methods
 -----------------
 
 void **connect** ()
-   Will attempt to connect to the DeviceService. The failure/success
-   will be reported back to the DeviceServiceListener. If the connection
-   attempt reveals that pairing is required, the DeviceServiceListener
-   will also be notified in that event.
+    Will attempt to connect to the DeviceService. The failure/success
+    will be reported back to the DeviceServiceListener. If the connection
+    attempt reveals that pairing is required, the DeviceServiceListener
+    will also be notified in that event.
 
 void **disconnect** ()
-   Will attempt to disconnect from the DeviceService. The
-   failure/success will be reported back to the DeviceServiceListener.
+    Will attempt to disconnect from the DeviceService. The
+    failure/success will be reported back to the DeviceServiceListener.
 
 boolean **isConnected** ()
-   Whether the DeviceService is currently connected
+    Whether the DeviceService is currently connected
 
 boolean **isConnectable** ()
 
 void **cancelPairing** ()
-   Explicitly cancels pairing in services that require pairing. In some
-   services, this will hide a prompt that is displaying on the device.
+    Explicitly cancels pairing in services that require pairing. In some
+    services, this will hide a prompt that is displaying on the device.
 
 void **sendPairingKey** (String *pairingKey*)
-   Will attempt to pair with the DeviceService with the provided
-   pairingData. The failure/success will be reported back to the
-   DeviceServiceListener.
+    Will attempt to pair with the DeviceService with the provided
+    pairingData. The failure/success will be reported back to the
+    DeviceServiceListener.
 
-   .. rubric:: Parameters:
-      :name: parameters-38
-      :class: method-detail-label
+    **Parameters:**
 
-   -  pairingKey –
-
-      Data to be used for pairing. The type of this parameter will vary
-      depending on what type of pairing is required, but is likely to be
-      a string (pin code, pairing key, etc).
+    -  pairingKey – Data to be used for pairing. The type of this parameter will vary depending on what type of pairing is required, but is likely to be a string (pin code, pairing key, etc).
 
 List<String> **getCapabilities** ()
 
 boolean **hasCapability** (String *capability*)
-   Test to see if the capabilities array contains a given capability.
-   See the individual Capability classes for acceptable capability
-   values.
+    Test to see if the capabilities array contains a given capability.
+    See the individual Capability classes for acceptable capability
+    values.
 
-   It is possible to append a wildcard search term ``.Any`` to the end
-   of the search term. This method will return true for capabilities
-   that match the term up to the wildcard.
+    It is possible to append a wildcard search term ``.Any`` to the end
+    of the search term. This method will return true for capabilities
+    that match the term up to the wildcard.
 
-   Example: ``Launcher.App.Any``
+    Example: ``Launcher.App.Any``
 
-   .. rubric:: Parameters:
-      :name: parameters-39
-      :class: method-detail-label
+    **Parameters:**
 
-   -  capability –
-
-      Capability to test against
+    -  capability – Capability to test against
 
 boolean **hasAnyCapability** (String... *capabilities*)
-   Test to see if the capabilities array contains at least one
-   capability in a given set of capabilities. See the individual
-   Capability classes for acceptable capability values.
+    Test to see if the capabilities array contains at least one
+    capability in a given set of capabilities. See the individual
+    Capability classes for acceptable capability values.
 
-   See hasCapability: for a description of the wildcard feature provided
-   by this method.
+    See hasCapability: for a description of the wildcard feature provided
+    by this method.
 
-   .. rubric:: Parameters:
-      :name: parameters-40
-      :class: method-detail-label
+    **Parameters:**
 
-   -  capabilities –
-
-      Set of capabilities to test against
+    -  capabilities – Set of capabilities to test against
 
 boolean **hasCapabilities** (List<String> *capabilities*)
-   Test to see if the capabilities array contains a given set of
-   capabilities. See the individual Capability classes for acceptable
-   capability values.
+    Test to see if the capabilities array contains a given set of
+    capabilities. See the individual Capability classes for acceptable
+    capability values.
 
-   See hasCapability: for a description of the wildcard feature provided
-   by this method.
+    See hasCapability: for a description of the wildcard feature provided
+    by this method.
 
-   .. rubric:: Parameters:
-      :name: parameters-41
-      :class: method-detail-label
+    **Parameters:**
 
-   -  capabilities –
-
-      List of capabilities to test against
+    -  capabilities – List of capabilities to test against
 
 ServiceDescription **getServiceDescription** ()
 
@@ -625,568 +402,349 @@ ServiceConfig **getServiceConfig** ()
 JSONObject **toJSONObject** ()
 
 String **getServiceName** ()
-   Name of the DeviceService (webOS, Chromecast, etc)
+    Name of the DeviceService (webOS, Chromecast, etc)
 
-void **closeLaunchSession** (`LaunchSession </apis/1-6-0/android/LaunchSession>`__ *launchSession*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Closes the session on the first screen device. Depending on the
-   sessionType, the associated service will have different ways of
-   handling the close functionality.
+void **closeLaunchSession** (:doc:`LaunchSession <and-launchsession>` *launchSession*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Closes the session on the first screen device. Depending on the
+    sessionType, the associated service will have different ways of
+    handling the close functionality.
 
-   .. rubric:: Parameters:
-      :name: parameters-42
-      :class: method-detail-label
+    **Parameters:**
 
-   -  launchSession –
+    -  launchSession – LaunchSession to close
+    -  listener – (optional) listener to be called on success/failure
 
-      LaunchSession to close
+:doc:`PlaylistControl <and-playlistcontrol>` **getPlaylistControl** ()
 
-   -  listener –
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getPlaylistControlCapabilityLevel** ()
 
-      (optional) listener to be called on success/failure
+void **previous** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Jump playlist to the previous track.
 
-`PlaylistControl </apis/1-6-0/android/PlaylistControl>`__ **getPlaylistControl** ()
+    Play previous track in the playlist
 
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getPlaylistControlCapabilityLevel** ()
+    **Related capabilities:**
 
-void **previous** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Jump playlist to the previous track.
+    -  ``PlaylistControl.Previous``
 
-   Play previous track in the playlist
+    **Parameters:**
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities
-      :class: method-detail-label
+    -  listener – optional response listener
 
-   -  ``PlaylistControl.Previous``
+void **next** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Jump playlist to the next track.
 
-   .. rubric:: Parameters:
-      :name: parameters-43
-      :class: method-detail-label
+    Play next track in the playlist
 
-   -  listener –
+    **Related capabilities:**
 
-      optional response listener
+    -  ``PlaylistControl.Next``
 
-void **next** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Jump playlist to the next track.
+    **Parameters:**
 
-   Play next track in the playlist
+    -  listener – optional response listener
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-1
-      :class: method-detail-label
+void **jumpToTrack** (long *index*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Jump the playlist to the designated track.
 
-   -  ``PlaylistControl.Next``
+    Play a track specified by index in the playlist
 
-   .. rubric:: Parameters:
-      :name: parameters-44
-      :class: method-detail-label
+    **Related capabilities:**
 
-   -  listener –
+    -  ``PlaylistControl.JumpToTrack``
 
-      optional response listener
+    **Parameters:**
 
-void **jumpToTrack** (long *index*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Jump the playlist to the designated track.
+    -  index – index in the playlist, it starts from zero like index of array
+    -  listener – optional response listener
 
-   Play a track specified by index in the playlist
+void **setPlayMode** (:doc:`PlayMode <and-playmode>` *playMode*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Set order of playing tracks
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-2
-      :class: method-detail-label
+    **Parameters:**
 
-   -  ``PlaylistControl.JumpToTrack``
+    -  playMode
+    -  listener – optional response listener
 
-   .. rubric:: Parameters:
-      :name: parameters-45
-      :class: method-detail-label
+:doc:`MediaControl <and-mediacontrol>` **getMediaControl** ()
+    Get MediaControl implementation
 
-   -  index –
+    **Returns:** MediaControl
 
-      index in the playlist, it starts from zero like index of array
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getMediaControlCapabilityLevel** ()
+    Get a capability priority for current implementation
 
-   -  listener –
+    **Returns:** CapabilityPriorityLevel
 
-      optional response listener
+void **play** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Send play command.
 
-void **setPlayMode** (`PlayMode </apis/1-6-0/android/PlayMode>`__ *playMode*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Set order of playing tracks
+    **Related capabilities:**
 
-   .. rubric:: Parameters:
-      :name: parameters-46
-      :class: method-detail-label
+    -  ``MediaControl.Play``
 
-   -  playMode
+    **Parameters:**
 
-   -  listener –
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-      optional response listener
+void **pause** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Send pause command.
 
-`MediaControl </apis/1-6-0/android/MediaControl>`__ **getMediaControl** ()
-   Get MediaControl implementation
+    **Related capabilities:**
 
-   .. rubric:: Returns:
-      :name: returns-3
-      :class: method-detail-label
+    -  ``MediaControl.Pause``
 
-   MediaControl
+    **Parameters:**
 
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getMediaControlCapabilityLevel** ()
-   Get a capability priority for current implementation
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   .. rubric:: Returns:
-      :name: returns-4
-      :class: method-detail-label
+void **stop** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Send play command.
 
-   CapabilityPriorityLevel
+    **Related capabilities:**
 
-void **play** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Send play command.
+    -  ``MediaControl.Stop``
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-3
-      :class: method-detail-label
+    **Parameters:**
 
-   -  ``MediaControl.Play``
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   .. rubric:: Parameters:
-      :name: parameters-47
-      :class: method-detail-label
+void **rewind** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Send rewind command.
 
-   -  listener –
+    **Related capabilities:**
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    -  ``MediaControl.Rewind``
 
-void **pause** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Send pause command.
+    **Parameters:**
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-4
-      :class: method-detail-label
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   -  ``MediaControl.Pause``
+void **fastForward** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Send play command.
 
-   .. rubric:: Parameters:
-      :name: parameters-48
-      :class: method-detail-label
+    **Related capabilities:**
 
-   -  listener –
+    -  ``MediaControl.FastForward``
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    **Parameters:**
 
-void **stop** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Send play command.
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-5
-      :class: method-detail-label
+void **seek** (long *position*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Seeks to a new position within the current media item
 
-   -  ``MediaControl.Stop``
+    **Related capabilities:**
 
-   .. rubric:: Parameters:
-      :name: parameters-49
-      :class: method-detail-label
+    -  ``MediaControl.Seek``
 
-   -  listener –
+    **Parameters:**
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    -  position – The new position, in milliseconds from the beginning of the stream
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-void **rewind** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Send rewind command.
+void **getDuration** (:doc:`DurationListener <and-durationlistener>` *listener*)
+    Get the current media duration in milliseconds
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-6
-      :class: method-detail-label
+    **Parameters:**
 
-   -  ``MediaControl.Rewind``
+    -  listener – (optional) DurationListener with methods to be called on success or failure
 
-   .. rubric:: Parameters:
-      :name: parameters-50
-      :class: method-detail-label
+void **getPosition** (:doc:`PositionListener <and-positionlistener>` *listener*)
+    Get the current playback position in milliseconds
 
-   -  listener –
+    **Parameters:**
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    -  listener – (optional) PositionListener with methods to be called on success or failure
 
-void **fastForward** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Send play command.
+void **getPlayState** (:doc:`PlayStateListener <and-playstatelistener>` *listener*)
+    Get the current state of playback
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-7
-      :class: method-detail-label
+    **Parameters:**
 
-   -  ``MediaControl.FastForward``
+    -  listener – (optional) PlayStateListener with methods to be called on success or failure
 
-   .. rubric:: Parameters:
-      :name: parameters-51
-      :class: method-detail-label
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`PlayStateListener <and-playstatelistener>`> **subscribePlayState** (:doc:`PlayStateListener <and-playstatelistener>` *listener*)
+    Subscribe for playback state changes
 
-   -  listener –
+    **Parameters:**
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    -  listener – receives play state notifications
 
-void **seek** (long *position*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Seeks to a new position within the current media item
+    **Returns:** ServiceSubscription<PlayStateListener>
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-8
-      :class: method-detail-label
+:doc:`MediaPlayer <and-mediaplayer>` **getMediaPlayer** ()
 
-   -  ``MediaControl.Seek``
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getMediaPlayerCapabilityLevel** ()
 
-   .. rubric:: Parameters:
-      :name: parameters-52
-      :class: method-detail-label
+void **getMediaInfo** (:doc:`MediaInfoListener <and-mediainfolistener>` *listener*)
+    **Parameters:**
 
-   -  position –
+    -  listener – (optional) MediaInfoListener with methods to be called on success or failure
 
-      The new position, in milliseconds from the beginning of the stream
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`MediaInfoListener <and-mediainfolistener>`> **subscribeMediaInfo** (:doc:`MediaInfoListener <and-mediainfolistener>` *listener*)
+    **Parameters:**
 
-   -  listener –
+    -  listener – (optional) MediaInfoListener with methods to be called on success or failure
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+void **displayImage** (:doc:`MediaInfo <and-mediainfo>` *mediaInfo*, LaunchListener *listener*)
+    Display an image on the device. Not all devices support all of the
+    parameters -- supply as many as you have available.
 
-void **getDuration** (`DurationListener </apis/1-6-0/android/DurationListener>`__ *listener*)
-   Get the current media duration in milliseconds
+    **Related capabilities:**
 
-   .. rubric:: Parameters:
-      :name: parameters-53
-      :class: method-detail-label
+    -  ``MediaPlayer.Display.Image``
+    -  ``MediaPlayer.MediaData.Title``
+    -  ``MediaPlayer.MediaData.Description``
+    -  ``MediaPlayer.MediaData.Thumbnail``
+    -  ``MediaPlayer.MediaData.MimeType``
 
-   -  listener –
+    **Parameters:**
 
-      (optional) DurationListener with methods to be called on success
-      or failure
+    -  mediaInfo – Object of MediaInfo class which includes all the information about an image to display.
 
-void **getPosition** (`PositionListener </apis/1-6-0/android/PositionListener>`__ *listener*)
-   Get the current playback position in milliseconds
+    -  listener – (optional) LaunchListener with methods to be called on success or failure
 
-   .. rubric:: Parameters:
-      :name: parameters-54
-      :class: method-detail-label
+void **playMedia** (:doc:`MediaInfo <and-mediainfo>` *mediaInfo*, boolean *shouldLoop*, LaunchListener *listener*)
+    Play an audio or video file on the device. Not all devices support
+    all of the parameters -- supply as many as you have available.
 
-   -  listener –
+    **Related capabilities:**
 
-      (optional) PositionListener with methods to be called on success
-      or failure
+    -  ``MediaPlayer.Play.Video``
+    -  ``MediaPlayer.Play.Audio``
+    -  ``MediaPlayer.MediaData.Title``
+    -  ``MediaPlayer.MediaData.Description``
+    -  ``MediaPlayer.MediaData.Thumbnail``
+    -  ``MediaPlayer.MediaData.MimeType``
 
-void **getPlayState** (`PlayStateListener </apis/1-6-0/android/PlayStateListener>`__ *listener*)
-   Get the current state of playback
+    **Parameters:**
 
-   .. rubric:: Parameters:
-      :name: parameters-55
-      :class: method-detail-label
+    -  mediaInfo – Object of MediaInfo class which includes all the information about an image to display.
+    -  shouldLoop – Whether to automatically loop playback
+    -  listener – (optional) LaunchListener with methods to be called on success or failure
 
-   -  listener –
+void **closeMedia** (:doc:`LaunchSession <and-launchsession>` *launchSession*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Close a running media session. Because media is handled differently
+    on different platforms, it is required to keep track of LaunchSession
+    and MediaControl objects to control that media session in the future.
+    LaunchSession will be required to close the media and mediaControl
+    will be required to control the media.
 
-      (optional) PlayStateListener with methods to be called on success
-      or failure
+    **Related capabilities:**
 
-`ServiceSubscription </apis/1-6-0/android/ServiceSubscription>`__\ <`PlayStateListener </apis/1-6-0/android/PlayStateListener>`__> **subscribePlayState** (`PlayStateListener </apis/1-6-0/android/PlayStateListener>`__ *listener*)
-   Subscribe for playback state changes
+    -  ``MediaPlayer.Close``
 
-   .. rubric:: Parameters:
-      :name: parameters-56
-      :class: method-detail-label
+    **Parameters:**
 
-   -  listener –
+    -  launchSession – LaunchSession object for use in closing media instance
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-      receives play state notifications
+:doc:`VolumeControl <and-volumecontrol>` **getVolumeControl** ()
 
-   .. rubric:: Returns:
-      :name: returns-5
-      :class: method-detail-label
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getVolumeControlCapabilityLevel** ()
 
-   ServiceSubscription<PlayStateListener>
+void **volumeUp** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Sends the volume up command to the device.
 
-`MediaPlayer </apis/1-6-0/android/MediaPlayer>`__ **getMediaPlayer** ()
+    **Related capabilities:**
 
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getMediaPlayerCapabilityLevel** ()
+    -  ``VolumeControl.UpDown``
 
-void **getMediaInfo** (`MediaInfoListener </apis/1-6-0/android/MediaInfoListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-57
-      :class: method-detail-label
+    **Parameters:**
 
-   -  listener –
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-      (optional) MediaInfoListener with methods to be called on success
-      or failure
+void **volumeDown** (:doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Sends the volume down command to the device.
 
-`ServiceSubscription </apis/1-6-0/android/ServiceSubscription>`__\ <`MediaInfoListener </apis/1-6-0/android/MediaInfoListener>`__> **subscribeMediaInfo** (`MediaInfoListener </apis/1-6-0/android/MediaInfoListener>`__ *listener*)
-   .. rubric:: Parameters:
-      :name: parameters-58
-      :class: method-detail-label
+    **Related capabilities:**
 
-   -  listener –
+    -  ``VolumeControl.UpDown``
 
-      (optional) MediaInfoListener with methods to be called on success
-      or failure
+    **Parameters:**
 
-void **displayImage** (`MediaInfo </apis/1-6-0/android/MediaInfo>`__ *mediaInfo*, LaunchListener *listener*)
-   Display an image on the device. Not all devices support all of the
-   parameters -- supply as many as you have available.
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-9
-      :class: method-detail-label
+void **setVolume** (float *volume*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Set the volume of the device.
 
-   -  ``MediaPlayer.Display.Image``
-   -  ``MediaPlayer.MediaData.Title``
-   -  ``MediaPlayer.MediaData.Description``
-   -  ``MediaPlayer.MediaData.Thumbnail``
-   -  ``MediaPlayer.MediaData.MimeType``
+    **Related capabilities:**
 
-   .. rubric:: Parameters:
-      :name: parameters-59
-      :class: method-detail-label
+    -  ``VolumeControl.Set``
 
-   -  mediaInfo –
+    **Parameters:**
 
-      Object of MediaInfo class which includes all the information about
-      an image to display.
+    -  volume – Volume as a float between 0.0 and 1.0
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   -  listener –
+void **getVolume** (:doc:`VolumeListener <and-volumelistener>` *listener*)
+    Get the current volume of the device.
 
-      (optional) LaunchListener with methods to be called on success or
-      failure
+    **Related capabilities:**
 
-void **playMedia** (`MediaInfo </apis/1-6-0/android/MediaInfo>`__ *mediaInfo*, boolean *shouldLoop*, LaunchListener *listener*)
-   Play an audio or video file on the device. Not all devices support
-   all of the parameters -- supply as many as you have available.
+    -  ``VolumeControl.Get``
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-10
-      :class: method-detail-label
+    **Parameters:**
 
-   -  ``MediaPlayer.Play.Video``
-   -  ``MediaPlayer.Play.Audio``
-   -  ``MediaPlayer.MediaData.Title``
-   -  ``MediaPlayer.MediaData.Description``
-   -  ``MediaPlayer.MediaData.Thumbnail``
-   -  ``MediaPlayer.MediaData.MimeType``
+    -  listener – (optional) VolumeListener with methods to be called on success or failure
 
-   .. rubric:: Parameters:
-      :name: parameters-60
-      :class: method-detail-label
+void **setMute** (boolean *isMute*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Set the current volume.
 
-   -  mediaInfo –
+    **Related capabilities:**
 
-      Object of MediaInfo class which includes all the information about
-      an image to display.
+    -  ``VolumeControl.Mute.Set``
 
-   -  shouldLoop –
+    **Parameters:**
 
-      Whether to automatically loop playback
+    -  isMute
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   -  listener –
+void **getMute** (:doc:`MuteListener <and-mutelistener>` *listener*)
+    Get the current mute state.
 
-      (optional) LaunchListener with methods to be called on success or
-      failure
+    **Related capabilities:**
 
-void **closeMedia** (`LaunchSession </apis/1-6-0/android/LaunchSession>`__ *launchSession*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Close a running media session. Because media is handled differently
-   on different platforms, it is required to keep track of LaunchSession
-   and MediaControl objects to control that media session in the future.
-   LaunchSession will be required to close the media and mediaControl
-   will be required to control the media.
+    -  ``VolumeControl.Mute.Get``
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-11
-      :class: method-detail-label
+    **Parameters:**
 
-   -  ``MediaPlayer.Close``
+    -  listener – (optional) MuteListener with methods to be called on success or failure
 
-   .. rubric:: Parameters:
-      :name: parameters-61
-      :class: method-detail-label
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`VolumeListener <and-volumelistener>`> **subscribeVolume** (:doc:`VolumeListener <and-volumelistener>` *listener*)
+    Subscribe to the volume on the TV.
 
-   -  launchSession –
+    **Related capabilities:**
 
-      LaunchSession object for use in closing media instance
+    -  ``VolumeControl.Subscribe``
 
-   -  listener –
+    **Parameters:**
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    -  listener – (optional) VolumeListener with methods to be called on success or failure
 
-`VolumeControl </apis/1-6-0/android/VolumeControl>`__ **getVolumeControl** ()
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`MuteListener <and-mutelistener>`> **subscribeMute** (:doc:`MuteListener <and-mutelistener>` *listener*)
+    Subscribe to the mute state on the TV.
 
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getVolumeControlCapabilityLevel** ()
+    **Related capabilities:**
 
-void **volumeUp** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Sends the volume up command to the device.
+    -  ``VolumeControl.Mute.Subscribe``
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-12
-      :class: method-detail-label
+    **Parameters:**
 
-   -  ``VolumeControl.UpDown``
-
-   .. rubric:: Parameters:
-      :name: parameters-62
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
-
-void **volumeDown** (`ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Sends the volume down command to the device.
-
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-13
-      :class: method-detail-label
-
-   -  ``VolumeControl.UpDown``
-
-   .. rubric:: Parameters:
-      :name: parameters-63
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
-
-void **setVolume** (float *volume*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Set the volume of the device.
-
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-14
-      :class: method-detail-label
-
-   -  ``VolumeControl.Set``
-
-   .. rubric:: Parameters:
-      :name: parameters-64
-      :class: method-detail-label
-
-   -  volume –
-
-      Volume as a float between 0.0 and 1.0
-
-   -  listener –
-
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
-
-void **getVolume** (`VolumeListener </apis/1-6-0/android/VolumeListener>`__ *listener*)
-   Get the current volume of the device.
-
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-15
-      :class: method-detail-label
-
-   -  ``VolumeControl.Get``
-
-   .. rubric:: Parameters:
-      :name: parameters-65
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) VolumeListener with methods to be called on success or
-      failure
-
-void **setMute** (boolean *isMute*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Set the current volume.
-
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-16
-      :class: method-detail-label
-
-   -  ``VolumeControl.Mute.Set``
-
-   .. rubric:: Parameters:
-      :name: parameters-66
-      :class: method-detail-label
-
-   -  isMute
-
-   -  listener –
-
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
-
-void **getMute** (`MuteListener </apis/1-6-0/android/MuteListener>`__ *listener*)
-   Get the current mute state.
-
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-17
-      :class: method-detail-label
-
-   -  ``VolumeControl.Mute.Get``
-
-   .. rubric:: Parameters:
-      :name: parameters-67
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) MuteListener with methods to be called on success or
-      failure
-
-`ServiceSubscription </apis/1-6-0/android/ServiceSubscription>`__\ <`VolumeListener </apis/1-6-0/android/VolumeListener>`__> **subscribeVolume** (`VolumeListener </apis/1-6-0/android/VolumeListener>`__ *listener*)
-   Subscribe to the volume on the TV.
-
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-18
-      :class: method-detail-label
-
-   -  ``VolumeControl.Subscribe``
-
-   .. rubric:: Parameters:
-      :name: parameters-68
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) VolumeListener with methods to be called on success or
-      failure
-
-`ServiceSubscription </apis/1-6-0/android/ServiceSubscription>`__\ <`MuteListener </apis/1-6-0/android/MuteListener>`__> **subscribeMute** (`MuteListener </apis/1-6-0/android/MuteListener>`__ *listener*)
-   Subscribe to the mute state on the TV.
-
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-19
-      :class: method-detail-label
-
-   -  ``VolumeControl.Mute.Subscribe``
-
-   .. rubric:: Parameters:
-      :name: parameters-69
-      :class: method-detail-label
-
-   -  listener –
-
-      (optional) MuteListener with methods to be called on success or
-      failure
+    -  listener – (optional) MuteListener with methods to be called on success or failure
 
 void **onLoseReachability** (DeviceServiceReachability *reachability*)
-   .. rubric:: Parameters:
-      :name: parameters-70
-      :class: method-detail-label
+    **Parameters:**
 
-   -  reachability
+    -  reachability
 
 void **unsubscribe** (URLServiceSubscription<?> *subscription*)
-   .. rubric:: Parameters:
-      :name: parameters-71
-      :class: method-detail-label
+    **Parameters:**
 
-   -  subscription
+    -  subscription
 
 void **sendCommand** (ServiceCommand<?> *command*)
-   .. rubric:: Parameters:
-      :name: parameters-72
-      :class: method-detail-label
+    **Parameters:**
 
-   -  command
+    -  command

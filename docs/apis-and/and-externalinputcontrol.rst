@@ -1,5 +1,6 @@
-ExternalInputControl com.connectsdk.service.capability.ExternalInputControl
-===========================================================================
+ExternalInputControl
+====================
+``com.connectsdk.service.capability.ExternalInputControl``
 
 *extends CapabilityMethods*
 
@@ -11,98 +12,73 @@ Properties
 ----------
 
 final String Any = "ExternalInputControl.Any"
+
 final String Picker_Launch = "ExternalInputControl.Picker.Launch"
+
 final String Picker_Close = "ExternalInputControl.Picker.Close"
+
 final String List = "ExternalInputControl.List"
+
 final String Set = "ExternalInputControl.Set"
+
 final String[] Capabilities = { Picker_Launch, Picker_Close, List, Set }
 
 Inner Classes
 -------------
 
--  `ExternalInputListListener </apis/1-6-0/android/ExternalInputListListener>`__
+-  :doc:`ExternalInputListListener <and-externalinputlistlistener>`
 
 Methods
 -------
 
-`ExternalInputControl </apis/1-6-0/android/ExternalInputControl>`__ **getExternalInput** ()
+:doc:`ExternalInputControl <and-externalinputcontrol>` **getExternalInput** ()
 
-`CapabilityPriorityLevel </apis/1-6-0/android/CapabilityPriorityLevel>`__ **getExternalInputControlPriorityLevel** ()
+:doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getExternalInputControlPriorityLevel** ()
 
-void **launchInputPicker** (`AppLaunchListener </apis/1-6-0/android/AppLaunchListener>`__ *listener*)
-   Launches the visual input picker on the device. This may be helpful
-   for situations where the device does not support directly
-   listing/modifying the external inputs.
+void **launchInputPicker** (:doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+    Launches the visual input picker on the device. This may be helpful
+    for situations where the device does not support directly
+    listing/modifying the external inputs.
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities
-      :class: method-detail-label
+    **Related capabilities:**
 
-   -  ``ExternalInputControl.Picker.Launch``
+    -  ``ExternalInputControl.Picker.Launch``
 
-   .. rubric:: Parameters:
-      :name: parameters
-      :class: method-detail-label
+    **Parameters:**
 
-   -  listener –
+    -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-      (optional) AppLaunchListener with methods to be called on success
-      or failure
+void **closeInputPicker** (:doc:`LaunchSession <and-launchsession>` *launchSessionm*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Closes the input picker on the device, if it is currently open.
 
-void **closeInputPicker** (`LaunchSession </apis/1-6-0/android/LaunchSession>`__ *launchSessionm*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Closes the input picker on the device, if it is currently open.
+    **Related capabilities:**
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-1
-      :class: method-detail-label
+    -  ``ExternalInputControl.Picker.Close``
 
-   -  ``ExternalInputControl.Picker.Close``
+    **Parameters:**
 
-   .. rubric:: Parameters:
-      :name: parameters-1
-      :class: method-detail-label
+    -  launchSessionm
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
 
-   -  launchSessionm
+void **getExternalInputList** (:doc:`ExternalInputListListener <and-externalinputlistlistener>` *listener*)
+    Get a list of input devices (HDMI, AV, etc) connected to the device
 
-   -  listener –
+    **Related capabilities:**
 
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    -  ``ExternalInputControl.List``
 
-void **getExternalInputList** (`ExternalInputListListener </apis/1-6-0/android/ExternalInputListListener>`__ *listener*)
-   Get a list of input devices (HDMI, AV, etc) connected to the device
+    **Parameters:**
 
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-2
-      :class: method-detail-label
+    -  listener – (optional) ExternalInputListListener with methods to be called on success or failure
 
-   -  ``ExternalInputControl.List``
+void **setExternalInput** (:doc:`ExternalInputInfo <and-externalinputinfo>` *input*, :doc:`ResponseListener <and-responselistener>` <Object> *listener*)
+    Switch to the specified external input
 
-   .. rubric:: Parameters:
-      :name: parameters-2
-      :class: method-detail-label
+    **Related capabilities:**
 
-   -  listener –
+    -  ``ExternalInputControl.Set``
 
-      (optional) ExternalInputListListener with methods to be called on
-      success or failure
+    **Parameters:**
 
-void **setExternalInput** (`ExternalInputInfo </apis/1-6-0/android/ExternalInputInfo>`__ *input*, `ResponseListener </apis/1-6-0/android/ResponseListener>`__\ <Object> *listener*)
-   Switch to the specified external input
-
-   .. rubric:: Related capabilities:
-      :name: related-capabilities-3
-      :class: method-detail-label
-
-   -  ``ExternalInputControl.Set``
-
-   .. rubric:: Parameters:
-      :name: parameters-3
-      :class: method-detail-label
-
-   -  input
-
-   -  listener –
-
-      (optional) ResponseListener< Object > with methods to be called on
-      success or failure
+    -  input
+    -  listener – (optional) ResponseListener< Object > with methods to be called on success or failure
