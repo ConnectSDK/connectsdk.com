@@ -21,77 +21,37 @@
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: DOWNLOAD
+   :caption: SDK DOWNLOAD
 
    download-connect-sdk
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: GUIDES FOR ANDROID
+   :caption: GUIDE:: ANDROID
 
    /guide-and/index
-   /guide-and/and-beam-media
-   /guide-and/and-beam-web-apps
-   /guide-and/and-launch-app
-   /guide-and/and-discovery-manager
-   /guide-and/and-checking-capabilities
-   /guide-and/and-resuming-apps
-   /guide-and/and-faq
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: GUIDES FOR CORDOVA
+   :caption: GUIDE:: CORDOVA
 
    /guide-cor/index
-   /guide-cor/cor-beam-media
-   /guide-cor/cor-beam-web-apps
-   /guide-cor/cor-launch-app
-   /guide-cor/cor-discovery-manager
-
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: GUIDES FOR IOS
+   :caption: GUIDE:: IOS
 
    /guide-ios/index
-   /guide-ios/ios-beam-media
-   /guide-ios/ios-beam-web-apps
-   /guide-ios/ios-launch-app
-   /guide-ios/ios-discovery-manager
-   /guide-ios/ios-checking-capabilities
-   /guide-ios/ios-resuming-apps
-   /guide-ios/ios-faq
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: GUIDES FOR WEB APP
+   :caption: GUIDE:: WEB APP
 
    /guide-web/index
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: APIS FOR ANDROID
-
-   /apis-and/index
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: APIS FOR CORDOVA
-
-   /apis-cor/index
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: APIS FOR IOS
-
-   /apis-ios/index
 
 .. toctree::
    :maxdepth: 2

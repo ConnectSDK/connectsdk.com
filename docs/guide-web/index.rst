@@ -6,7 +6,6 @@ technologies such as HTML5, Javascript, and CSS. TV web apps are
 typically optimized for larger displays.
 
 To learn more
--------------
 
 #. Read the :doc:`Overview <webapp-overview>` article
 #. Learn how easy it is to :doc:`Create a TV Web App <webapp-create-tv-web-app>`
@@ -15,7 +14,7 @@ To learn more
 .. toctree::
    :maxdepth: 2
    :hidden:
-   
+
    webapp-overview
    webapp-create-tv-web-app
    webapp-port-receiver-app
