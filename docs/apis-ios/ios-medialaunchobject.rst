@@ -19,7 +19,7 @@ id<:doc:`PlayListControl <ios-playlistcontrol>`> playListControl
 Methods
 -------
 
-\- (instancetype) **initWithLaunchSession**:(:doc:`LaunchSession <ios-launchsession>` \*)\ *session* **andMediaControl**:(id<`MediaControl </apis/1-6-0/ios/MediaControl>`__>)\ *mediaControl*
+\- (instancetype) **initWithLaunchSession**:(:doc:`LaunchSession <ios-launchsession>` \*)\ *session* **andMediaControl**:(id<:doc:`MediaControl <ios-mediacontrol>`>)\ *mediaControl*
    Creates an instance of MediaLaunchObject with given property values.
 
    **Parameters:**
@@ -28,7 +28,7 @@ Methods
 
    -  **andMediaControl**: mediaControl – MediaControl object used to control playback
 
-\- (instancetype) **initWithLaunchSession**:(:doc:`LaunchSession <ios-launchsession>` \*)\ *session* **andMediaControl**:(id<`MediaControl </apis/1-6-0/ios/MediaControl>`__>)\ *mediaControl* **andPlayListControl**:(id<:doc:`PlayListControl <ios-playlistcontrol>`>)\ *playListControl*
+\- (instancetype) **initWithLaunchSession**:(:doc:`LaunchSession <ios-launchsession>` \*)\ *session* **andMediaControl**:(id<:doc:`MediaControl <ios-mediacontrol>`>)\ *mediaControl* **andPlayListControl**:(id<:doc:`PlayListControl <ios-playlistcontrol>`>)\ *playListControl*
    **Parameters:**
 
    -  session

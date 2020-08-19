@@ -8,7 +8,7 @@ click).
 Methods
 -------
 
-\- (id<:doc:`MouseControl <ios-mousevontrol>`>) **mouseControl**
+\- (id<:doc:`MouseControl <ios-mousecontrol>`>) **mouseControl**
 
 \- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **mouseControlPriority**
 

@@ -9,7 +9,7 @@ browser, etc) as well as by (platform-specific) app id.
 Methods
 -------
 
-\- (id<:doc:`Launcher <ios-launcher>`__>) **launcher**
+\- (id<:doc:`Launcher <ios-launcher>`>) **launcher**
 
 \- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **launcherPriority**
 
@@ -135,7 +135,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (:doc:`ServiceSubscription <ios-servicesubscription>`__ \*) **subscribeAppState**:(`LaunchSession </apis/1-6-0/ios/LaunchSession>`__ \*)\ *launchSession* **success**:(`AppStateSuccessBlock <#appstatesuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribeAppState**:(:doc:`LaunchSession <ios-launchsession>` \*)\ *launchSession* **success**:(`AppStateSuccessBlock <#appstatesuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Subscribes to changes of the state of the target app. Every time the
    app's state changes, the success block will be called with info on
    the app's running status and on-screen visibility.

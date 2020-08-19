@@ -7,7 +7,7 @@ required for displaying media on the device.
 Methods
 -------
 
-\- (id<:doc:`MediaPlayer <ios-mediaplayer>`__>) **mediaPlayer**
+\- (id<:doc:`MediaPlayer <ios-mediaplayer>`>) **mediaPlayer**
 
 \- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **mediaPlayerPriority**
 
