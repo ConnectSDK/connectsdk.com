@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DiscoveryManager &mdash; connectSDK  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DiscoveryManagerDelegate" href="ios-discoverymanagerdelegate.html" />
+    <link rel="prev" title="DevicePickerDelegate" href="ios-devicepickerdelegate.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Discovery</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ios-capabilityfilter.html">CapabilityFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-devicepicker.html">DevicePicker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-devicepickerdelegate.html">DevicePickerDelegate</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DiscoveryManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#in-depth">In depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ios-discoverymanagerdelegate.html">DiscoveryManagerDelegate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device-services">Device Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capabilities">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#info-objects">Info Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#advanced">Advanced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#globals">Globals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#misc">Misc</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../guide-ios/index.html">Getting Started</a> &raquo;</li>
+        
+          <li><a href="index.html">Discovery</a> &raquo;</li>
+        
+      <li>DiscoveryManager</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apis-ios/ios-discoverymanager.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="discoverymanager">
+<h1>DiscoveryManager<a class="headerlink" href="#discoverymanager" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>At the heart of Connect SDK is DiscoveryManager, a multi-protocol
+service discovery engine with a pluggable architecture. Much of your
+initial experience with Connect SDK will be with the DiscoveryManager
+class, as it consolidates discovered service information into
+ConnectableDevice objects.</p>
+</div>
+<div class="section" id="in-depth">
+<h2>In depth<a class="headerlink" href="#in-depth" title="Permalink to this headline">¶</a></h2>
+<p>DiscoveryManager supports discovering services of differing protocols by
+using DiscoveryProviders. Many services are discoverable over
+<a class="reference external" href="http://tools.ietf.org/html/draft-cai-ssdp-v1-03">SSDP</a> and are
+registered to be discovered with the SSDPDiscoveryProvider class.</p>
+<p>As services are discovered on the network, the DiscoveryProviders will
+notify DiscoveryManager. DiscoveryManager is capable of attributing
+multiple services, if applicable, to a single ConnectableDevice
+instance. Thus, it is possible to have a mixed-mode ConnectableDevice
+object that is theoretically capable of more functionality than a single
+service can provide.</p>
+<p>DiscoveryManager keeps a running list of all discovered devices and
+maintains a filtered list of devices that have satisfied any of your
+CapabilityFilters. This filtered list is used by the DevicePicker when
+presenting the user with a list of devices.</p>
+<p>Only one instance of the DiscoveryManager should be in memory at a time.
+To assist with this, DiscoveryManager has singleton accessors at
+sharedManager and sharedManagerWithDeviceStore:.</p>
+<p>Example:</p>
+<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="n">DiscoveryManager</span> <span class="o">*</span><span class="n">discoveryManager</span> <span class="o">=</span> <span class="p">[</span><span class="n">DiscoveryManager</span> <span class="n">sharedManager</span><span class="p">];</span>
+<span class="n">discoveryManager</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span> <span class="c1">// set delegate to listen for discovery events</span>
+<span class="p">[</span><span class="n">discoveryManager</span> <span class="n">startDiscovery</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>id&lt;<a class="reference internal" href="ios-discoverymanagerdelegate.html"><span class="doc">DiscoveryManagerDelegate</span></a>&gt; delegate</dt><dd><p>Delegate which should receive discovery updates. It is not necessary
+to set this delegate property unless you are implementing your own
+device picker. Connect SDK provides a default DevicePicker which acts
+as a DiscoveryManagerDelegate, and should work for most cases.</p>
+<p>If you have provided a capabilityFilters array, the delegate will
+only receive update messages for ConnectableDevices which satisfy at
+least one of the CapabilityFilters. If no capabilityFilters array is
+provided, the delegate will receive update messages for all
+ConnectableDevice objects that are discovered.</p>
+</dd>
+<dt>NSArray * capabilityFilters</dt><dd><p>A ConnectableDevice will be displayed in the DevicePicker and
+compatibleDevices array if it matches any of the CapabilityFilter
+objects in this array.</p>
+</dd>
+<dt><a class="reference internal" href="ios-deviceservicepairinglevel.html"><span class="doc">DeviceServicePairingLevel</span></a> pairingLevel</dt><dd><p>The pairingLevel property determines whether capabilities that
+require pairing (such as entering a PIN) will be available.</p>
+<p>If pairingLevel is set to DeviceServicePairingLevelOn,
+ConnectableDevices that require pairing will prompt the user to pair
+when connecting to the ConnectableDevice.</p>
+<p>If pairingLevel is set to DeviceServicePairingLevelOff (the default),
+connecting to the device will avoid requiring pairing if possible but
+some capabilities may not be available.</p>
+</dd>
+<dt>id&lt;<a class="reference internal" href="ios-connectabledevicestore.html"><span class="doc">ConnectableDeviceStore</span></a>&gt; deviceStore</dt><dd><p>ConnectableDeviceStore object which loads &amp; stores references to all
+discovered devices. Pairing codes/keys, SSL certificates, recent
+access times, etc are kept in the device store.</p>
+<p>ConnectableDeviceStore is a protocol which may be implemented as
+needed. A default implementation, DefaultConnectableDeviceStore,
+exists for convenience and will be used if no other device store is
+provided.</p>
+<p>In order to satisfy user privacy concerns, you should provide a UI
+element in your app which exposes the ConnectableDeviceStore
+removeAll method.</p>
+<p>To disable the ConnectableDeviceStore capabilities of Connect SDK,
+set this value to nil. This may be done at the time of instantiation
+with <code class="docutils literal notranslate"><span class="pre">[DiscoveryManager</span> <span class="pre">sharedManagerWithDeviceStore:nil]</span></code>.</p>
+</dd>
+<dt>BOOL useDeviceStore</dt><dd><p>Whether pairing state will be automatically loaded/saved in the
+deviceStore. This property is not available for direct modification.
+To disable the device store,</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>+ (instancetype) <strong>sharedManager</strong></dt><dd><p>Singleton accessor for DiscoveryManager. This method calls
+sharedManagerWithDeviceStore: and passes an instance of
+DefaultConnectableDeviceStore.</p>
+</dd>
+<dt>+ (instancetype) <strong>sharedManagerWithDeviceStore</strong>:(id&lt;<a class="reference internal" href="ios-connectabledevicestore.html"><span class="doc">ConnectableDeviceStore</span></a>&gt;)<em>deviceStore</em></dt><dd><p>Singleton accessor for DiscoveryManager, will initialize singleton
+with reference to a custom ConnectableDeviceStore object.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>deviceStore – (optional) An object which implements the ConnectableDeviceStore protocol to be used for save/load of device information. You may provide nil to completely disable the device store capabilities of the SDK.</p></li>
+</ul>
+</dd>
+<dt>- (NSDictionary *) <strong>compatibleDevices</strong></dt><dd><p>Filtered list of discovered ConnectableDevices, limited to devices
+that match at least one of the CapabilityFilters in the
+capabilityFilters array. Each ConnectableDevice object is keyed
+against its current IP address.</p>
+</dd>
+<dt>- (NSDictionary *) <strong>allDevices</strong></dt><dd><p>List of all devices discovered by DiscoveryManager. Each
+ConnectableDevice object is keyed against its current IP address.</p>
+</dd>
+<dt>- (void) <strong>startDiscovery</strong></dt><dd><p>Start scanning for devices on the local network.</p>
+</dd>
+<dt>- (void) <strong>stopDiscovery</strong></dt><dd><p>Stop scanning for devices.</p>
+<p>This method will be called when your app enters a background state.
+When your app resumes, startDiscovery will be called.</p>
+</dd>
+<dt>- (<a class="reference internal" href="ios-devicepicker.html"><span class="doc">DevicePicker</span></a> *) <strong>devicePicker</strong></dt><dd><p>Get a DevicePicker to show compatible ConnectableDevices that have
+been found by DiscoveryManager.</p>
+<p><strong>Returns:</strong> DevicePickerDevicePicker singleton for use in picking devices</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ios-discoverymanagerdelegate.html" class="btn btn-neutral float-right" title="DiscoveryManagerDelegate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ios-devicepickerdelegate.html" class="btn btn-neutral float-left" title="DevicePickerDelegate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020 LG Silicon Valley Lab. All Rights Reserved. All trademarks and logos beling to their respective owners.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

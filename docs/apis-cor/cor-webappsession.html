@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WebAppSession &mdash; connectSDK  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ExternalInputControl" href="cor-externalinputcontrol.html" />
+    <link rel="prev" title="LaunchSession" href="cor-launchsession.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html">Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device">Device</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#sessions">Sessions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cor-launchsession.html">LaunchSession</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">WebAppSession</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capabilities">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#constants">Constants</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../guide-cor/index.html">Getting Started</a> &raquo;</li>
+        
+          <li><a href="index.html">Discovery</a> &raquo;</li>
+        
+      <li>WebAppSession</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apis-cor/cor-webappsession.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="webappsession">
+<h1>WebAppSession<a class="headerlink" href="#webappsession" title="Permalink to this headline">¶</a></h1>
+<p>A WebAppSession represents a web-based app running on a TV. You can
+communicate with a web app by first calling connect() to establish a
+communication channel, and then listening for “message” events as well
+as sending your own messages using sendText and sendJSON.</p>
+<p>Example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">device</span><span class="p">.</span><span class="nx">getWebAppLauncher</span><span class="p">().</span><span class="nx">launchWebApp</span><span class="p">(</span><span class="nx">webAppId</span><span class="p">).</span><span class="nx">success</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">session</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">session</span> <span class="o">=</span> <span class="nx">session</span><span class="p">.</span><span class="nx">acquire</span><span class="p">();</span> <span class="c1">// hold on to a reference</span>
+
+    <span class="nx">session</span><span class="p">.</span><span class="nx">connect</span><span class="p">().</span><span class="nx">success</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">session</span><span class="p">.</span><span class="nx">sendText</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">session</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// message could be either a string or an object</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">message</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;received string message: &quot;</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;received object message: &quot;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+
+    <span class="nx">session</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;disconnect&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;session disconnected&quot;</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">session</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+
+<span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>webAppSession.<strong>connect</strong> ()</dt><dd><p>Open a message channel to the app.</p>
+<p><strong>Returns:</strong> <a class="reference internal" href="cor-command.html"><span class="doc">Command</span></a></p>
+</dd>
+<dt>webAppSession.<strong>disconnect</strong> ()</dt><dd><p>Close channel to app.</p>
+<p><strong>Returns:</strong> <a class="reference internal" href="cor-command.html"><span class="doc">Command</span></a></p>
+</dd>
+<dt>webAppSession.<strong>setWebAppSessionListener</strong> ()</dt><dd><p>Set web app session listener to app</p>
+<p><strong>Returns:</strong> <a class="reference internal" href="cor-command.html"><span class="doc">Command</span></a></p>
+</dd>
+<dt>webAppSession.<strong>sendText</strong> (<em>text</em>)</dt><dd><p>Send a text string to the app. Must be connected first.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>text (string) – Text to send to the app</p></li>
+</ul>
+<p><strong>Returns:</strong> <a class="reference internal" href="cor-command.html"><span class="doc">Command</span></a></p>
+</dd>
+<dt>webAppSession.<strong>sendJSON</strong> (<em>object</em>)</dt><dd><p>Send a plain JavaScript object to the app. Must be connected first.
+If the receiving app does not support non-string messages, the object
+will be serialized into a string in JSON format.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>object (object) – Plain JavaScript object to send to the app</p></li>
+</ul>
+<p><strong>Returns:</strong> <a class="reference internal" href="cor-command.html"><span class="doc">Command</span></a></p>
+</dd>
+<dt>webAppSession.<strong>close</strong> ()</dt><dd><p>Close the web app.</p>
+<p><strong>Returns:</strong> <a class="reference internal" href="cor-command.html"><span class="doc">Command</span></a></p>
+</dd>
+</dl>
+<div class="section" id="mixin-methods-simpleeventemitter">
+<h3>Mixin Methods - SimpleEventEmitter<a class="headerlink" href="#mixin-methods-simpleeventemitter" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>webAppSession.<strong>addListener</strong> (<em>event</em>, <em>callback</em>, [<em>context</em>])</dt><dd><p>Add event listener.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event (string) – name of event</p></li>
+<li><p>callback (function) – function to call when event is fired</p></li>
+<li><p>context (object) [optional] – object to bind to “this” value when calling function</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+<dt>webAppSession.<strong>removeListener</strong> (<em>event</em>, [<em>callback</em>], [<em>context</em>])</dt><dd><p>Remove event listener with the specified callback and context. If
+callback is null or undefined, all callbacks for this event will be
+removed.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event (string) – name of event</p></li>
+<li><p>callback (function) [optional] – function originally passed to addListener</p></li>
+<li><p>context (object) [optional] – context object originally passed to addListener</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+<dt>webAppSession.<strong>on</strong> (<em>event</em>, <em>callback</em>, [<em>context</em>])</dt><dd><p>Alias for addListener.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event (string) – name of event</p></li>
+<li><p>callback (function) – function to call when event is fired</p></li>
+<li><p>context (object) [optional] – object to bind to “this” value when calling function</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+<dt>webAppSession.<strong>off</strong> (<em>event</em>, [<em>callback</em>], [<em>context</em>])</dt><dd><p>Alias for removeListener.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event (string) – event name</p></li>
+<li><p>callback (function) [optional] – function originally passed to on</p></li>
+<li><p>context (object) [optional] – context object originally passed to on</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="mixin-methods-wrappedobject">
+<h3>Mixin Methods - WrappedObject<a class="headerlink" href="#mixin-methods-wrappedobject" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>webAppSession.<strong>acquire</strong> ()</dt><dd><p>Indicate that you would like to keep an active reference to this
+object. Wrapped objects that are not acquired may be freed after the
+success callback returns.</p>
+<p><strong>Returns:</strong> object – reference to object</p>
+</dd>
+<dt>webAppSession.<strong>release</strong> ()</dt><dd><p>Release the reference to this object. After calling .release(), this
+object may no longer be used. You should always release objects when
+you no longer need them, to avoid memory leaks.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cor-externalinputcontrol.html" class="btn btn-neutral float-right" title="ExternalInputControl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cor-launchsession.html" class="btn btn-neutral float-left" title="LaunchSession" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020 LG Silicon Valley Lab. All Rights Reserved. All trademarks and logos beling to their respective owners.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

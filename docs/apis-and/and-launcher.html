@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Launcher &mdash; connectSDK  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MediaControl" href="and-mediacontrol.html" />
+    <link rel="prev" title="KeyControl" href="and-keycontrol.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html">Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device-services">Device Services</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#capabilities">Capabilities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="and-capabilityprioritylevel.html">CapabilityPriorityLevel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-externalinputcontrol.html">ExternalInputControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-keycontrol.html">KeyControl</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Launcher</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inner-classes">Inner Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="and-mediacontrol.html">MediaControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-mediaplayer.html">MediaPlayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-mousecontrol.html">MouseControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-playlistcontrol.html">PlaylistControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-powercontrol.html">PowerControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-tvcontrol.html">TVControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-textinputcontrol.html">TextInputControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-toastcontrol.html">ToastControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-volumecontrol.html">VolumeControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-webapplauncher.html">WebAppLauncher</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capability-listeners">Capability Listeners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#errors">Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#info-objects">Info Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#advanced">Advanced</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../guide-and/index.html">Getting Started</a> &raquo;</li>
+        
+          <li><a href="index.html">Discovery</a> &raquo;</li>
+        
+      <li>Launcher</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apis-and/and-launcher.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="launcher">
+<h1>Launcher<a class="headerlink" href="#launcher" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">com.connectsdk.service.capability.Launcher</span></code></p>
+<p><em>extends CapabilityMethods</em></p>
+<p>The Launcher capability protocol serves to define the methods required
+for normalizing the launching of apps. It allows for in-built support
+for certain common launch types (deep-linking to YouTube, Netflix, Hulu,
+browser, etc) as well as by (platform-specific) app id.</p>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<p>final String Any = “Launcher.Any”</p>
+<p>final String Application = “Launcher.App”</p>
+<p>final String Application_Params = “Launcher.App.Params”</p>
+<p>final String Application_Close = “Launcher.App.Close”</p>
+<p>final String Application_List = “Launcher.App.List”</p>
+<p>final String Browser = “Launcher.Browser”</p>
+<p>final String Browser_Params = “Launcher.Browser.Params”</p>
+<p>final String Hulu = “Launcher.Hulu”</p>
+<p>final String Hulu_Params = “Launcher.Hulu.Params”</p>
+<p>final String Netflix = “Launcher.Netflix”</p>
+<p>final String Netflix_Params = “Launcher.Netflix.Params”</p>
+<p>final String YouTube = “Launcher.YouTube”</p>
+<p>final String YouTube_Params = “Launcher.YouTube.Params”</p>
+<p>final String AppStore = “Launcher.AppStore”</p>
+<p>final String AppStore_Params = “Launcher.AppStore.Params”</p>
+<p>final String AppState = “Launcher.AppState”</p>
+<p>final String AppState_Subscribe = “Launcher.AppState.Subscribe”</p>
+<p>final String RunningApp = “Launcher.RunningApp”</p>
+<p>final String RunningApp_Subscribe = “Launcher.RunningApp.Subscribe”</p>
+<p>final String[] Capabilities = { Application, Application_Params, Application_Close, Application_List, Browser, Browser_Params, Hulu, Hulu_Params, Netflix, Netflix_Params, YouTube, YouTube_Params, AppStore, AppStore_Params, AppState, AppState_Subscribe, RunningApp, RunningApp_Subscribe }</p>
+</div>
+<div class="section" id="inner-classes">
+<h2>Inner Classes<a class="headerlink" href="#inner-classes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="and-appinfolistener.html"><span class="doc">AppInfoListener</span></a></p></li>
+<li><p><a class="reference internal" href="and-applaunchlistener.html"><span class="doc">AppLaunchListener</span></a></p></li>
+<li><p><a class="reference internal" href="and-applistlistener.html"><span class="doc">AppListListener</span></a></p></li>
+<li><p><a class="reference internal" href="and-appstate.html"><span class="doc">AppState</span></a></p></li>
+<li><p><a class="reference internal" href="and-appstatelistener.html"><span class="doc">AppStateListener</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="#"><span class="doc">Launcher</span></a> <strong>getLauncher</strong> ()</p>
+<p><a class="reference internal" href="and-capabilityprioritylevel.html"><span class="doc">CapabilityPriorityLevel</span></a> <strong>getLauncherCapabilityLevel</strong> ()</p>
+<dl>
+<dt>void <strong>launchAppWithInfo</strong> (<a class="reference internal" href="and-appinfo.html"><span class="doc">AppInfo</span></a> <em>appInfo</em>, <a class="reference internal" href="and-applaunchlistener.html"><span class="doc">AppLaunchListener</span></a> <em>listener</em>)</dt><dd><p>Launch an application on the device.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.App</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.App.Params</span></code> – if launching with params</p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>appInfo – AppInfo object for the application</p></li>
+<li><p>listener – (optional) AppLaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>launchAppWithInfo</strong> (<a class="reference internal" href="and-appinfo.html"><span class="doc">AppInfo</span></a> <em>appInfo</em>, Object <em>params</em>, <a class="reference internal" href="and-applaunchlistener.html"><span class="doc">AppLaunchListener</span></a> <em>listener</em>)</dt><dd><p>Launch an application on the device.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.App</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.App.Params</span></code> – if launching with params</p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>appInfo – AppInfo object for the application</p></li>
+<li><p>params</p></li>
+<li><p>listener – (optional) AppLaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>launchApp</strong> (String <em>appId</em>, <a class="reference internal" href="and-applaunchlistener.html"><span class="doc">AppLaunchListener</span></a> <em>listener</em>)</dt><dd><p>Launch an application on the device.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.App</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>appId – ID of the application</p></li>
+<li><p>listener – (optional) AppLaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>closeApp</strong> (<a class="reference internal" href="and-launchsession.html"><span class="doc">LaunchSession</span></a> <em>launchSession</em>, <a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>Close an application on the device.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.App.Close</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>launchSession – LaunchSession of the target app</p></li>
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>getAppList</strong> (<a class="reference internal" href="and-applistlistener.html"><span class="doc">AppListListener</span></a> <em>listener</em>)</dt><dd><p>Gets a list of all apps installed on the device.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.App.List</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) AppListListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>getRunningApp</strong> (<a class="reference internal" href="and-appinfolistener.html"><span class="doc">AppInfoListener</span></a> <em>listener</em>)</dt><dd><p>Gets an AppInfo object for the current running app on the device.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.RunningApp</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) AppInfoListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="and-servicesubscription.html"><span class="doc">ServiceSubscription</span></a> &lt;<a class="reference internal" href="and-appinfolistener.html"><span class="doc">AppInfoListener</span></a>&gt; <strong>subscribeRunningApp</strong> (<a class="reference internal" href="and-appinfolistener.html"><span class="doc">AppInfoListener</span></a> <em>listener</em>)</dt><dd><p>Subscribes to changes of the current running app. Every time the
+running app changes, the success block will be called with an AppInfo
+object for the current running app.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.RunningApp.Subscribe</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) AppInfoListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>getAppState</strong> (<a class="reference internal" href="and-launchsession.html"><span class="doc">LaunchSession</span></a> <em>launchSession</em>, <a class="reference internal" href="and-appstatelistener.html"><span class="doc">AppStateListener</span></a> <em>listener</em>)</dt><dd><p>Gets the target app’s running status and on-screen visibility.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.AppState</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>launchSession – LaunchSession of the target app</p></li>
+<li><p>listener – (optional) AppStateListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="and-servicesubscription.html"><span class="doc">ServiceSubscription</span></a> &lt;<a class="reference internal" href="and-appstatelistener.html"><span class="doc">AppStateListener</span></a>&gt; <strong>subscribeAppState</strong> (<a class="reference internal" href="and-launchsession.html"><span class="doc">LaunchSession</span></a> <em>launchSession</em>, <a class="reference internal" href="and-appstatelistener.html"><span class="doc">AppStateListener</span></a> <em>listener</em>)</dt><dd><p>Subscribes to changes of the state of the target app. Every time the
+app’s state changes, the success block will be called with info on the app’s running status and on-screen visibility.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.AppState.Subscribe</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>launchSession - LaunchSession of the target app</p></li>
+<li><p>listener – (optional) AppStateListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>launchBrowser</strong> (String <em>url</em>, <a class="reference internal" href="and-applaunchlistener.html"><span class="doc">AppLaunchListener</span></a> <em>listener</em>)</dt><dd><p>Launch the web browser. Will launch deep-linked to provided URL, if supported on the target platform.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.Browser</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.Browser.Params</span></code> – if launching with url</p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>url</p></li>
+<li><p>listener – (optional) AppLaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>launchYouTube</strong> (String <em>contentId</em>, <a class="reference internal" href="and-applaunchlistener.html"><span class="doc">AppLaunchListener</span></a> <em>listener</em>)</dt><dd><p>Launch YouTube app. Will launch deep-linked to provided contentId, if supported on the target platform.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.YouTube</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.YouTube.Params</span></code> – if launching with contentId</p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>contentId – Video id to open</p></li>
+<li><p>listener – (optional) AppLaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>launchYouTube</strong> (String <em>contentId</em>, float <em>startTime</em>, <a class="reference internal" href="and-applaunchlistener.html"><span class="doc">AppLaunchListener</span></a> <em>listener</em>)</dt><dd><p>Launch YouTube app. Will launch deep-linked to provided contentId, if supported on the target platform.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.YouTube</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.YouTube.Params</span></code> – if launching with contentId</p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>contentId – Video id to open</p></li>
+<li><p>startTime</p></li>
+<li><p>listener – (optional) AppLaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>launchNetflix</strong> (String <em>contentId</em>, <a class="reference internal" href="and-applaunchlistener.html"><span class="doc">AppLaunchListener</span></a> <em>listener</em>)</dt><dd><p>Launch Netflix app. Will launch deep-linked to provided contentId, if supported on the target platform.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.Netflix</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.Netflix.Params</span></code> – if launching with contentId</p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>contentId – Video id to open</p></li>
+<li><p>listener – (optional) AppLaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>launchHulu</strong> (String <em>contentId</em>, <a class="reference internal" href="and-applaunchlistener.html"><span class="doc">AppLaunchListener</span></a> <em>listener</em>)</dt><dd><p>Launch Hulu app. Will launch deep-linked to provided contentId, if supported on the target platform.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.Hulu</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.Hulu.Params</span></code> – if launching with contentId</p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>contentId – Video id to open</p></li>
+<li><p>listener – (optional) AppLaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>launchAppStore</strong> (String <em>appId</em>, <a class="reference internal" href="and-applaunchlistener.html"><span class="doc">AppLaunchListener</span></a> <em>listener</em>)</dt><dd><p>Launch the device’s app store app, optionally deep-linked to a specific app’s page.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.AppStore</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Launcher.AppStore.Params</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>appId – (optional) ID of the application to show in the app store</p></li>
+<li><p>listener – (optional) AppLaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="and-mediacontrol.html" class="btn btn-neutral float-right" title="MediaControl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="and-keycontrol.html" class="btn btn-neutral float-left" title="KeyControl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020 LG Silicon Valley Lab. All Rights Reserved. All trademarks and logos beling to their respective owners.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

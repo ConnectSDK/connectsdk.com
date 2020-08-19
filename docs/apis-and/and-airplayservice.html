@@ -1,0 +1,761 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AirPlayService &mdash; connectSDK  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CastService" href="and-castservice.html" />
+    <link rel="prev" title="ServiceSubscription" href="and-servicesubscription.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html">Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device">Device</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#device-services">Device Services</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">AirPlayService</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inner-classes">Inner Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inherited-methods">Inherited Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="and-castservice.html">CastService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-dialservice.html">DIALService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-dlnaservice.html">DLNAService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-deviceservice.html">DeviceService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-deviceservicelistener.html">DeviceServiceListener</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-firetvservice.html">FireTVService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-netcasttvservice.html">NetcastTVService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-rokuservice.html">RokuService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-webostvservice.html">WebOSTVService</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capabilities">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capability-listeners">Capability Listeners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#errors">Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#info-objects">Info Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#advanced">Advanced</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../guide-and/index.html">Getting Started</a> &raquo;</li>
+        
+          <li><a href="index.html">Discovery</a> &raquo;</li>
+        
+      <li>AirPlayService</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apis-and/and-airplayservice.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="airplayservice">
+<h1>AirPlayService<a class="headerlink" href="#airplayservice" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">com.connectsdk.service.AirPlayService</span></code></p>
+<p><em>extends</em> <a class="reference internal" href="and-deviceservice.html"><span class="doc">DeviceService</span></a></p>
+<p>AirPlayService provides media playback/control &amp; web app launching (iOS
+only) capabilities for Apple TV devices.</p>
+<p>AirPlay-enabled speakers are not currently supported by Connect SDK.</p>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<p>final String X_APPLE_SESSION_ID = “X-Apple-Session-ID”</p>
+<p>final String ID = “AirPlay”</p>
+</div>
+<div class="section" id="inner-classes">
+<h2>Inner Classes<a class="headerlink" href="#inner-classes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>PlaybackPositionListener</p></li>
+</ul>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt><a class="reference internal" href="and-capabilityprioritylevel.html"><span class="doc">CapabilityPriorityLevel</span></a> <strong>getPriorityLevel</strong> (Class&lt;?extends CapabilityMethods &gt; <em>clazz</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>clazz</p></li>
+</ul>
+</dd>
+<dt><strong>AirPlayService</strong> (ServiceDescription <em>serviceDescription</em>, ServiceConfig <em>serviceConfig</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>serviceDescription</p></li>
+<li><p>serviceConfig</p></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="and-mediacontrol.html"><span class="doc">MediaControl</span></a> <strong>getMediaControl</strong> ()</dt><dd><p>Get MediaControl implementation</p>
+<p><strong>Returns:</strong> MediaControl</p>
+</dd>
+<dt><a class="reference internal" href="and-capabilityprioritylevel.html"><span class="doc">CapabilityPriorityLevel</span></a> <strong>getMediaControlCapabilityLevel</strong> ()</dt><dd><p>Get a capability priority for current implementation</p>
+<p><strong>Returns:</strong> CapabilityPriorityLevel</p>
+</dd>
+<dt>void <strong>play</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>pause</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>stop</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>rewind</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>fastForward</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>previous</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>This method is deprecated. Use
+<code class="docutils literal notranslate"><span class="pre">PlaylistControl::previous(ResponseListener&lt;Object&gt;</span> <span class="pre">listener)</span></code>
+instead.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>next</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>This method is deprecated. Use
+<code class="docutils literal notranslate"><span class="pre">PlaylistControl::next(ResponseListener&lt;Object&gt;</span> <span class="pre">listener)</span></code> instead.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>seek</strong> (long <em>position</em>, <a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>position – The new position, in milliseconds from the beginning of the stream</p></li>
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>getPosition</strong> (final :doc: <cite>PositionListener &lt;and-positionlistener&gt;</cite> <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) final PositionListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>getPlayState</strong> (final <a class="reference internal" href="and-playstatelistener.html"><span class="doc">PlayStateListener</span></a> <em>listener</em>)</dt><dd><p>AirPlay has the same response for Buffering and Finished states
+that’s why this method always returns Finished state for video which
+is not ready to play.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) final PlayStateListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>getDuration</strong> (final <a class="reference internal" href="and-durationlistener.html"><span class="doc">DurationListener</span></a> <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) final DurationListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="and-servicesubscription.html"><span class="doc">ServiceSubscription</span></a> &lt;<a class="reference internal" href="and-playstatelistener.html"><span class="doc">PlayStateListener</span></a>&gt; <strong>subscribePlayState</strong> (<a class="reference internal" href="and-playstatelistener.html"><span class="doc">PlayStateListener</span></a> <em>listener</em>)</dt><dd><p>Subscribe for playback state changes</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – receives play state notifications</p></li>
+</ul>
+<p><strong>Returns:</strong> ServiceSubscription&lt;PlayStateListener&gt;</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="and-mediaplayer.html"><span class="doc">MediaPlayer</span></a> <strong>getMediaPlayer</strong> ()</p>
+<p><a class="reference internal" href="and-capabilityprioritylevel.html"><span class="doc">CapabilityPriorityLevel</span></a> <strong>getMediaPlayerCapabilityLevel</strong> ()</p>
+<dl>
+<dt>void <strong>getMediaInfo</strong> (<a class="reference internal" href="and-mediainfolistener.html"><span class="doc">MediaInfoListener</span></a> <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) MediaInfoListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="and-servicesubscription.html"><span class="doc">ServiceSubscription</span></a> &lt;<a class="reference internal" href="and-mediainfolistener.html"><span class="doc">MediaInfoListener</span></a>&gt; <strong>subscribeMediaInfo</strong> (<a class="reference internal" href="and-mediainfolistener.html"><span class="doc">MediaInfoListener</span></a> <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) MediaInfoListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>displayImage</strong> (final String <em>url</em>, String <em>mimeType</em>, String <em>title</em>, String <em>description</em>, String <em>iconSrc</em>, final LaunchListener <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>url</p></li>
+<li><p>mimeType</p></li>
+<li><p>title</p></li>
+<li><p>description</p></li>
+<li><p>iconSrc</p></li>
+<li><p>listener – (optional) final LaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>displayImage</strong> (<a class="reference internal" href="and-mediainfo.html"><span class="doc">MediaInfo</span></a> <em>mediaInfo</em>, LaunchListener <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>mediaInfo</p></li>
+<li><p>listener – (optional) LaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>playVideo</strong> (final String <em>url</em>, String <em>mimeType</em>, String <em>title</em>, String <em>description</em>, String <em>iconSrc</em>, boolean <em>shouldLoop</em>, final LaunchListener <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>url</p></li>
+<li><p>mimeType</p></li>
+<li><p>title</p></li>
+<li><p>description</p></li>
+<li><p>iconSrc</p></li>
+<li><p>shouldLoop</p></li>
+<li><p>listener – (optional) final LaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>playMedia</strong> (String <em>url</em>, String <em>mimeType</em>, String <em>title</em>, String <em>description</em>, String <em>iconSrc</em>, boolean <em>shouldLoop</em>, LaunchListener <em>listener</em>)</dt><dd><p>This method is deprecated. Use
+<code class="docutils literal notranslate"><span class="pre">MediaPlayer::playMedia(MediaInfo</span> <span class="pre">mediaInfo,</span> <span class="pre">boolean</span> <span class="pre">shouldLoop,</span> <span class="pre">LaunchListener</span> <span class="pre">listener)</span></code>
+instead.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>url</p></li>
+<li><p>mimeType</p></li>
+<li><p>title</p></li>
+<li><p>description</p></li>
+<li><p>iconSrc</p></li>
+<li><p>shouldLoop</p></li>
+<li><p>listener – (optional) LaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>playMedia</strong> (<a class="reference internal" href="and-mediainfo.html"><span class="doc">MediaInfo</span></a> <em>mediaInfo</em>, boolean <em>shouldLoop</em>, LaunchListener <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>mediaInfo</p></li>
+<li><p>shouldLoop</p></li>
+<li><p>listener – (optional) LaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>closeMedia</strong> (<a class="reference internal" href="and-launchsession.html"><span class="doc">LaunchSession</span></a> <em>launchSession</em>, <a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>launchSession</p></li>
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>sendCommand</strong> (final ServiceCommand&lt;?&gt; <em>serviceCommand</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>serviceCommand</p></li>
+</ul>
+</dd>
+<dt>void <strong>sendPairingKey</strong> (String <em>pairingKey</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>pairingKey</p></li>
+</ul>
+</dd>
+</dl>
+<p>boolean <strong>isConnectable</strong> ()</p>
+<p>boolean <strong>isConnected</strong> ()</p>
+<p>void <strong>connect</strong> ()</p>
+<p>void <strong>disconnect</strong> ()</p>
+<dl class="simple">
+<dt>void <strong>onLoseReachability</strong> (DeviceServiceReachability <em>reachability</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>reachability</p></li>
+</ul>
+</dd>
+</dl>
+<p>static DiscoveryFilter <strong>discoveryFilter</strong> ()</p>
+</div>
+<div class="section" id="inherited-methods">
+<h2>Inherited Methods<a class="headerlink" href="#inherited-methods" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>void <strong>connect</strong> ()</dt><dd><p>Will attempt to connect to the DeviceService. The failure/success
+will be reported back to the DeviceServiceListener. If the connection
+attempt reveals that pairing is required, the DeviceServiceListener
+will also be notified in that event.</p>
+</dd>
+<dt>void <strong>disconnect</strong> ()</dt><dd><p>Will attempt to disconnect from the DeviceService. The
+failure/success will be reported back to the DeviceServiceListener.</p>
+</dd>
+<dt>boolean <strong>isConnected</strong> ()</dt><dd><p>Whether the DeviceService is currently connected</p>
+</dd>
+</dl>
+<p>boolean <strong>isConnectable</strong> ()</p>
+<dl>
+<dt>void <strong>cancelPairing</strong> ()</dt><dd><p>Explicitly cancels pairing in services that require pairing. In some
+services, this will hide a prompt that is displaying on the device.</p>
+</dd>
+<dt>void <strong>sendPairingKey</strong> (String <em>pairingKey</em>)</dt><dd><p>Will attempt to pair with the DeviceService with the provided
+pairingData. The failure/success will be reported back to the
+DeviceServiceListener.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>pairingKey – Data to be used for pairing. The type of this parameter will vary depending on what type of pairing is required, but is likely to be a string (pin code, pairing key, etc).</p></li>
+</ul>
+</dd>
+</dl>
+<p>List&lt;String&gt; <strong>getCapabilities</strong> ()</p>
+<dl>
+<dt>boolean <strong>hasCapability</strong> (String <em>capability</em>)</dt><dd><p>Test to see if the capabilities array contains a given capability.
+See the individual Capability classes for acceptable capability
+values.</p>
+<p>It is possible to append a wildcard search term <code class="docutils literal notranslate"><span class="pre">.Any</span></code> to the end
+of the search term. This method will return true for capabilities
+that match the term up to the wildcard.</p>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">Launcher.App.Any</span></code></p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>capability – Capability to test against</p></li>
+</ul>
+</dd>
+<dt>boolean <strong>hasAnyCapability</strong> (String… <em>capabilities</em>)</dt><dd><p>Test to see if the capabilities array contains at least one
+capability in a given set of capabilities. See the individual
+Capability classes for acceptable capability values.</p>
+<p>See hasCapability: for a description of the wildcard feature provided
+by this method.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>capabilities – Set of capabilities to test against</p></li>
+</ul>
+</dd>
+<dt>boolean <strong>hasCapabilities</strong> (List&lt;String&gt; <em>capabilities</em>)</dt><dd><p>Test to see if the capabilities array contains a given set of
+capabilities. See the individual Capability classes for acceptable
+capability values.</p>
+<p>See hasCapability: for a description of the wildcard feature provided
+by this method.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>capabilities – List of capabilities to test against</p></li>
+</ul>
+</dd>
+</dl>
+<p>ServiceDescription <strong>getServiceDescription</strong> ()</p>
+<p>ServiceConfig <strong>getServiceConfig</strong> ()</p>
+<p>JSONObject <strong>toJSONObject</strong> ()</p>
+<dl>
+<dt>String <strong>getServiceName</strong> ()</dt><dd><p>Name of the DeviceService (webOS, Chromecast, etc)</p>
+</dd>
+<dt>void <strong>closeLaunchSession</strong> (<a class="reference internal" href="and-launchsession.html"><span class="doc">LaunchSession</span></a> <em>launchSession</em>, <a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>Closes the session on the first screen device. Depending on the
+sessionType, the associated service will have different ways of
+handling the close functionality.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>launchSession – LaunchSession to close</p></li>
+<li><p>listener – (optional) listener to be called on success/failure</p></li>
+</ul>
+</dd>
+</dl>
+<p><a class="reference internal" href="and-mediaplayer.html"><span class="doc">MediaPlayer</span></a> <strong>getMediaPlayer</strong> ()</p>
+<p><a class="reference internal" href="and-capabilityprioritylevel.html"><span class="doc">CapabilityPriorityLevel</span></a> <strong>getMediaPlayerCapabilityLevel</strong> ()</p>
+<dl>
+<dt>void <strong>getMediaInfo</strong> (<a class="reference internal" href="and-mediainfolistener.html"><span class="doc">MediaInfoListener</span></a> <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) MediaInfoListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="and-servicesubscription.html"><span class="doc">ServiceSubscription</span></a> &lt;<a class="reference internal" href="and-mediainfolistener.html"><span class="doc">MediaInfoListener</span></a>&gt; <strong>subscribeMediaInfo</strong> (<a class="reference internal" href="and-mediainfolistener.html"><span class="doc">MediaInfoListener</span></a> <em>listener</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) MediaInfoListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>displayImage</strong> (<a class="reference internal" href="and-mediainfo.html"><span class="doc">MediaInfo</span></a> <em>mediaInfo</em>, LaunchListener <em>listener</em>)</dt><dd><p>Display an image on the device. Not all devices support all of the
+parameters – supply as many as you have available.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaPlayer.Display.Image</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaPlayer.MediaData.Title</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaPlayer.MediaData.Description</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaPlayer.MediaData.Thumbnail</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaPlayer.MediaData.MimeType</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>mediaInfo – Object of MediaInfo class which includes all the information about an image to display.</p></li>
+<li><p>listener – (optional) LaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>playMedia</strong> (<a class="reference internal" href="and-mediainfo.html"><span class="doc">MediaInfo</span></a> <em>mediaInfo</em>, boolean <em>shouldLoop</em>, LaunchListener <em>listener</em>)</dt><dd><p>Play an audio or video file on the device. Not all devices support
+all of the parameters – supply as many as you have available.</p>
+<blockquote>
+<div><p><strong>Related capabilities:</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaPlayer.Play.Video</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaPlayer.Play.Audio</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaPlayer.MediaData.Title</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaPlayer.MediaData.Description</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaPlayer.MediaData.Thumbnail</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaPlayer.MediaData.MimeType</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>mediaInfo – Object of MediaInfo class which includes all the information about an image to display.</p></li>
+<li><p>shouldLoop – Whether to automatically loop playback</p></li>
+<li><p>listener – (optional) LaunchListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>closeMedia</strong> (<a class="reference internal" href="and-launchsession.html"><span class="doc">LaunchSession</span></a> <em>launchSession</em>, <a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>Close a running media session. Because media is handled differently
+on different platforms, it is required to keep track of LaunchSession
+and MediaControl objects to control that media session in the future.
+LaunchSession will be required to close the media and mediaControl
+will be required to control the media.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaPlayer.Close</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>launchSession – LaunchSession object for use in closing media instance</p></li>
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="and-mediacontrol.html"><span class="doc">MediaControl</span></a> <strong>getMediaControl</strong> ()</dt><dd><blockquote>
+<div><p>Get MediaControl implementation</p>
+</div></blockquote>
+<p><strong>Returns:</strong> MediaControl</p>
+</dd>
+<dt><a class="reference internal" href="and-capabilityprioritylevel.html"><span class="doc">CapabilityPriorityLevel</span></a> <strong>getMediaControlCapabilityLevel</strong> ()</dt><dd><blockquote>
+<div><p>Get a capability priority for current implementation</p>
+</div></blockquote>
+<p><strong>Returns:</strong> CapabilityPriorityLevel</p>
+</dd>
+<dt>void <strong>play</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>Send play command.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaControl.Play</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>pause</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>Send pause command.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaControl.Pause</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>stop</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>Send play command.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaControl.Stop</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>rewind</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>Send rewind command.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaControl.Rewind</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>fastForward</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>Send play command.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaControl.FastForward</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>previous</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>This method is deprecated. Use
+<code class="docutils literal notranslate"><span class="pre">PlaylistControl::previous(ResponseListener&lt;Object&gt;</span> <span class="pre">listener)</span></code>
+instead.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>next</strong> (<a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>This method is deprecated. Use
+<code class="docutils literal notranslate"><span class="pre">PlaylistControl::next(ResponseListener&lt;Object&gt;</span> <span class="pre">listener)</span></code> instead.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>seek</strong> (long <em>position</em>, <a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a> &lt;Object&gt; <em>listener</em>)</dt><dd><p>Seeks to a new position within the current media item</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MediaControl.Seek</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>position – The new position, in milliseconds from the beginning of the stream</p></li>
+<li><p>listener – (optional) ResponseListener&lt; Object &gt; with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>getDuration</strong> (<a class="reference internal" href="and-durationlistener.html"><span class="doc">DurationListener</span></a> <em>listener</em>)</dt><dd><p>Get the current media duration in milliseconds</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) DurationListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>getPosition</strong> (:doc: <cite>PositionListener &lt;and-positionlistener&gt;</cite> <em>listener</em>)</dt><dd><p>Get the current playback position in milliseconds</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) PositionListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>getPlayState</strong> (<a class="reference internal" href="and-playstatelistener.html"><span class="doc">PlayStateListener</span></a> <em>listener</em>)</dt><dd><p>Get the current state of playback</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) PlayStateListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="and-servicesubscription.html"><span class="doc">ServiceSubscription</span></a> &lt;<a class="reference internal" href="and-playstatelistener.html"><span class="doc">PlayStateListener</span></a>&gt; <strong>subscribePlayState</strong> (<a class="reference internal" href="and-playstatelistener.html"><span class="doc">PlayStateListener</span></a> <em>listener</em>)</dt><dd><p>Subscribe for playback state changes</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – receives play state notifications</p></li>
+</ul>
+<p><strong>Returns:</strong> ServiceSubscription&lt;PlayStateListener&gt;</p>
+</dd>
+<dt>void <strong>onLoseReachability</strong> (DeviceServiceReachability <em>reachability</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>reachability</p></li>
+</ul>
+</dd>
+<dt>void <strong>unsubscribe</strong> (URLServiceSubscription&lt;?&gt; <em>subscription</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>subscription</p></li>
+</ul>
+</dd>
+<dt>void <strong>sendCommand</strong> (ServiceCommand&lt;?&gt; <em>command</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>command</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="and-castservice.html" class="btn btn-neutral float-right" title="CastService" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="and-servicesubscription.html" class="btn btn-neutral float-left" title="ServiceSubscription" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020 LG Silicon Valley Lab. All Rights Reserved. All trademarks and logos beling to their respective owners.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

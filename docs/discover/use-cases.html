@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Use Cases &mdash; connectSDK  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Supported features" href="../fundamentals/supported-feature.html" />
+    <link rel="prev" title="Connect SDK Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">DISCOVER</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Use Cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#web-app-beaming">Web App Beaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#photo-video-youtube-beaming">Photo, Video &amp; YouTube Beaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#promote-your-tv-app">Promote Your TV App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#control-your-tv-app">Control Your TV App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hybrid">Hybrid</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Use Cases</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/discover/use-cases.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="use-cases">
+<h1>Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="web-app-beaming">
+<h2>Web App Beaming<a class="headerlink" href="#web-app-beaming" title="Permalink to this headline">¶</a></h2>
+<p>Using HTML5 and other web technologies, the capabilities and opportunity
+are nearly limitless.</p>
+<p><strong>Example:</strong> Chromecast apps, which are essentially web apps, are good
+examples of some possibilities of integrating Connect SDK.
+<a class="reference external" href="https://store.google.com/product/chromecast_apps">Click here</a> for a list of existing Chromecast apps .</p>
+<p><em>Web App beaming is supported by Connect SDK v1.3 on webOS, Apple TV,
+and Chromecast.</em></p>
+</div>
+<div class="section" id="photo-video-youtube-beaming">
+<h2>Photo, Video &amp; YouTube Beaming<a class="headerlink" href="#photo-video-youtube-beaming" title="Permalink to this headline">¶</a></h2>
+<p>Integrate Connect SDK into any mobile app that contains a photo, a video
+or YouTube video and give users the option to beam and view their
+content on a larger, more social display for a more engaging experience.</p>
+<p><strong>Example:</strong> Trulia’s mobile app shows homes for sale. Instead of
+crowding over a screen or passing a phone around to view the homes with
+friends and family, the user simply beams the photos directly to the
+Smart TV screen allowing everyone in the room to share in the
+experience.</p>
+<p><strong>Example:</strong> The Verge app embeds product reviews, interviews and
+YouTube videos within their articles. With Connect SDK integrated in the
+app, users could beam the content onto a Smart TV or TV set top box
+sharing content with co-workers.</p>
+<p><em>YouTube beaming is supported by Connect SDK v1.3 on webOS, LG Smart TV
+‘13, LG Smart TV ‘12, Roku 3, Chromecast, Fire TV, and many DIAL
+supporting devices.
+Photo and Video beaming is supported by Connect SDK v1.3 on webOS, LG
+Smart TV ‘13, LG Smart TV ‘12, Roku, Apple TV, and Chromecast.</em></p>
+</div>
+<div class="section" id="promote-your-tv-app">
+<h2>Promote Your TV App<a class="headerlink" href="#promote-your-tv-app" title="Permalink to this headline">¶</a></h2>
+<p>If you are going to invest in building a TV app, promote its
+availability using your mobile app. Using Connect SDK, your mobile app
+can detect if a specific device is on the same network and prompt the
+user to install your app. If the user accepts, Connect SDK launches the
+device’s app store deep-linked to your specific app where the user can
+complete the download and installation.</p>
+<p><strong>Example:</strong> Crunchyroll, a leading Japanese Anime and Asian media video
+service, has a channel on Roku. By integrating Connect SDK, they could
+detect a Roku device on the same network and promote their channel’s
+availability within their app.</p>
+<p><em>This use case is supported by Connect SDK v1.3 on webOS, LG Smart TV
+‘13, and Roku.</em></p>
+</div>
+<div class="section" id="control-your-tv-app">
+<h2>Control Your TV App<a class="headerlink" href="#control-your-tv-app" title="Permalink to this headline">¶</a></h2>
+<p>Own your user’s experience by allowing users to control the TV app using
+a mobile app. Everything from keyboard input, app navigation, even
+logging-in can be made easier using your mobile app.</p>
+<p><strong>Example:</strong> Vudu could easily integrate keyboard and mouse control
+allowing their users to select videos and enter credit card information
+using Vudu mobile app. Vudu could even pass user credentials from the
+mobile app to the TV app eliminating the need to login on the TV if the
+user is already logged in on the mobile app.</p>
+</div>
+<div class="section" id="hybrid">
+<h2>Hybrid<a class="headerlink" href="#hybrid" title="Permalink to this headline">¶</a></h2>
+<p>Of course, developers can provide different experience depending on each
+platform. Some of the newer platforms like webOS and Chromecast offer
+newer features</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../fundamentals/supported-feature.html" class="btn btn-neutral float-right" title="Supported features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral float-left" title="Connect SDK Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020 LG Silicon Valley Lab. All Rights Reserved. All trademarks and logos beling to their respective owners.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

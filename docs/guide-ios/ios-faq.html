@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FAQ &mdash; connectSDK  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Discovery" href="../apis-ios/index.html" />
+    <link rel="prev" title="Resuming Apps" href="ios-resuming-apps.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html#developer-guides">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ios-beam-media.html">Beam Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-beam-web-apps.html">Beam Web Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-launch-app.html">Launch App on TV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-discovery-manager.html">Discovery Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-checking-capabilities.html">Checking Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-resuming-apps.html">Resuming Apps</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">FAQ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#when-do-i-start-the-discoverymanager">When do I start the DiscoveryManager?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-reconnect-to-a-device-on-resume">How do I reconnect to a device on resume?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-re-connect-to-a-web-app-when-app-resumes">How do I re-connect to a Web App when app resumes?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-get-the-number-of-devices-discovered">How do I get the number of devices discovered?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-create-an-adhoc-list-of-devices">How do create an ADHoc list of devices?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-show-an-image-or-video-from-my-device">How do I show an image or video from my device?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Getting Started</a> &raquo;</li>
+        
+      <li>FAQ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/guide-ios/ios-faq.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="faq">
+<h1>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="when-do-i-start-the-discoverymanager">
+<h2>When do I start the DiscoveryManager?<a class="headerlink" href="#when-do-i-start-the-discoverymanager" title="Permalink to this headline">¶</a></h2>
+<p>We recommend starting the DiscoveryManager when the app is started so
+that devices can be discovered and ready for use by the time the UI is
+loaded.</p>
+<p>If you need to start the discovery later or only during a specific
+activity within your app you should be aware that it can take a few
+seconds for devices to be discovered.</p>
+</div>
+<div class="section" id="how-do-i-reconnect-to-a-device-on-resume">
+<h2>How do I reconnect to a device on resume?<a class="headerlink" href="#how-do-i-reconnect-to-a-device-on-resume" title="Permalink to this headline">¶</a></h2>
+<p>When your app goes into the background you can hold onto a
+ConnectableDevice object. When your app resumes you have the reference
+to the ConnectableDevice and you can listen for the Device ready
+function. Once the device is ready you can call connect and begin using
+it again.</p>
+</div>
+<div class="section" id="how-do-i-re-connect-to-a-web-app-when-app-resumes">
+<h2>How do I re-connect to a Web App when app resumes?<a class="headerlink" href="#how-do-i-re-connect-to-a-web-app-when-app-resumes" title="Permalink to this headline">¶</a></h2>
+<p>When a WebApp is launched on a TV you get a reference to that WebApp’s
+WebAppSession object. When your phone’s application goes into the
+background you can hold onto that WebAppSession object for the next time
+your application is in the foreground. Once your app is in the
+foreground again and you get a ConnectableDevice object.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="nl">connectableDeviceReady</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>Then once the method is called you can use the stored WebAppSession
+object to continue to send commands to the running app.</p>
+</div>
+<div class="section" id="how-do-i-get-the-number-of-devices-discovered">
+<h2>How do I get the number of devices discovered?<a class="headerlink" href="#how-do-i-get-the-number-of-devices-discovered" title="Permalink to this headline">¶</a></h2>
+<p>When you start an app you should always assume that there are 0 devices
+discovered. Using the DiscoveryManagerDelegate you will be notified
+whenever a new device is discovered and an existing device has been
+lost.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="nl">discoveryManager</span><span class="p">:</span><span class="nl">didFindDevice</span><span class="p">:</span>
+<span class="nl">discoveryManager</span><span class="p">:</span><span class="nl">didLoseDevice</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>When either of these methods are called you can reference the
+compatibleDevices property of the sharedManager to get a complete list
+of devices that match your filters.</p>
+<p>When there are no compatible devices your UI should reflect this by
+hiding the beam icon.</p>
+</div>
+<div class="section" id="how-do-create-an-adhoc-list-of-devices">
+<h2>How do create an ADHoc list of devices?<a class="headerlink" href="#how-do-create-an-adhoc-list-of-devices" title="Permalink to this headline">¶</a></h2>
+<p>When you specify your device filters you may have devices that don’t
+support every feature. If you are searching for all devices that can
+either display an image or play a YouTube video then you want to show a
+list of all the devices that can show an image.</p>
+<p>To do this you will need to check that each device in the
+compatibleDevices array has the capabilities that you are looking for.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="bp">NSArray</span> <span class="o">*</span><span class="p">)</span> <span class="nf">getImageDevices</span>
+<span class="p">{</span>
+    <span class="bp">NSMutableArray</span> <span class="o">*</span><span class="n">imageDevices</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSMutableArray</span> <span class="n">new</span><span class="p">];</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">ConnectableDevice</span> <span class="o">*</span><span class="n">device</span> <span class="k">in</span> <span class="p">[</span><span class="n">DiscoveryManager</span> <span class="n">sharedManager</span><span class="p">].</span><span class="n">compatibleDevices</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">([</span><span class="n">device</span> <span class="nl">hasCapability</span><span class="p">:</span><span class="n">kMediaPlayerDisplayImage</span><span class="p">])</span>
+            <span class="p">[</span><span class="n">imageDevices</span> <span class="nl">addObject</span><span class="p">:</span><span class="n">device</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">imageDevices</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-i-show-an-image-or-video-from-my-device">
+<h2>How do I show an image or video from my device?<a class="headerlink" href="#how-do-i-show-an-image-or-video-from-my-device" title="Permalink to this headline">¶</a></h2>
+<p>All videos that are sent with the Connect SDK are links to external web
+content and your device is no different. You can setup a quick HTTP
+server and pass the url of your phone with Connect SDK. The media player
+will reach to your HTTP server and stream your content right from there.</p>
+<p>There are some pre-made libraries that already do the heavy lifting for
+you.</p>
+<p>Checkout:
+<a class="reference external" href="https://github.com/robbiehanson/CocoaHTTPServer">CocoaHTTPServer</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../apis-ios/index.html" class="btn btn-neutral float-right" title="Discovery" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ios-resuming-apps.html" class="btn btn-neutral float-left" title="Resuming Apps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020 LG Silicon Valley Lab. All Rights Reserved. All trademarks and logos beling to their respective owners.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

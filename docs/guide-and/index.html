@@ -1,0 +1,476 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started &mdash; connectSDK  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Modularization" href="and-modularization.html" />
+    <link rel="prev" title="Download Connect SDK" href="../download-connect-sdk.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="and-modularization.html">Modularization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-setup-instructions.html">Setup Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-discover-connect.html">Discover &amp; Connect to Device</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#developer-guides">Developer Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-media.html">Beam Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-web-apps.html">Beam Web Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-launch-app.html">Launch App on TV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-discovery-manager.html">Discovery Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-checking-capabilities.html">Checking Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html">Resuming Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-faq.html">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#api-references">API References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/index.html">Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/index.html#device">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/index.html#device-services">Device Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/index.html#capabilities">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/index.html#capability-listeners">Capability Listeners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/index.html#errors">Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/index.html#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/index.html#info-objects">Info Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/index.html#advanced">Advanced</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Getting Started</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/guide-and/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="and-modularization.html">Modularization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="and-modularization.html#structure">Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-modularization.html#contributing">Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="and-setup-instructions.html">Setup Instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="and-setup-instructions.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-setup-instructions.html#setup-connect-sdk-in-android-studio">Setup Connect SDK in Android Studio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-setup-instructions.html#setup-connect-sdk-in-android-studio-from-sources">Setup Connect SDK in Android Studio from sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="and-discover-connect.html">Discover &amp; Connect to Device</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="and-discover-connect.html#initial-setup">Initial setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-discover-connect.html#discovery-device-selection">Discovery &amp; device selection</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="developer-guides">
+<h1>Developer Guides<a class="headerlink" href="#developer-guides" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="and-beam-media.html">Beam Media</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-media.html#beam-an-image-file">Beam an image file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-media.html#beam-an-audio-video-file">Beam an audio/video file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-media.html#control-media-playback">Control media playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-media.html#beam-a-playlist">Beam a playlist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-media.html#control-a-playlist">Control a playlist</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="and-beam-web-apps.html">Beam Web Apps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-web-apps.html#web-app-ids">Web App IDs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-web-apps.html#launch-web-app-with-identifier">Launch web app with identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-web-apps.html#communicating-with-web-apps">Communicating with web apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-web-apps.html#beam-media-to-web-app">Beam media to web app</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="and-launch-app.html">Launch App on TV</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="and-launch-app.html#launch-an-app">Launch an app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-launch-app.html#device-specific-app-identifiers">Device-specific app identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-launch-app.html#launching-an-app-with-device-specific-identifiers">Launching an app with device-specific identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-launch-app.html#launching-an-app-with-parameters">Launching an app with parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="and-discovery-manager.html">Discovery Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="and-discovery-manager.html#features">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="and-checking-capabilities.html">Checking Capabilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="and-checking-capabilities.html#setting-up-filters">Setting up filters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="and-resuming-apps.html">Resuming Apps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html#connectabledevice-id">ConnectableDevice ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html#launchsession">LaunchSession</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html#webappsession">WebAppSession</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html#important-note-about-reconnecting">Important note about reconnecting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html#save-device-id-to-disk">Save device ID to disk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html#reconnect-to-device">Reconnect to device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html#save-session-info-to-disk">Save session info to disk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html#re-create-session-after-device-is-connected-ready">Re-create session after device is connected/ready</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html#low-effort-re-connection-option">Low-effort re-connection option</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="and-faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="and-faq.html#when-do-i-start-the-discoverymanager">When do I start the DiscoveryManager?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-faq.html#how-do-i-reconnect-to-a-device-on-resume">How do I reconnect to a device on resume?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-faq.html#how-do-i-re-connect-to-a-web-app-when-app-resumes">How do I re-connect to a Web App when app resumes?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-faq.html#how-do-i-get-the-number-of-devices-discovered">How do I get the number of devices discovered?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-faq.html#how-do-i-get-an-adhoc-list-of-devices">How do I get an ADHoc list of devices?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-faq.html#how-do-i-show-an-image-or-video-from-my-device">How do I show an image or video from my device?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="api-references">
+<h1>API References<a class="headerlink" href="#api-references" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../apis-and/index.html">Discovery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-capabilityfilter.html">CapabilityFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-devicepicker.html">DevicePicker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-discoverymanager.html">DiscoveryManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-discoverymanagerlistener.html">DiscoveryManagerListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-pairinglevel.html">PairingLevel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-pairingtype.html">PairingType</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../apis-and/index.html#device">Device</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-connectabledevice.html">ConnectableDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-connectabledevicelistener.html">ConnectableDeviceListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-servicesubscription.html">ServiceSubscription</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../apis-and/index.html#device-services">Device Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-airplayservice.html">AirPlayService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-castservice.html">CastService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-dialservice.html">DIALService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-dlnaservice.html">DLNAService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-deviceservice.html">DeviceService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-deviceservicelistener.html">DeviceServiceListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-firetvservice.html">FireTVService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-netcasttvservice.html">NetcastTVService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-rokuservice.html">RokuService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-webostvservice.html">WebOSTVService</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../apis-and/index.html#capabilities">Capabilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-capabilityprioritylevel.html">CapabilityPriorityLevel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-externalinputcontrol.html">ExternalInputControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-keycontrol.html">KeyControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-launcher.html">Launcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-mediacontrol.html">MediaControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-mediaplayer.html">MediaPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-mousecontrol.html">MouseControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-playlistcontrol.html">PlaylistControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-powercontrol.html">PowerControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-tvcontrol.html">TVControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-textinputcontrol.html">TextInputControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-toastcontrol.html">ToastControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-volumecontrol.html">VolumeControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-webapplauncher.html">WebAppLauncher</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../apis-and/index.html#capability-listeners">Capability Listeners</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-appinfolistener.html">AppInfoListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-applaunchlistener.html">AppLaunchListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-applistlistener.html">AppListListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-appstatelistener.html">AppStateListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-channellistlistener.html">ChannelListListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-channellistener.html">ChannelListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-durationlistener.html">DurationListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-errorlistener.html">ErrorListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-externalinputlistlistener.html">ExternalInputListListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-mediainfolistener.html">MediaInfoListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-mediaplayer-launchlistener.html">MediaPlayer.LaunchListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-mutelistener.html">MuteListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-playstatelistener.html">PlayStateListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-positionlistener.html">PositionListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-programinfolistener.html">ProgramInfoListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-programlistlistener.html">ProgramListListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-responselistener.html">ResponseListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-state3dmodelistener.html">State3DModeListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-textinputstatuslistener.html">TextInputStatusListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-volumelistener.html">VolumeListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-volumestatuslistener.html">VolumeStatusListener</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../apis-and/index.html#errors">Errors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-firetvserviceerror.html">FireTVServiceError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-notsupportedservicecommanderror.html">NotSupportedServiceCommandError</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-servicecommanderror.html">ServiceCommandError</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../apis-and/index.html#sessions">Sessions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-launchsession.html">LaunchSession</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-launchsessiontype.html">LaunchSessionType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-statuslistener.html">StatusListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-webapppinstatuslistener.html">WebAppPinStatusListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-webappsession.html">WebAppSession</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-webappsession-launchlistener.html">WebAppSession.LaunchListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-webappsessionlistener.html">WebAppSessionListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-webappstatus.html">WebAppStatus</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../apis-and/index.html#info-objects">Info Objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-appinfo.html">AppInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-appstate.html">AppState</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-channelinfo.html">ChannelInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-externalinputinfo.html">ExternalInputInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-imageinfo.html">ImageInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-keycode.html">KeyCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-mediainfo.html">MediaInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-medialaunchobject.html">MediaLaunchObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-playmode.html">PlayMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-playstatestatus.html">PlayStateStatus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-programinfo.html">ProgramInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-programlist.html">ProgramList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-textinputstatusinfo.html">TextInputStatusInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-volumestatus.html">VolumeStatus</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../apis-and/index.html#advanced">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-connectabledevicestore.html">ConnectableDeviceStore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apis-and/and-defaultconnectabledevicestore.html">DefaultConnectableDeviceStore</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="and-modularization.html" class="btn btn-neutral float-right" title="Modularization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../download-connect-sdk.html" class="btn btn-neutral float-left" title="Download Connect SDK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020 LG Silicon Valley Lab. All Rights Reserved. All trademarks and logos beling to their respective owners.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

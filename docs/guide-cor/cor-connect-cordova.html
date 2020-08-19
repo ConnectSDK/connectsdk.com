@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Discover &amp; Connect to Device &mdash; connectSDK  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Beam Media" href="cor-beam-media.html" />
+    <link rel="prev" title="Setup Instructions" href="cor-setup-instructions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cor-setup-instructions.html">Setup Instructions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Discover &amp; Connect to Device</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-a-device-picker-button">Adding a device picker button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connecting-to-a-device">Connecting to a device</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#capability-filtering">Capability Filtering</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Getting Started</a> &raquo;</li>
+        
+      <li>Discover &amp; Connect to Device</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/guide-cor/cor-connect-cordova.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="discover-connect-to-device">
+<h1>Discover &amp; Connect to Device<a class="headerlink" href="#discover-connect-to-device" title="Permalink to this headline">¶</a></h1>
+<p>This guide assumes you’re working with a brand new Cordova app as
+described in the <a class="reference internal" href="cor-setup-instructions.html"><span class="doc">Setup Instructions</span></a>. It will show you how to add a
+button that selects a supported smart TV on your local WiFi network and
+displays a video.</p>
+<div class="section" id="adding-a-device-picker-button">
+<h2>Adding a device picker button<a class="headerlink" href="#adding-a-device-picker-button" title="Permalink to this headline">¶</a></h2>
+<p>Open hello_connect/www/index.html in your preferred editor. Let’s add a
+new button:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Apache Cordova<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;app.showDevicePicker()&quot;</span><span class="p">&gt;</span>Select a TV<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Open hello_connect/www/js/index.js in your preferred text editor. Find
+the “onDeviceReady” method, which is called when Cordova is finished
+initializing. At the end, add the following line:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">app</span><span class="p">.</span><span class="nx">setupDiscovery</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Next, add a new method to the app object called setupDiscovery:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">setupDiscovery</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">ConnectSDK</span><span class="p">.</span><span class="nx">discoveryManager</span><span class="p">.</span><span class="nx">startDiscovery</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now let’s add a handler for the button:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">showDevicePicker</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">ConnectSDK</span><span class="p">.</span><span class="nx">discoveryManager</span><span class="p">.</span><span class="nx">pickDevice</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Let’s build and run the modified example. If you are building through
+Xcode/Android Studio you will need to run the following command to
+update the projects.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cordova</span> <span class="n">prepare</span>
+</pre></div>
+</div>
+<p>Otherwise, you can simply build with the Cordova tools&lt;/&gt;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cordova</span> <span class="n">build</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="connecting-to-a-device">
+<h2>Connecting to a device<a class="headerlink" href="#connecting-to-a-device" title="Permalink to this headline">¶</a></h2>
+<p>If the app launch went well, you should be able to click on the “Select
+a TV” button to bring up a picker.</p>
+<p>Next, we should allow the user to actually do something with the TV.</p>
+<p>Open hello_connect/www/js/index.js again. We’ll modify showDevicePicker
+to talk to the TV by chaining a <em>success</em> callback that will be called
+when a device is selected. This function will be called with a device
+object as the first argument, which we can use to send a video URL to
+the TV.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">showDevicePicker</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">ConnectSDK</span><span class="p">.</span><span class="nx">discoveryManager</span><span class="p">.</span><span class="nx">pickDevice</span><span class="p">().</span><span class="nx">success</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">device</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">function</span> <span class="nx">sendVideo</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">device</span><span class="p">.</span><span class="nx">getMediaPlayer</span><span class="p">().</span><span class="nx">playMedia</span><span class="p">(</span><span class="s2">&quot;http://media.w3.org/2010/05/sintel/trailer.mp4&quot;</span><span class="p">,</span> <span class="s2">&quot;video/mp4&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">device</span><span class="p">.</span><span class="nx">isReady</span><span class="p">())</span> <span class="p">{</span> <span class="c1">// already connected</span>
+            <span class="nx">sendVideo</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">device</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;ready&quot;</span><span class="p">,</span> <span class="nx">sendVideo</span><span class="p">);</span>
+            <span class="nx">device</span><span class="p">.</span><span class="nx">connect</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="capability-filtering">
+<h3>Capability Filtering<a class="headerlink" href="#capability-filtering" title="Permalink to this headline">¶</a></h3>
+<p>If your app is making use of certain device capabilities (media
+playback/controls, web app launching, etc), it is strongly recommended
+that you create filters with this information for DiscoveryManager.</p>
+<p>Devices that are discovered &amp; shown in the picker will be guaranteed to
+have the set of capabilities that you have provided. This will prevent
+your users from selecting a device that has not yet acquired all of its
+protocols.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">videoFilter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ConnectSDK</span><span class="p">.</span><span class="nx">CapabilityFilter</span><span class="p">([</span>
+   <span class="nx">ConnectSDK</span><span class="p">.</span><span class="nx">Capabilities</span><span class="p">.</span><span class="nx">MediaPlayer</span><span class="p">.</span><span class="nx">Play</span><span class="p">.</span><span class="nx">Video</span><span class="p">,</span>
+   <span class="nx">ConnectSDK</span><span class="p">.</span><span class="nx">Capabilities</span><span class="p">.</span><span class="nx">MediaControl</span><span class="p">.</span><span class="nx">Any</span><span class="p">,</span>
+   <span class="nx">ConnectSDK</span><span class="p">.</span><span class="nx">Capabilities</span><span class="p">.</span><span class="nx">VolumeControl</span><span class="p">.</span><span class="nx">UpDown</span>
+<span class="p">]);</span>
+
+<span class="kd">var</span> <span class="nx">imageFilter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ConnectSDK</span><span class="p">.</span><span class="nx">CapabilityFilter</span><span class="p">([</span>
+    <span class="nx">ConnectSDK</span><span class="p">.</span><span class="nx">Capabilities</span><span class="p">.</span><span class="nx">MediaPlayer</span><span class="p">.</span><span class="nx">Display</span><span class="p">.</span><span class="nx">Image</span>
+<span class="p">]);</span>
+
+<span class="nx">ConnectSDK</span><span class="p">.</span><span class="nx">discoveryManager</span><span class="p">.</span><span class="nx">setCapabilityFilters</span><span class="p">([</span><span class="nx">videoFilter</span><span class="p">,</span> <span class="nx">imageFilter</span><span class="p">]);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">setupDiscovery</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cor-beam-media.html" class="btn btn-neutral float-right" title="Beam Media" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cor-setup-instructions.html" class="btn btn-neutral float-left" title="Setup Instructions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020 LG Silicon Valley Lab. All Rights Reserved. All trademarks and logos beling to their respective owners.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

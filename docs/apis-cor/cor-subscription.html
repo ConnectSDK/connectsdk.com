@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Subscription &mdash; connectSDK  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="LaunchSession" href="cor-launchsession.html" />
+    <link rel="prev" title="ConnectableDevice" href="cor-connectabledevice.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html">Discovery</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#device">Device</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cor-command.html">Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cor-connectabledevice.html">ConnectableDevice</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Subscription</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capabilities">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#constants">Constants</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-policy.html">Privacy Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../guide-cor/index.html">Getting Started</a> &raquo;</li>
+        
+          <li><a href="index.html">Discovery</a> &raquo;</li>
+        
+      <li>Subscription</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apis-cor/cor-subscription.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="subscription">
+<h1>Subscription<a class="headerlink" href="#subscription" title="Permalink to this headline">¶</a></h1>
+<p>Subscription objects are returned when calling capability subscription
+methods.</p>
+<p>Subscription objects allow listening for success/error events from the
+request. Success events may be emitted multiple times when updates to
+the subscription are received.</p>
+<p>Example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">subscription</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">getVolumeControl</span><span class="p">().</span><span class="nx">subscribeVolume</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">updateCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="nx">subscription</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">volume</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// this may be called multiple times</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;got volume update: &quot;</span> <span class="o">+</span> <span class="nx">volume</span><span class="p">);</span>
+
+    <span class="nx">updateCount</span><span class="o">++</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">updateCount</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// unsubscribe after 5 updates</span>
+        <span class="nx">subscription</span><span class="p">.</span><span class="nx">unsubscribe</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}).</span><span class="nx">error</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;subscription failed&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>subscription.<strong>unsubscribe</strong> ()</dt><dd><p>Unsubscribes from this subscription. Notifies the device that updates
+are no longer needed, and stops emitting events from this
+Subscription object.</p>
+</dd>
+</dl>
+<div class="section" id="mixin-methods-simpleeventemitter">
+<h3>Mixin Methods - SimpleEventEmitter<a class="headerlink" href="#mixin-methods-simpleeventemitter" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>subscription.<strong>addListener</strong> (<em>event</em>, <em>callback</em>, [<em>context</em>])</dt><dd><p>Add event listener.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event (string) – name of event</p></li>
+<li><p>callback (function) – function to call when event is fired</p></li>
+<li><p>context (object) [optional] – object to bind to “this” value when calling function</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+<dt>subscription.<strong>removeListener</strong> (<em>event</em>, [<em>callback</em>], [<em>context</em>])</dt><dd><p>Remove event listener with the specified callback and context. If
+callback is null or undefined, all callbacks for this event will be
+removed.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event (string) – name of event</p></li>
+<li><p>callback (function) [optional] – function originally passed to addListener</p></li>
+<li><p>context (object) [optional] – context object originally passed to addListener</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+<dt>subscription.<strong>on</strong> (<em>event</em>, <em>callback</em>, [<em>context</em>])</dt><dd><p>Alias for addListener.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event (string) – name of event</p></li>
+<li><p>callback (function) – function to call when event is fired</p></li>
+<li><p>context (object) [optional] – object to bind to “this” value when calling function</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+<dt>subscription.<strong>off</strong> (<em>event</em>, [<em>callback</em>], [<em>context</em>])</dt><dd><p>Alias for removeListener.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event (string) – event name</p></li>
+<li><p>callback (function) [optional] – function originally passed to on</p></li>
+<li><p>context (object) [optional] – context object originally passed to on</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="mixin-methods-successcallbacks">
+<h3>Mixin Methods - SuccessCallbacks<a class="headerlink" href="#mixin-methods-successcallbacks" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>subscription.<strong>success</strong> (<em>callback</em>, [<em>context</em>])</dt><dd><p>Register a callback for the “success” event. The success callback may
+be called with zero or more arguments depending on the type of
+response.</p>
+<p>Example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">obj</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">report</span><span class="p">(</span><span class="s2">&quot;I got a result: &quot;</span> <span class="o">+</span> <span class="nx">result</span><span class="p">);</span>
+<span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>callback (function) – function to call when event is fired</p></li>
+<li><p>context (*) [optional] – object to bind to “this” value when calling function</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+<dt>subscription.<strong>error</strong> (<em>callback</em>, [<em>context</em>])</dt><dd><p>Register a callback for the “error” event. The error callback will be
+called with a error object as the only argument.</p>
+<p>Example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">obj</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">reportError</span><span class="p">(</span><span class="s2">&quot;I got an error: &quot;</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span>
+<span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>callback (function) – function to call when event is fired</p></li>
+<li><p>context (*) [optional] – object to bind to “this” value when calling function</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+<dt>subscription.<strong>complete</strong> (<em>callback</em>, [<em>context</em>])</dt><dd><p>Register a callback for the “complete” event. The complete callback
+will be called with</p>
+<p>Example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">obj</span><span class="p">.</span><span class="nx">complete</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">report</span><span class="p">(</span><span class="s2">&quot;I got an error: &quot;</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;I got a result: &quot;</span> <span class="o">+</span> <span class="nx">result</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>callback (function) – function to call when event is fired</p></li>
+<li><p>context (*) [optional] – object to bind to “this” value when calling function</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cor-launchsession.html" class="btn btn-neutral float-right" title="LaunchSession" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cor-connectabledevice.html" class="btn btn-neutral float-left" title="ConnectableDevice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020 LG Silicon Valley Lab. All Rights Reserved. All trademarks and logos beling to their respective owners.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
