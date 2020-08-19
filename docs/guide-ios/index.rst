@@ -25,4 +25,4 @@ API References
 .. toctree::
    :maxdepth: 2
 
-   ../api-ios/index
+   ../apis-ios/index

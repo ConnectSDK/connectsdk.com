@@ -148,6 +148,6 @@ into the web app, the control is just like any other media session.
 
 .. note::
    For beaming media to AirPlay devices, you must set the
-   :doc:`AirPlayServiceMode <../api-ios/ios-airplayservicemode>` to
+   :doc:`AirPlayServiceMode <../apis-ios/ios-airplayservicemode>` to
    AirPlayServiceModeMedia. See the :doc:`API
-   docs <../api-ios/ios-airplayservice>` for more information.
+   docs <../apis-ios/ios-airplayservice>` for more information.

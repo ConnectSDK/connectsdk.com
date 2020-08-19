@@ -1,4 +1,4 @@
-CastService 
+CastService
 ===========
 ``com.connectsdk.service.CastService``
 
@@ -124,12 +124,12 @@ void **getPosition** (final :doc:`PositionListener <and-positionlistener>` *list
 
 :doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getMediaPlayerCapabilityLevel** ()
 
-void **getMediaInfo** (:doc:`MediaInfoListener <and-mediaInfolistener>` *listener*)
+void **getMediaInfo** (:doc:`MediaInfoListener <and-mediainfolistener>` *listener*)
     **Parameters:**
 
     -  listener – (optional) MediaInfoListener with methods to be called on success or failure
 
-:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`MediaInfoListener <and-mediaInfolistener>`> **subscribeMediaInfo** (:doc:`MediaInfoListener <and-mediaInfolistener>` *listener*)
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`MediaInfoListener <and-mediainfolistener>`> **subscribeMediaInfo** (:doc:`MediaInfoListener <and-mediainfolistener>` *listener*)
     **Parameters:**
 
     -  listener – (optional) MediaInfoListener with methods to be called on success or failure
@@ -482,12 +482,12 @@ void **closeLaunchSession** (:doc:`LaunchSession <and-launchsession>` *launchSes
 
 :doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getMediaPlayerCapabilityLevel** ()
 
-void **getMediaInfo** (:doc:`MediaInfoListener <and-mediaInfolistener>` *listener*)
+void **getMediaInfo** (:doc:`MediaInfoListener <and-mediainfolistener>` *listener*)
     **Parameters:**
 
     -  listener – (optional) MediaInfoListener with methods to be called on success or failure
 
-:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`MediaInfoListener <and-mediaInfolistener>`> **subscribeMediaInfo** (:doc:`MediaInfoListener <and-mediaInfolistener>` *listener*)
+:doc:`ServiceSubscription <and-servicesubscription>` <:doc:`MediaInfoListener <and-mediainfolistener>`> **subscribeMediaInfo** (:doc:`MediaInfoListener <and-mediainfolistener>` *listener*)
     **Parameters:**
 
     -  listener – (optional) MediaInfoListener with methods to be called on success or failure

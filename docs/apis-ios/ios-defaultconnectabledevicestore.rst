@@ -22,6 +22,7 @@ File Format
 DefaultConnectableDeviceStore stores data in a JSON file named ``Connect_SDK_Device_Store.json`` in the documents directory.
 
 .. code-block:: json
+   :force:
 
    {
        // necessary for migrations, if needed

@@ -29,4 +29,4 @@ The combined release notes for iOS and Android:
 
 We are working towards some exciting features, including Windows SDK
 support and new device platforms support in the coming months. Please
-continue to help our work by providing your valuable :doc:`feedback to us <../conta>`.
+continue to help our work by providing your valuable :doc:`feedback to us <../contact>`.

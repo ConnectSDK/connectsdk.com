@@ -70,7 +70,7 @@ Capability Listeners
    and-errorlistener.rst
    and-externalinputlistlistener.rst
    and-mediainfolistener.rst
-   and-mediaplayer-launchListener.rst
+   and-mediaplayer-launchlistener.rst
    and-mutelistener.rst
    and-playstatelistener.rst
    and-positionlistener.rst

@@ -119,8 +119,8 @@ DiscoveryManager when startDiscovery is called.
 
 .. seealso::
 
-  * :doc:`DiscoveryManager <../apis-ios/ios-discovery-manager>`
+  * :doc:`DiscoveryManager <../apis-ios/ios-discoverymanager>`
   * :doc:`CapabilityFilter <../apis-ios/ios-capabilityfilter>`
-  * :doc:`PairingLevel <../apis-ios/ios-pairinglevel>`
+  * :doc:`PairingLevel <../apis-ios/ios-deviceservicepairinglevel>`
   * :doc:`ConnectableDeviceStore <../apis-ios/ios-connectabledevicestore>`
   * :doc:`DefaultConnectableDeviceStore <../apis-ios/ios-defaultconnectabledevicestore>`

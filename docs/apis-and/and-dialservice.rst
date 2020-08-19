@@ -61,13 +61,13 @@ void **launchApp** (String *appId*, :doc:`AppLaunchListener <and-applaunchlisten
     -  appId
     -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-void **launchAppWithInfo** (:doc:`AppInfo <appinfo>` *appInfo*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+void **launchAppWithInfo** (:doc:`AppInfo <and-appinfo>` *appInfo*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
     **Parameters:**
 
     -  appInfo
     -  listener – (optional) AppLaunchListener with methods to be called on success or failure
 
-void **launchAppWithInfo** (final :doc:`AppInfo <appinfo>` *appInfo*, Object *params*, final :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+void **launchAppWithInfo** (final :doc:`AppInfo <and-appinfo>` *appInfo*, Object *params*, final :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
     **Parameters:**
 
     -  appInfo
@@ -262,7 +262,7 @@ void **closeLaunchSession** (:doc:`LaunchSession <and-launchsession>` *launchSes
 
 :doc:`CapabilityPriorityLevel <and-capabilityprioritylevel>` **getLauncherCapabilityLevel** ()
 
-void **launchAppWithInfo** (:doc:`AppInfo <appinfo>` *appInfo*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
+void **launchAppWithInfo** (:doc:`AppInfo <and-appinfo>` *appInfo*, :doc:`AppLaunchListener <and-applaunchlistener>` *listener*)
     Launch an application on the device.
 
     **Related capabilities:**

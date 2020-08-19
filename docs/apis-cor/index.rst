@@ -6,26 +6,6 @@ Discovery
    cor-capabilityfilter.rst
    cor-devicepicker.rst
    cor-discoverymanager.rst
-   cor-launchsession.rst
-   cor-webappsession.rst
-   cor-externalinputcontrol.rst
-   cor-keycontrol.rst
-   cor-launcher.rst
-   cor-mediacontrol.rst
-   cor-mediaplayer.rst
-   cor-mousecontrol.rst
-   cor-playlistcontrol.rst
-   cor-powercontrol.rst
-   cor-tvcontrol.rst
-   cor-textinputcontrol.rst
-   cor-toastcontrol.rst
-   cor-volumecontrol.rst
-   cor-webapplauncher.rst
-   cor-airplayservicemode.rst
-   cor-keycodes.rst
-   cor-pairinglevel.rst
-   cor-pairingtype.rst
-   cor-services.rstand-capabilityfilter.rst
 
 Device
 ---------
@@ -41,18 +21,35 @@ Sessions
 .. toctree::
    :maxdepth: 1
 
-To be published
+   cor-launchsession.rst
+   cor-webappsession.rst
 
 Capabilities
 -------------
 .. toctree::
    :maxdepth: 1
 
-To be published
+   cor-externalinputcontrol.rst
+   cor-keycontrol.rst
+   cor-launcher.rst
+   cor-mediacontrol.rst
+   cor-mediaplayer.rst
+   cor-mousecontrol.rst
+   cor-playlistcontrol.rst
+   cor-powercontrol.rst
+   cor-tvcontrol.rst
+   cor-textinputcontrol.rst
+   cor-toastcontrol.rst
+   cor-volumecontrol.rst
+   cor-webapplauncher.rst
 
 Constants
 -------------
 .. toctree::
    :maxdepth: 1
 
-To be published
+   cor-airplayservicemode.rst
+   cor-keycodes.rst
+   cor-pairinglevel.rst
+   cor-pairingtype.rst
+   cor-services.rst
