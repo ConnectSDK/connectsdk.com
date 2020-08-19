@@ -7,9 +7,9 @@ required for normalizing power off functionality.
 Methods
 -------
 
-\- (id<`PowerControl </apis/1-6-0/ios/PowerControl>`__>) **powerControl**
+\- (id<:doc:`PowerControl <ios-powercontrol>`>) **powerControl**
 
-\- (`CapabilityPriorityLevel </apis/1-6-0/ios/CapabilityPriorityLevel>`__) **powerControlPriority**
+\- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **powerControlPriority**
 
 \- (void) **powerOffWithSuccess**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Sends a power off signal to the TV. A success message will,

@@ -8,9 +8,9 @@ click).
 Methods
 -------
 
-\- (id<`MouseControl </apis/1-6-0/ios/MouseControl>`__>) **mouseControl**
+\- (id<:doc:`MouseControl <ios-mousevontrol>`>) **mouseControl**
 
-\- (`CapabilityPriorityLevel </apis/1-6-0/ios/CapabilityPriorityLevel>`__) **mouseControlPriority**
+\- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **mouseControlPriority**
 
 \- (void) **connectMouseWithSuccess**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Establish a connection with the DeviceService's mouse communication

@@ -7,7 +7,7 @@ from a running web app.
 Methods
 -------
 
-\- (void) **webAppSession**:(`WebAppSession </apis/1-6-0/ios/WebAppSession>`__ \*)\ *webAppSession* **didReceiveMessage**:(id)\ *message*
+\- (void) **webAppSession**:(:doc:`WebAppSession <ios-webappsession>` \*)\ *webAppSession* **didReceiveMessage**:(id)\ *message*
    This method is called when a message is received from a web app.
 
    **Parameters:**
@@ -18,7 +18,7 @@ Methods
    -  **didReceiveMessage**: message – Message from the web app, either an NSString or a JSON object in
       the form of an NSDictionary
 
-\- (void) **webAppSessionDidDisconnect**:(`WebAppSession </apis/1-6-0/ios/WebAppSession>`__ \*)\ *webAppSession*
+\- (void) **webAppSessionDidDisconnect**:(:doc:`WebAppSession <ios-webappsession>` \*)\ *webAppSession*
    This method is called when a web app's communication channel
    (WebSocket, etc) has become disconnected.
 

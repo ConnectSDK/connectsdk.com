@@ -32,14 +32,14 @@ webOS, etc).
 Properties
 ----------
 
-`LaunchSession </apis/1-6-0/ios/LaunchSession>`__ \* launchSession
+:doc:`LaunchSession <ios-launchsession>` \* launchSession
    LaunchSession object containing key session information. Much of this
    information is required for web app messaging & closing the web app.
 
-`DeviceService </apis/1-6-0/ios/DeviceService>`__ \* service
+:doc:`DeviceService <ios-deviceservice>` \* service
    DeviceService that was responsible for launching this web app.
 
-id<`WebAppSessionDelegate </apis/1-6-0/ios/WebAppSessionDelegate>`__> delegate
+id<:doc:`WebAppSessionDelegate <ios-webappsessiondelegate>`> delegate
    When messages are received from a web app, they are parsed into the
    appropriate object type (string vs JSON/NSDictionary) and routed to
    the WebAppSessionDelegate.
@@ -47,7 +47,7 @@ id<`WebAppSessionDelegate </apis/1-6-0/ios/WebAppSessionDelegate>`__> delegate
 Methods
 -------
 
-\- (instancetype) **initWithLaunchSession**:(`LaunchSession </apis/1-6-0/ios/LaunchSession>`__ \*)\ *launchSession* **service**:(`DeviceService </apis/1-6-0/ios/DeviceService>`__ \*)\ *service*
+\- (instancetype) **initWithLaunchSession**:(:doc:`LaunchSession <ios-launchsession>` \*)\ *launchSession* **service**:(:doc:`DeviceService <ios-deviceservice>` \*)\ *service*
    Instantiates a WebAppSession object with all the information
    necessary to interact with a web app.
 
@@ -57,7 +57,7 @@ Methods
 
    -  **service**: service – DeviceService that was responsible for launching this web app
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribeWebAppStatus**:(`WebAppStatusBlock <#webappstatusblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribeWebAppStatus**:(`WebAppStatusBlock <#webappstatusblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Subscribes to changes in the web app's status.
 
    **Parameters:**
@@ -160,7 +160,7 @@ Typedefs
 WebAppStatusBlock
 ~~~~~~~~~~~~~~~~~
 
-void(^)(`WebAppStatus </apis/1-6-0/ios/WebAppStatus>`__ status)
+void(^)(:doc:`WebAppStatus <ios-webappstatus>` status)
 
 Success block that is called upon successfully getting a web app's
 status.

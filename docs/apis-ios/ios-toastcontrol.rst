@@ -11,9 +11,9 @@ message.
 Methods
 -------
 
-\- (id<`ToastControl </apis/1-6-0/ios/ToastControl>`__>) **toastControl**
+\- (id<:doc:`ToastControl <ios-toastcontrol>`>) **toastControl**
 
-\- (`CapabilityPriorityLevel </apis/1-6-0/ios/CapabilityPriorityLevel>`__) **toastControlPriority**
+\- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **toastControlPriority**
 
 \- (void) **showToast**:(NSString \*)\ *message* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Show a toast on the TV.
@@ -41,7 +41,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **showClickableToast**:(NSString \*)\ *message* **appInfo**:(`AppInfo </apis/1-6-0/ios/AppInfo>`__ \*)\ *appInfo* **params**:(NSDictionary \*)\ *params* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **showClickableToast**:(NSString \*)\ *message* **appInfo**:(:doc:`AppInfo <ios-appinfo>` \*)\ *appInfo* **params**:(NSDictionary \*)\ *params* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Show a toast on the TV and perform an action when the toast is
    clicked on the TV.
 
@@ -63,7 +63,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **showClickableToast**:(NSString \*)\ *message* **appInfo**:(`AppInfo </apis/1-6-0/ios/AppInfo>`__ \*)\ *appInfo* **params**:(NSDictionary \*)\ *params* **iconData**:(NSString \*)\ *iconData* **iconExtension**:(NSString \*)\ *iconExtension* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **showClickableToast**:(NSString \*)\ *message* **appInfo**:(:doc:`AppInfo <ios-appinfo>` \*)\ *appInfo* **params**:(NSDictionary \*)\ *params* **iconData**:(NSString \*)\ *iconData* **iconExtension**:(NSString \*)\ *iconExtension* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Show a toast on the TV and perform an action when the toast is
    clicked on the TV.
 

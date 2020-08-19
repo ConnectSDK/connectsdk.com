@@ -1,7 +1,7 @@
 NetcastTVService
 ================
 
-*extends*\ `DeviceService </apis/1-6-0/ios/DeviceService>`__
+*extends*\ :doc:`DeviceService <ios-deviceservice>`
 
 NetcastTVService provides capabilities for LG Smart TVs running Netcast
 versions 3.x and 4.x (model years 2012-2014). The media playback
@@ -45,7 +45,7 @@ Inherited Methods
    DiscoveryProvider used to discover this DeviceService. Some keys that
    are used are: service name, SSDP filter, etc.
 
-\+ (`DeviceService </apis/1-6-0/ios/DeviceService>`__ \*) **deviceServiceWithClass**:(Class)\ *\_class* **serviceConfig**:(ServiceConfig \*)\ *serviceConfig*
+\+ (:doc:`DeviceService <ios-deviceservice>` \*) **deviceServiceWithClass**:(Class)\ *\_class* **serviceConfig**:(ServiceConfig \*)\ *serviceConfig*
    **Parameters:**
 
    -  \_class
@@ -107,7 +107,7 @@ Inherited Methods
       depending on what type of pairing is required, but is likely to be
       a string (pin code, pairing key, etc).
 
-\- (void) **closeLaunchSession**:(`LaunchSession </apis/1-6-0/ios/LaunchSession>`__ \*)\ *launchSession* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **closeLaunchSession**:(:doc:`LaunchSession <ios-launchsession>` \*)\ *launchSession* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Every LaunchSession object has an associated DeviceService.
    Internally, LaunchSession's close method proxies to it's
    DeviceService's closeLaunchSession method. If, for some reason, your

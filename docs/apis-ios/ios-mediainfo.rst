@@ -27,7 +27,7 @@ NSArray \* images
    Collection of ImageInfo objects to send, as necessary, to the device
    when launching media through the MediaPlayer capability.
 
-`SubtitleInfo </apis/1-6-0/ios/SubtitleInfo>`__ \* subtitleInfo
+:doc:`SubtitleInfo <ios-subtitleinfo>` \* subtitleInfo
    Subtitle track for this media instance (optional).
 
 Methods
@@ -42,7 +42,7 @@ Methods
 
    -  **mimeType**: mimeType – Mime-type of the media file
 
-\- (void) **addImage**:(`ImageInfo </apis/1-6-0/ios/ImageInfo>`__ \*)\ *image*
+\- (void) **addImage**:(:doc:`ImageInfo <ios-imageinfo>` \*)\ *image*
    Adds an ImageInfo object to the array of images.
 
    **Parameters:**

@@ -7,9 +7,9 @@ launching web apps and establishing two-way communication.
 Methods
 -------
 
-\- (id<`WebAppLauncher </apis/1-6-0/ios/WebAppLauncher>`__>) **webAppLauncher**
+\- (id<:doc:`WebAppLauncher <ios-webapplauncher>`>) **webAppLauncher**
 
-\- (`CapabilityPriorityLevel </apis/1-6-0/ios/CapabilityPriorityLevel>`__) **webAppLauncherPriority**
+\- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **webAppLauncherPriority**
 
 \- (void) **launchWebApp**:(NSString \*)\ *webAppId* **success**:(`WebAppLaunchSuccessBlock <#webapplaunchsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Launch a web application on the TV.
@@ -95,7 +95,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **joinWebApp**:(`LaunchSession </apis/1-6-0/ios/LaunchSession>`__ \*)\ *webAppLaunchSession* **success**:(`WebAppLaunchSuccessBlock <#webapplaunchsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **joinWebApp**:(:doc:`LaunchSession <ios-launchsession>` \*)\ *webAppLaunchSession* **success**:(`WebAppLaunchSuccessBlock <#webapplaunchsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Join an active web app without launching/relaunching. If the app is
    not running/joinable, the failure block will be called immediately.
 
@@ -129,7 +129,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **closeWebApp**:(`LaunchSession </apis/1-6-0/ios/LaunchSession>`__ \*)\ *launchSession* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **closeWebApp**:(:doc:`LaunchSession <ios-launchsession>` \*)\ *launchSession* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Closes a web app with the provided LaunchSession.
 
    **Related capabilities:**
@@ -171,7 +171,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribeIsWebAppPinned**:(NSString \*)\ *webAppId* **success**:(WebAppPinStatusBlock)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribeIsWebAppPinned**:(NSString \*)\ *webAppId* **success**:(WebAppPinStatusBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    **Parameters:**
 
    -  webAppId
@@ -186,7 +186,7 @@ Typedefs
 WebAppLaunchSuccessBlock
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-void(^)(`WebAppSession </apis/1-6-0/ios/WebAppSession>`__
+void(^)(:doc:`WebAppSession <ios-webappsession>`
 \*webAppSession)
 
 Success block that is called upon successfully launch of a web app.

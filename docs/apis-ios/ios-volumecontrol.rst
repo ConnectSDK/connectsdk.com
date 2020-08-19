@@ -8,9 +8,9 @@ up/down, mute, etc).
 Methods
 -------
 
-\- (id<`VolumeControl </apis/1-6-0/ios/VolumeControl>`__>) **volumeControl**
+\- (id<:doc:`VolumeControl <ios-volumecontrol>`>) **volumeControl**
 
-\- (`CapabilityPriorityLevel </apis/1-6-0/ios/CapabilityPriorityLevel>`__) **volumeControlPriority**
+\- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **volumeControlPriority**
 
 \- (void) **volumeUpWithSuccess**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Sends the volume up command to the device.
@@ -66,7 +66,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribeVolumeWithSuccess**:(`VolumeSuccessBlock <#volumesuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribeVolumeWithSuccess**:(`VolumeSuccessBlock <#volumesuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Subscribe to the volume on the TV.
 
    **Related capabilities:**
@@ -107,7 +107,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribeMuteWithSuccess**:(`MuteSuccessBlock <#mutesuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribeMuteWithSuccess**:(`MuteSuccessBlock <#mutesuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Subscribe to the mute state on the TV.
 
    **Related capabilities:**

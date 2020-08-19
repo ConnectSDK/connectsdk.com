@@ -18,7 +18,7 @@ void **onSuccess** (T *object*)
 
      * object – Response object, can be any number of object types, depending on the protocol/capability/etc
 
-void **onError** (`ServiceCommandError <and-ServiceCommandError>`__ *error*)
+void **onError** (:doc:`ServiceCommandError <and-servicecommanderror>` *error*)
      Method to return the error that was generated. Will pass an error object with a helpful status code and error message.
 
      **Parameters:**

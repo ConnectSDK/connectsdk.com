@@ -9,9 +9,9 @@ browser, etc) as well as by (platform-specific) app id.
 Methods
 -------
 
-\- (id<`Launcher </apis/1-6-0/ios/Launcher>`__>) **launcher**
+\- (id<:doc:`Launcher <ios-launcher>`__>) **launcher**
 
-\- (`CapabilityPriorityLevel </apis/1-6-0/ios/CapabilityPriorityLevel>`__) **launcherPriority**
+\- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **launcherPriority**
 
 \- (void) **launchApp**:(NSString \*)\ *appId* **success**:(`AppLaunchSuccessBlock <#applaunchsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Launch an application on the device.
@@ -28,7 +28,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **launchAppWithInfo**:(`AppInfo </apis/1-6-0/ios/AppInfo>`__ \*)\ *appInfo* **success**:(`AppLaunchSuccessBlock <#applaunchsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **launchAppWithInfo**:(:doc:`AppInfo <ios-appInfo>` \*)\ *appInfo* **success**:(`AppLaunchSuccessBlock <#applaunchsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Launch an application on the device.
 
    **Related capabilities:**
@@ -45,7 +45,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **launchAppWithInfo**:(`AppInfo </apis/1-6-0/ios/AppInfo>`__ \*)\ *appInfo* **params**:(NSDictionary \*)\ *params* **success**:(`AppLaunchSuccessBlock <#applaunchsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **launchAppWithInfo**:(:doc:`AppInfo <ios-appInfo>` \*)\ *appInfo* **params**:(NSDictionary \*)\ *params* **success**:(`AppLaunchSuccessBlock <#applaunchsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Launch an application on the device.
 
    **Related capabilities:**
@@ -64,7 +64,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **closeApp**:(`LaunchSession </apis/1-6-0/ios/LaunchSession>`__ \*)\ *launchSession* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **closeApp**:(:doc:`LaunchSession <ios-launchSession>` \*)\ *launchSession* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Close an application on the device.
 
    **Related capabilities:**
@@ -105,7 +105,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribeRunningAppWithSuccess**:(`AppInfoSuccessBlock <#appinfosuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribeRunningAppWithSuccess**:(`AppInfoSuccessBlock <#appinfosuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Subscribes to changes of the current running app. Every time the
    running app changes, the success block will be called with an AppInfo
    object for the current running app.
@@ -120,7 +120,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **getAppState**:(`LaunchSession </apis/1-6-0/ios/LaunchSession>`__ \*)\ *launchSession* **success**:(`AppStateSuccessBlock <#appstatesuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **getAppState**:(:doc:`LaunchSession <ios-launchsession>` \*)\ *launchSession* **success**:(`AppStateSuccessBlock <#appstatesuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Gets the target app's running status and on-screen visibility.
 
    **Related capabilities:**
@@ -135,7 +135,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribeAppState**:(`LaunchSession </apis/1-6-0/ios/LaunchSession>`__ \*)\ *launchSession* **success**:(`AppStateSuccessBlock <#appstatesuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>`__ \*) **subscribeAppState**:(`LaunchSession </apis/1-6-0/ios/LaunchSession>`__ \*)\ *launchSession* **success**:(`AppStateSuccessBlock <#appstatesuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Subscribes to changes of the state of the target app. Every time the
    app's state changes, the success block will be called with info on
    the app's running status and on-screen visibility.
@@ -231,7 +231,7 @@ Typedefs
 AppInfoSuccessBlock
 ~~~~~~~~~~~~~~~~~~~
 
-void(^)(`AppInfo </apis/1-6-0/ios/AppInfo>`__ \*appInfo)
+void(^)(:doc:`AppInfo <ios-appinfo>` \*appInfo)
 
 Success block that is called upon requesting info about the current
 running app.
@@ -243,8 +243,7 @@ running app.
 AppLaunchSuccessBlock
 ~~~~~~~~~~~~~~~~~~~~~
 
-void(^)(`LaunchSession </apis/1-6-0/ios/LaunchSession>`__
-\*launchSession)
+void(^)(:doc:`LaunchSession <ios-launchsession>` \*launchSession)
 
 Success block that is called upon successfully launching an app.
 

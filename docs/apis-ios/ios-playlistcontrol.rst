@@ -4,9 +4,9 @@ PlayListControl
 Methods
 -------
 
-\- (id<`PlayListControl </apis/1-6-0/ios/PlayListControl>`__>) **playListControl**
+\- (id<:doc:`PlayListControl <ios-playlistcontrol>`>) **playListControl**
 
-\- (`CapabilityPriorityLevel </apis/1-6-0/ios/CapabilityPriorityLevel>`__) **playListControlPriority**
+\- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **playListControlPriority**
 
 \- (void) **playNextWithSuccess**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Plays the next track in the playlist

@@ -8,11 +8,11 @@ keyboard status).
 Methods
 -------
 
-\- (id<`TextInputControl </apis/1-6-0/ios/TextInputControl>`__>) **textInputControl**
+\- (id<:doc:`TextInputControl <ios-textinputcontrol>`>) **textInputControl**
 
-\- (`CapabilityPriorityLevel </apis/1-6-0/ios/CapabilityPriorityLevel>`__) **textInputControlPriority**
+\- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **textInputControlPriority**
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribeTextInputStatusWithSuccess**:(`TextInputStatusInfoSuccessBlock <#textinputstatusinfosuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribeTextInputStatusWithSuccess**:(`TextInputStatusInfoSuccessBlock <#textinputstatusinfosuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Subscribe to information about the current text field.
 
    **Related capabilities:**
@@ -72,7 +72,7 @@ Typedefs
 TextInputStatusInfoSuccessBlock
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-void(^)(`TextInputStatusInfo </apis/1-6-0/ios/TextInputStatusInfo>`__
+void(^)(:doc:`TextInputStatusInfo <ios-textinputstatusinfo>`
 \*textInputStatusInfo)
 
 Response block that is fired on any change of keyboard visibility.

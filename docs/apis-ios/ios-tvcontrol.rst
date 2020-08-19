@@ -8,9 +8,9 @@ list, channel info, etc).
 Methods
 -------
 
-\- (id<`TVControl </apis/1-6-0/ios/TVControl>`__>) **tvControl**
+\- (id<:doc:`TVControl <ios-tvcontrol>`>) **tvControl**
 
-\- (`CapabilityPriorityLevel </apis/1-6-0/ios/CapabilityPriorityLevel>`__) **tvControlPriority**
+\- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **tvControlPriority**
 
 \- (void) **channelUpWithSuccess**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Sends a channel up command to the TV.
@@ -38,7 +38,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **setChannel**:(`ChannelInfo </apis/1-6-0/ios/ChannelInfo>`__ \*)\ *channelInfo* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **setChannel**:(:doc:`ChannelInfo <ios-channelinfo>` \*)\ *channelInfo* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Sets the current channel to the channel provided by the ChannelInfo
    object provided.
 
@@ -68,7 +68,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribeCurrentChannelWithSuccess**:(`CurrentChannelSuccessBlock <#currentchannelsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribeCurrentChannelWithSuccess**:(`CurrentChannelSuccessBlock <#currentchannelsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Subscribes to any changes in the current channel. Each time the
    channel is changed, the new channel's info will be provided to the
    success callback.
@@ -109,7 +109,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribeProgramInfoWithSuccess**:(`ProgramInfoSuccessBlock <#programinfosuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribeProgramInfoWithSuccess**:(`ProgramInfoSuccessBlock <#programinfosuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Subscribes to any changes in the current program. Each time the
    channel is changed or a new program starts, the new program's info
    will be provided to the success callback.
@@ -137,7 +137,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribeProgramListWithSuccess**:(`ProgramListSuccessBlock <#programlistsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribeProgramListWithSuccess**:(`ProgramListSuccessBlock <#programlistsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Subscribes to any changes in the current program. Each time the
    channel is changed or a new program starts, the new program's info
    will be provided to the success callback.
@@ -180,7 +180,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribe3DEnabledWithSuccess**:(`TV3DEnabledSuccessBlock <#tv3denabledsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribe3DEnabledWithSuccess**:(`TV3DEnabledSuccessBlock <#tv3denabledsuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Subscribes to changes in the TV's 3D status.
 
    **Related capabilities:**
@@ -199,7 +199,7 @@ Typedefs
 CurrentChannelSuccessBlock
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-void(^)(`ChannelInfo </apis/1-6-0/ios/ChannelInfo>`__ \*channelInfo)
+void(^)(:doc:`ChannelInfo <ios-channelinfo>` \*channelInfo)
 
 Success block that is called upon successfully getting the current
 channel's information.
@@ -223,7 +223,7 @@ Success block that is called upon successfully getting the channel list.
 ProgramInfoSuccessBlock
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-void(^)(`ProgramInfo </apis/1-6-0/ios/ProgramInfo>`__ \*programInfo)
+void(^)(:doc:`ProgramInfo <ios-programinfo>` \*programInfo)
 
 Success block that is called upon successfully getting the current
 program's information.

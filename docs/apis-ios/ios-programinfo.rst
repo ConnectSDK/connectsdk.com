@@ -14,7 +14,7 @@ NSString \* name
    User-friendly name of the program (ex. Sesame Street, Cosmos, Game of
    Thrones, etc).
 
-`ChannelInfo </apis/1-6-0/ios/ChannelInfo>`__ \* channelInfo
+:doc:`ChannelInfo <ios-channelinfo>` \* channelInfo
    Reference to the ChannelInfo object that this program is associated
    with
 
@@ -25,7 +25,7 @@ id rawData
 Methods
 -------
 
-\- (BOOL) **isEqual**:(`ProgramInfo </apis/1-6-0/ios/ProgramInfo>`__ \*)\ *programInfo*
+\- (BOOL) **isEqual**:(:doc:`ProgramInfo <ios-programinfo>` \*)\ *programInfo*
    Compares two ProgramInfo objects.
 
    **Parameters:**

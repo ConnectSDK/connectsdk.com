@@ -1,7 +1,7 @@
 ServiceSubscription
 ===================
 
-*extends*\ `ServiceCommand </apis/1-6-0/ios/ServiceCommand>`__
+*extends*\ :doc:`ServiceCommand <ios-servicecommand>`
 
 Properties
 ----------

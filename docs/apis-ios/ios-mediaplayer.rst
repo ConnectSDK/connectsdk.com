@@ -7,11 +7,11 @@ required for displaying media on the device.
 Methods
 -------
 
-\- (id<`MediaPlayer </apis/1-6-0/ios/MediaPlayer>`__>) **mediaPlayer**
+\- (id<:doc:`MediaPlayer <ios-mediaplayer>`__>) **mediaPlayer**
 
-\- (`CapabilityPriorityLevel </apis/1-6-0/ios/CapabilityPriorityLevel>`__) **mediaPlayerPriority**
+\- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **mediaPlayerPriority**
 
-\- (void) **displayImageWithMediaInfo**:(`MediaInfo </apis/1-6-0/ios/MediaInfo>`__ \*)\ *mediaInfo* **success**:(`MediaPlayerSuccessBlock <#mediaplayersuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **displayImageWithMediaInfo**:(:doc:`MediaInfo <ios-mediainfo>` \*)\ *mediaInfo* **success**:(`MediaPlayerSuccessBlock <#mediaplayersuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    **Parameters:**
 
    -  mediaInfo
@@ -20,7 +20,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **playMediaWithMediaInfo**:(`MediaInfo </apis/1-6-0/ios/MediaInfo>`__ \*)\ *mediaInfo* **shouldLoop**:(BOOL)\ *shouldLoop* **success**:(`MediaPlayerSuccessBlock <#mediaplayersuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **playMediaWithMediaInfo**:(:doc:`MediaInfo <ios-mediainfo>` \*)\ *mediaInfo* **shouldLoop**:(BOOL)\ *shouldLoop* **success**:(`MediaPlayerSuccessBlock <#mediaplayersuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    **Parameters:**
 
    -  mediaInfo
@@ -31,7 +31,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **closeMedia**:(`LaunchSession </apis/1-6-0/ios/LaunchSession>`__ \*)\ *launchSession* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **closeMedia**:(:doc:`LaunchSession <ios-launchsession>` \*)\ *launchSession* **success**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Close a running media session. Because media is handled differently
    on different platforms, it is required to keep track of LaunchSession
    and MediaControl objects to control that media session in the future.
@@ -78,7 +78,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **displayImage**:(`MediaInfo </apis/1-6-0/ios/MediaInfo>`__ \*)\ *mediaInfo* **success**:(`MediaPlayerDisplaySuccessBlock <#mediaplayerdisplaysuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **displayImage**:(:doc:`MediaInfo <ios-mediainfo>` \*)\ *mediaInfo* **success**:(`MediaPlayerDisplaySuccessBlock <#mediaplayerdisplaysuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Display an image on the device. Not all devices support all of the
    parameters -- supply as many as you have available.
 
@@ -130,7 +130,7 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (void) **playMedia**:(`MediaInfo </apis/1-6-0/ios/MediaInfo>`__ \*)\ *mediaInfo* **shouldLoop**:(BOOL)\ *shouldLoop* **success**:(`MediaPlayerDisplaySuccessBlock <#mediaplayerdisplaysuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (void) **playMedia**:(:doc:`MediaInfo <ios-mediainfo>` \*)\ *mediaInfo* **shouldLoop**:(BOOL)\ *shouldLoop* **success**:(`MediaPlayerDisplaySuccessBlock <#mediaplayerdisplaysuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    Play an audio or video file on the device. Not all devices support
    all of the parameters -- supply as many as you have available.
 
@@ -159,8 +159,8 @@ Typedefs
 MediaPlayerDisplaySuccessBlock
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-void(^)(`LaunchSession </apis/1-6-0/ios/LaunchSession>`__
-\*launchSession, id<`MediaControl </apis/1-6-0/ios/MediaControl>`__>
+void(^)(:doc:`LaunchSession <ios-launchsession>`
+\*launchSession, id<:doc:`MediaControl <ios-mediacontrol>`>
 mediaControl)
 
 Success block that is called upon successfully playing/displaying a
@@ -177,5 +177,5 @@ media file.
 MediaPlayerSuccessBlock
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-void(^)(`MediaLaunchObject </apis/1-6-0/ios/MediaLaunchObject>`__
+void(^)(:doc:`MediaLaunchObject <ios-medialaunchobject>`
 \*mediaLaunchObject)

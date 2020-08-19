@@ -9,9 +9,9 @@ position, duration, etc).
 Methods
 -------
 
-\- (id<`MediaControl </apis/1-6-0/ios/MediaControl>`__>) **mediaControl**
+\- (id<:doc:`MediaControl <ios-mediacontrol>`>) **mediaControl**
 
-\- (`CapabilityPriorityLevel </apis/1-6-0/ios/CapabilityPriorityLevel>`__) **mediaControlPriority**
+\- (:doc:`CapabilityPriorityLevel <ios-capabilityprioritylevel>`) **mediaControlPriority**
 
 \- (void) **playWithSuccess**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    Send play command.
@@ -121,14 +121,14 @@ Methods
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribePlayStateWithSuccess**:(`MediaPlayStateSuccessBlock <#mediaplaystatesuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribePlayStateWithSuccess**:(`MediaPlayStateSuccessBlock <#mediaplaystatesuccessblock>`__)\ *success* **failure**:(FailureBlock)\ *failure*
    **Parameters:**
 
    -  success – Optional MediaPlayStateSuccessBlock to be called on success
 
    -  **failure**: failure – Optional FailureBlock to be called on failure
 
-\- (`ServiceSubscription </apis/1-6-0/ios/ServiceSubscription>`__ \*) **subscribeMediaInfoWithSuccess**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
+\- (:doc:`ServiceSubscription <ios-servicesubscription>` \*) **subscribeMediaInfoWithSuccess**:(SuccessBlock)\ *success* **failure**:(FailureBlock)\ *failure*
    **Parameters:**
 
    -  success – Optional SuccessBlock to be called on success
@@ -141,7 +141,7 @@ Typedefs
 MediaPlayStateSuccessBlock
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-void(^)(`MediaControlPlayState </apis/1-6-0/ios/MediaControlPlayState>`__
+void(^)(:doc:`MediaControlPlayState <ios-mediacontrolplaystate>`
 playState)
 
 Success block that is called upon any change in a media file's play

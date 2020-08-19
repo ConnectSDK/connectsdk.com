@@ -82,7 +82,7 @@ NSArray \* capabilities
 Methods
 -------
 
-\+ (`CapabilityFilter </apis/1-6-0/ios/CapabilityFilter>`__ \*) **filterWithCapabilities**:(NSArray \*)\ *capabilities*
+\+ (:doc:`CapabilityFilter <ios-capabilityfilter>` \*) **filterWithCapabilities**:(NSArray \*)\ *capabilities*
    Create a CapabilityFilter with the given array required capabilities.
 
    **Parameters**

@@ -53,7 +53,7 @@ Methods
 
    -  url
 
-\+ (instancetype) **infoWithURL**:(NSURL \*)\ *url* **andBlock**:(void(^)(`SubtitleInfoBuilder </apis/1-6-0/ios/SubtitleInfoBuilder>`__ \*builder))\ *block*
+\+ (instancetype) **infoWithURL**:(NSURL \*)\ *url* **andBlock**:(void(^)(:doc:`SubtitleInfoBuilder <ios-subtitleinfobuilder>` \*builder))\ *block*
    Creates a new instance with the given ``url`` and properties set in
    the ``builder`` object.
 
