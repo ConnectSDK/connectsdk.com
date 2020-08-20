@@ -35,7 +35,7 @@ The following capabilities are provided by the Netcast OS:
 
 To learn more about Netcast's second screen protocol, visit the `UDAP
 protocol
-specification <http://developer.lgappstv.com/TV_HELP/index.jsp?topic=%2Flge.tvsdk.references.book%2Fhtml%2FUDAP%2FUDAP%2FLG+UDAP+2+0+Protocol+Specifications.htm>`__.
+specification <http://webostv.developer.lge.com/discover/netcast/document/>`__.
 
 Inherited Methods
 -----------------
