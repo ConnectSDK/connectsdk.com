@@ -66,5 +66,4 @@
    :caption: ABOUT CONNECT SDK
 
    terms-and-conditions
-   privacy-policy
    contact
