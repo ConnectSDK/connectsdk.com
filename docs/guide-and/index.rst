@@ -18,6 +18,8 @@ Developer Guides
    and-discovery-manager
    and-checking-capabilities
    and-resuming-apps
+   and-screen-mirroring
+   and-remote-camera
    and-faq
 
 API References

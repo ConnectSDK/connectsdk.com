@@ -54,6 +54,8 @@ Capabilities
    and-toastcontrol.rst
    and-volumecontrol.rst
    and-webapplauncher.rst
+   and-screenmirroringcontrol.rst
+   and-remotecameracontrol.rst
 
 Capability Listeners
 ---------------------
@@ -81,6 +83,15 @@ Capability Listeners
    and-textinputstatuslistener.rst
    and-volumelistener.rst
    and-volumestatuslistener.rst
+   and-screenmirroringstartlistener.rst
+   and-screenmirroringstoplistener.rst
+   and-screenmirroringerrorlistener.rst
+   and-remotecamerastartlistener.rst
+   and-remotecamerastoplistener.rst
+   and-remotecamerasplayinglistener.rst
+   and-remotecamerapropertychangelistener.rst
+   and-remotecameraerrorlistener.rst
+
 
 Errors
 -------
@@ -124,6 +135,9 @@ Info Objects
    and-programlist.rst
    and-textinputstatusinfo.rst
    and-volumestatus.rst
+   and-screenmirroringerror.rst
+   and-remotecameraerror.rst
+   and-remotecameraproperty.rst
 
 Advanced
 ---------

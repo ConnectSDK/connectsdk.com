@@ -17,6 +17,7 @@ Apps
    :align: center
 
    * - Feature
+     - LG Smart webOS \`22\
      - LG Smart webOS \`14\
      - Chromecast & Android TV
      - Apple TV
@@ -32,6 +33,7 @@ Apps
      - Yes
      - Yes
      - Yes
+     - Yes
      - No
      - No
      - No
@@ -41,6 +43,7 @@ Apps
      - No
      - No
    * - Launch My app
+     - Yes
      - Yes
      - Yes
      - No
@@ -53,6 +56,7 @@ Apps
      - No
      - No
    * - Get list of installed apps
+     - Yes
      - Yes
      - No
      - No
@@ -68,6 +72,7 @@ Apps
      - Yes
      - Yes
      - Yes
+     - Yes
      - No
      - No
      - No
@@ -77,6 +82,7 @@ Apps
      - No
      - No
    * - Deeplink into app store
+     - Yes
      - Yes
      - No
      - No
@@ -91,15 +97,43 @@ Apps
    * - Beam Youtube
      - Yes
      - Yes
-     - No
-     - Yes
-     - Yes
-     - Yes
-     - Yes
      - Yes
      - No
      - Yes
+     - Yes
+     - Yes
+     - Yes
+     - Yes
      - No
+     - Yes
+     - No
+   * - Screen Mirroring
+     - Yes
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+   * - Remote Camera
+     - Yes
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+     - No
+
 
 Media
 ~~~~~

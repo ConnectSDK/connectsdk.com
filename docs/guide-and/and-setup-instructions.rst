@@ -37,14 +37,21 @@ Edit your project's build.gradle to add this in the "dependencies" section.
 
 .. code-block:: groovy
 
-   dependencies {
-    //...
-    compile 'com.connectsdk:connect-sdk-android:1.6.0'
+   allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
    }
 
-This prebuilt library doesn't have Amazon Fling SDK support, because
-it’s not available on maven. You need to set the project up from sources
-if you want to have Amazon Fling SDK support.
+   //...
+
+   dependencies {
+      //...
+      implementation 'com.github.ConnectSDK:Connect-SDK-Android:master-SNAPSHOT'
+   }
+
 
 Setup Connect SDK in Android Studio from sources
 ------------------------------------------------
@@ -71,16 +78,13 @@ Setup Connect SDK in Android Studio from sources
 
            dependencies {
             //...
-            compile project(':Connect-SDK-Android')
+            implementation project(':Connect-SDK-Android')
            }
-
-#. Setup `FireTV module`_
 
 #. Sync project with gradle files
 
 #. Add permissions to your manifest
 
-.. _FireTV module: https://github.com/ConnectSDK/Connect-SDK-Android-FireTV
 
 Permissions to include in manifest
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -99,6 +103,12 @@ Permissions to include in manifest
 
    *  ``android.permission.WRITE_EXTERNAL_STORAGE``
 
+* Required for Screen Mirroring and Remote Camera
+
+   * ``android.permission.RECORD_AUDIO``
+   * ``android.permission.FOREGROUND_SERVICE``
+   * ``android.permission.CAMERA``
+
 .. code-block:: xml
 
    <uses-permission android:name="android.permission.INTERNET"/>
@@ -106,6 +116,10 @@ Permissions to include in manifest
    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+   <uses-permission android:name="android.permission.RECORD_AUDIO" />
+   <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+   <uses-permission android:name="android.permission.CAMERA" />
+
 
 Metadata for application tag
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

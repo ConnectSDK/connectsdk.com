@@ -29,3 +29,18 @@ Sample Apps
 .. _Android Web App Sampler: https://github.com/ConnectSDK/Web-App-Sampler-Android
 .. _Cordova Web App Sampler: https://github.com/ConnectSDK/Web-App-Sampler-Cordova
 .. _iOS Web App Sampler: https://github.com/ConnectSDK/Web-App-Sampler-iOS
+
+* Screen Mirroring Sampler
+
+  * `Android Screen Mirroring Sampler`_
+  * `Android Dual Screen Sampler`_
+
+.. _Android Screen Mirroring Sampler: https://github.com/ConnectSDK/LGCast-Android-API-Sampler/tree/master/ScreenMirroring-Sampler
+.. _Android Dual Screen Sampler: https://github.com/ConnectSDK/LGCast-Android-API-Sampler/tree/master/DualScreen-Sampler
+
+
+* Remote Camera Sampler
+
+  * `Android Remote Camera Sampler`_
+
+.. _Android Remote Camera Sampler: https://github.com/ConnectSDK/LGCast-Android-API-Sampler/tree/master/RemoteCamera-Sampler
