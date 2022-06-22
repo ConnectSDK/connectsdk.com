@@ -197,7 +197,7 @@ When the camera playback starts on the TV, take appropriate actions such as remo
 7. Stop Remote Camera
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you want to stop the remote camera, call startRemoteCamera. 
+When you want to stop the remote camera, call stopRemoteCamera. 
 
 
 .. code-block:: java
