@@ -40,6 +40,22 @@ supporting devices.
 Photo and Video beaming is supported by Connect SDK v1.3 on webOS, LG
 Smart TV '13, LG Smart TV '12, Roku, Apple TV, and Chromecast.*
 
+Screen and Camera Preview Mirroring
+---------------------------
+
+Integrate Connect SDK into any mobile app and let users to mirror their screen
+and camera preview of the mobile device on the TV for more valuable experience.
+
+**Screen Mirroring Example:** The Movie Box app is a service that provides video on mobile.
+With Connect SDK integrated in the app, the user experience can be expanded to a larger TV screen.
+This allows the app users to watch a movie with their family on the large screen on their TV.
+
+**Remote Camera Example:** Tom's TV doesn't have a built-in camera, so he can't make video calls
+with the TV.  By streaming the camera to the TV with the Connect SDK, video calls can be made on
+the large TV without a built-in camera or USB camera.
+
+*Screen Mirroring and Remote Camera are supported on LG Smart TV '22.*
+
 Promote Your TV App
 --------------------
 

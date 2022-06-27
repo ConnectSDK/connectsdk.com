@@ -19,13 +19,16 @@ The webOS TV emulator is currently available through the LG developer portal,
 
 The emulator is limited in that it cannot download/install apps from LG Store.
 This will limit your testing on the emulator to web app & media support.
-NOTE: The Emulator's network setting has to be set  to "Bridged Adapter" mode
+Note that the emulator's network setting has to be set  to "Bridged Adapter" mode
 for the Emulator to be discoverable.
 
 If you have need of production hardware, the line of 2014 LG Smart TVs with
 webOS are currently available from major electronic retailers. Loaner devices
 are made available to select partners — contact
 `partners@connectsdk.com <partners@connectsdk.com>`_ for more information.
+
+To test the Screen Mirroring or Remote Camera feature, we recommend you
+purchase the targeted device (webOS TV 22).
 
 Chromecast
 ------------
