@@ -80,9 +80,6 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_js_files = [
-    'js/custom.js',
-]
 
 # you have your own conf.py file, it overrides Read the Doc's default conf.py.
 # By default, Sphinx expects the master doc to be contents.
@@ -97,3 +94,4 @@ def setup(app):
             'auto_toc_tree_section': 'Contents',
             }, True)
     app.add_transform(AutoStructify)
+    app.add_js_file('js/custom.js')
