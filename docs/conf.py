@@ -80,6 +80,10 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_js_files = [
+    'js/cookie-banner.js',
+]
+
 # you have your own conf.py file, it overrides Read the Doc's default conf.py.
 # By default, Sphinx expects the master doc to be contents.
 # Read the Docs will set master doc to index instead (or whatever it is
