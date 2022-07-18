@@ -1,1 +1,0 @@
-<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/8ff606c1232b4aeea935d6e004e73131.js"></script>

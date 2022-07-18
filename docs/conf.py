@@ -94,4 +94,3 @@ def setup(app):
             'auto_toc_tree_section': 'Contents',
             }, True)
     app.add_transform(AutoStructify)
-    app.add_js_file('js/custom.js')
