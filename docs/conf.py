@@ -81,7 +81,7 @@ html_theme_options = {
 html_static_path = ['_static']
 
 html_js_files = [
-    'js/cookie-banner.js',
+    'js/custom.js',
 ]
 
 # you have your own conf.py file, it overrides Read the Doc's default conf.py.
