@@ -58,6 +58,10 @@ Capabilities
    ios-toastcontrol.rst
    ios-volumecontrol.rst
    ios-webapplauncher.rst
+   ios-screenmirroringcontrol.rst
+   ios-screenmirroringcontroldelegate.rst
+   ios-remotecameracontrol.rst
+   ios-remotecameracontroldelegate.rst
 
 Sessions
 ---------
@@ -86,6 +90,9 @@ Info Objects
    ios-subtitleinfo.rst
    ios-subtitleinfobuilder.rst
    ios-textinputstatusinfo.rst
+   ios-screenmirroringerror.rst
+   ios-remotecameraproperty.rst
+   ios-remotecameraerror.rst
 
 Advanced
 ---------

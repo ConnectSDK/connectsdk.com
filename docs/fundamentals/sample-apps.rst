@@ -34,13 +34,17 @@ Sample Apps
 
   * `Android Screen Mirroring Sampler`_
   * `Android Dual Screen Sampler`_
+  * `iOS Screen Mirroring Sampler`_
 
 .. _Android Screen Mirroring Sampler: https://github.com/ConnectSDK/LGCast-Android-API-Sampler/tree/master/ScreenMirroring-Sampler
 .. _Android Dual Screen Sampler: https://github.com/ConnectSDK/LGCast-Android-API-Sampler/tree/master/DualScreen-Sampler
+.. _iOS Screen Mirroring Sampler: https://github.com/ConnectSDK/LGCast-iOS-API-Sampler/tree/master/ScreenMirroring-Sampler
 
 
 * Remote Camera Sampler
 
   * `Android Remote Camera Sampler`_
+  * `iOS Remote Camera Sampler`_
 
 .. _Android Remote Camera Sampler: https://github.com/ConnectSDK/LGCast-Android-API-Sampler/tree/master/RemoteCamera-Sampler
+.. _iOS Remote Camera Sampler: https://github.com/ConnectSDK/LGCast-iOS-API-Sampler/tree/master/RemoteCamera-Sampler

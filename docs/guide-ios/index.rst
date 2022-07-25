@@ -18,6 +18,8 @@ Developer Guides
    ios-discovery-manager
    ios-checking-capabilities
    ios-resuming-apps
+   ios-screen-mirroring
+   ios-remote-camera
    ios-faq
 
 API References
