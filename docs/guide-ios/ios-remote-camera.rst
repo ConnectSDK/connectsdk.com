@@ -17,7 +17,7 @@ Add ``pod "ConnectSDK"`` to your ``Podfile``, and run ``pod install``. Open the 
 
 Note that remote camera runs on iOS 12 and higher. Refer to the ``Podfile`` example below.
 
-.. code-block:: 
+.. code-block:: obj-c
 
     platform :ios, '12.0'
 	

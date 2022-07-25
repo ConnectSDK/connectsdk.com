@@ -20,7 +20,7 @@ Add ``pod "ConnectSDK"`` to your ``Podfile``, and run ``pod install``. Open the 
 Note that screen mirroring runs on iOS 12 and higher. In case of Broadcast Upload Extension for
 Screen Mirroring, set the APPLICATION_EXTENSION_API_ONLY value to NO. Refer to the ``Podfile`` example below.
 
-.. code-block:: 
+.. code-block:: obj-c
 
     platform :ios, '12.0'
 
