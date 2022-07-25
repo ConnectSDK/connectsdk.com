@@ -8,18 +8,16 @@ Properties
 --------------
 
 ERROR_GENERIC
-   When the general error
+   The general error
 
 ERROR_CONNECTION_CLOSED
-    When the network is disconnect
+    The error that occurs when the network is disconnected
 
 ERROR_DEVICE_SHUTDOWN
-    When the TV is turned off
+    The error that occurs when the TV shuts down
 
 ERROR_RENDERER_TERMINATED
-    When remote camera is terminated on the TV
+    The error that occurs when the TV app is closed
 
 ERROR_STOPPED_BY_NOTIFICATION
-    When remote camera is terminated through notification on the mobile device
-
- 
+    The error that occurs when remote camera is stopped through notification from the mobile device
