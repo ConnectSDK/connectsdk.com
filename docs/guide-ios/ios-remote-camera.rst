@@ -74,7 +74,7 @@ Search for devices (TVs) connected to your home network. You can set the filter 
 The remote camera function requires the camera and microphone permission. The user must grant these permissions when the remote camera is first executed.
 Register NSCameraUsageDescription and NSMicrophoneUsageDescription in ``Info.plist``.
 
-.. code-block::
+.. code-block:: obj-c
 
     <key>NSCameraUsageDescription</key>
     <string></string>
