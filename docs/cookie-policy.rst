@@ -32,7 +32,7 @@ Our website uses **Google Analytics cookies.** Information collected by Google A
 *You can find more information about the individual cookies we use and the purposes for which we use them in the table below:*
 
 .. list-table::
-   :widths: 10 15 10 10 30
+   :widths: 5 10 5 5 30
    :header-rows: 1
    :align: center
    
@@ -81,6 +81,7 @@ Our website uses **Google Analytics cookies.** Information collected by Google A
      - Google LLC YouTube
      - Session
      - This cookie is set by YouTube to track views of embedded videos.
+
 
 How to refuse, disable or delete cookies?
 -----------------------------------------
