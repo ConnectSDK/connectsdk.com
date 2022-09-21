@@ -32,7 +32,7 @@ Our website uses **Google Analytics cookies.** Information collected by Google A
 *You can find more information about the individual cookies we use and the purposes for which we use them in the table below:*
 
 .. list-table::
-   :widths: 5 10 5 5 30
+   :widths: 5 10 5 5 15
    :header-rows: 1
    :align: center
    
