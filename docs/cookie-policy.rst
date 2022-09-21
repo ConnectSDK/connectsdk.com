@@ -32,9 +32,8 @@ Our website uses **Google Analytics cookies.** Information collected by Google A
 *You can find more information about the individual cookies we use and the purposes for which we use them in the table below:*
 
 .. list-table::
-   :widths: auto
+   :widths: 10 15 10 10 30
    :header-rows: 1
-   :stub-columns: 1
    :align: center
    
    * - Cookie Type
