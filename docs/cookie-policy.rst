@@ -2,26 +2,35 @@ Cookie Policy
 =============
 
 The connectsdk.com website (the “Site”) use cookies. You can find out more about cookies and how to control them below.
+
 By using the Sites, you accept the use of cookies in accordance with this cookie policy. If you do not accept the use of these cookies, please disable them following the instructions in this cookie policy.
 
 What is a cookie?
 -----------------
 
 Cookies are text files containing small amounts of information which are downloaded to your computer or mobile device when you visit a website. Cookies are then sent back to the originating website on each subsequent visit, or to another website that recognizes that cookie. Cookies are useful because they allow a website to recognize a user’s device.
+
 Cookies do lots of different jobs, like letting you navigate between pages efficiently, remembering your preferences, and generally improving the user experience. They can also help to ensure that adverts you see online are more relevant to you and your interests.
+
 For further information on cookies, including how to see what cookies have been set on your device and how to manage and delete them, visit http://www.allaboutcookies.org/.
 
 What cookies do we use on the Sites?
 ------------------------------------
 
 We use the following cookies.
+
 **Strictly necessary cookies.** These are cookies that are required for the operation of our website. They include, for example, cookies that enable you to log into secure areas of our website. These cookies do not gather information about you that could be used for marketing or remembering where you have been on the internet. This category of cookies cannot be disabled.
+
 **Analytical cookies.** They allow us to recognize and count the number of visitors and to see how visitors move around our website when they are using it. This helps us to improve the way our website works, for example, by ensuring that users are finding what they are looking for easily. These cookies do not collect information that can identify you. All the information that these cookies collect is anonymous and is only used to improve how the website works.
+
 Our website uses **Google Analytics cookies.** Information collected by Google Analytics cookies will be transmitted to and stored by Google on servers in the United States of America in accordance with its privacy practices. To see an overview of privacy at Google and how this applies to Google Analytics, visit >http://www.google.co.uk/intl/en/analytics/privacyoverview.html. You may opt out of tracking by Google Analytics by visiting >https://tools.google.com/dlpage/gaoptout?hl+en-GB.
+
 **Advertising Cookies** (Behavioral advertising). To personalize our Sites, deliver customized advertisements to you, or contact you directly where you have separately consented to such communications, in a way which is relevant to you and which matches your interests by, for example, using information about products you have browsed or ordered on our website.
+
 **Functional cookies.** These are used to recognize you when you return to our website. This enables us to personalize our content for you and remember your preferences (for example, your choice of language or region). These cookies do not collect information that can identify you. All the information that these cookies collect is anonymous and is only used to improve how the website works.
 
 *You can find more information about the individual cookies we use and the purposes for which we use them in the table below:*
+
 .. list-table::
    :widths: auto
    :header-rows: 1
@@ -78,8 +87,11 @@ How to refuse, disable or delete cookies?
 -----------------------------------------
 
 You can refuse certain types of cookies (except “strictly necessary cookies”) at any time by changing your settings on Cookie Settings.
+
 You may also disable cookies by activating the setting on your browser that allows you to refuse the setting of all or some cookies. However, if you use your browser settings to disable all cookies (including strictly necessary cookies) you may not be able to access all or parts of the Sites.
+
 Disabling a cookie or category of cookie does not delete the cookie from your browser. You will need to do this separately within your browser.
+
 If you would like to make changes to your cookie settings, please go to the 'Options' or 'Preferences' menu of your browser. Alternatively, go to the 'Help' option in your browser for more details.
 
 *To learn more about the cookie settings for your browser, please select the links below:*
