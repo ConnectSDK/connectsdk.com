@@ -15,17 +15,15 @@ webOS
 The webOS TV emulator is currently available through the LG developer portal,
 `download here`_.
 
-.. _download here: http://webostv.developer.lge.com/sdk/installation/
+.. _download here: https://webostv.developer.lge.com/develop/tools/emulator-installation
 
 The emulator is limited in that it cannot download/install apps from LG Store.
 This will limit your testing on the emulator to web app & media support.
 Note that the emulator's network setting has to be set  to "Bridged Adapter" mode
 for the Emulator to be discoverable.
 
-If you have need of production hardware, the line of 2014 LG Smart TVs with
-webOS are currently available from major electronic retailers. Loaner devices
-are made available to select partners — contact
-`partners@connectsdk.com <partners@connectsdk.com>`_ for more information.
+If you have need of production hardware, the line of LG Smart TVs with
+webOS are currently available from major electronic retailers.
 
 To test the Screen Mirroring or Remote Camera feature, we recommend you
 purchase the targeted device (webOS TV 22).
@@ -41,7 +39,7 @@ To test your application with LG 2012 and 2013 Smart TVs, we recommend you
 purchase the targeted device. The emulators available `here`_ are meant to
 be used exclusively for first-screen TV App development.
 
-.. _here: http://webostv.developer.lge.com/discover/netcast/sdk/
+.. _here: https://webostv.developer.lge.com/more/netcast/sdk-overview
 
 Roku
 -----
