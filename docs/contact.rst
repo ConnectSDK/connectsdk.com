@@ -1,5 +1,4 @@
 Contact
 =======
 
-* **Developer Support**: `support@connectsdk.com <support@connectsdk.com>`_
-* **Partnerships**: `partners@connectsdk.com <partners@connectsdk.com>`_
+* **Developer Support**: `developer@lge.com <developer@lge.com>`_
