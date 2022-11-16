@@ -51,7 +51,7 @@ This will download and install the Connect SDK plugin:
 
 The plugin will set up the projects automatically. If you run into any
 issues with the automatic setup process, please email
-support@connectsdk.com or file an issue on Github.
+developer@lge.com or file an issue on Github.
 
 .. _Cordova platform guides: https://cordova.apache.org/docs/en/5.0.0/guide_platforms_index.md.html#Platform%20Guides
 .. _Cordova's Setup Guide: http://cordova.apache.org/docs/en/5.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide
