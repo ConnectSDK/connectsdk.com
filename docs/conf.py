@@ -24,7 +24,7 @@ from recommonmark.transform import AutoStructify
 
 project = 'connectSDK'
 author = 'LG Electronics'
-copyright = 'Copyright © 2022 LG Electronics. All Rights Reserved.'
+copyright = '2022 LG Electronics. All Rights Reserved.'
 
 
 # -- General configuration ---------------------------------------------------
