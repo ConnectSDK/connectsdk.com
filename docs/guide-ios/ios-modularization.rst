@@ -80,4 +80,4 @@ merge the changes into the submodules, then update the full and lite
 repositories (as those just keep the project and track commits from the submodules).
 If you have a simpler contributing workflow in mind, please `let us know`_.
 
-.. _let us know: support@connectsdk.com
+.. _let us know: developer@lge.com
