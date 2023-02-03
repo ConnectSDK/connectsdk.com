@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConnectableDevice &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Subscription" href="cor-subscription.html" />
+    <link rel="prev" title="Command" href="cor-command.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html">Discovery</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#device">Device</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cor-command.html">Command</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ConnectableDevice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cor-subscription.html">Subscription</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capabilities">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#constants">Constants</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../guide-cor/index.html">Getting Started</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Discovery</a></li>
+      <li class="breadcrumb-item active">ConnectableDevice</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apis-cor/cor-connectabledevice.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="connectabledevice">
+<h1>ConnectableDevice<a class="headerlink" href="#connectabledevice" title="Permalink to this heading"></a></h1>
+<p>ConnectableDevice represents a device on the network. It provides
+several <em>capability interfaces</em> which allow the developer to get
+information from and control the device.</p>
+<p>These interfaces are accessed using getter methods like
+device.getLauncher(). Not all of the capabilities or methods are
+available on every device; you should check if the functionality is
+supported using device.supports(capabilityName).</p>
+<p>If the device was selected from the built-in picker, it will already be
+connected; if the device was obtained from elsewhere then you must call
+device.connect() and wait for the “ready” event before trying to use the
+device.</p>
+<p>Example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">device</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;ready&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ready to send commands now</span>
+<span class="w">    </span><span class="nx">device</span><span class="p">.</span><span class="nx">getLauncher</span><span class="p">().</span><span class="nx">launchYouTube</span><span class="p">(</span><span class="nx">videoId</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">device</span><span class="p">.</span><span class="nx">connect</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>ConnectableDevice emits the following high-level events:</p>
+<ul class="simple">
+<li><p>ready - device is ready to use</p></li>
+<li><p>disconnect - device is no longer connected</p></li>
+<li><p>capabilitieschanged - some capabilities may be available or
+unavailable now</p></li>
+</ul>
+<p>Internally, ConnectableDevice uses one or more <em>services</em> to control a
+device on the network. Services speak a specific protocol like DIAL or
+DLNA or other vendor-specific protocols. Services are not directly
+accessible from the Connect SDK Cordova plugin at this time.</p>
+<p>There are several events related to the process of connecting to
+individual services:</p>
+<ul class="simple">
+<li><p>serviceconnectionrequired - pending connection</p></li>
+<li><p>serviceconnectionerror - error connecting to a service</p></li>
+<li><p>servicepairingrequired - pairing is required for a service</p></li>
+<li><p>servicepairingsuccess - pairing successful for a service</p></li>
+<li><p>servicepairingerror - error pairing with a service</p></li>
+</ul>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>connectableDevice.<strong>getLauncher</strong> ()</dt><dd><p><strong>Returns:</strong> <a class="reference internal" href="cor-launcher.html"><span class="doc">Launcher</span></a></p>
+</dd>
+<dt>connectableDevice.<strong>getMediaPlayer</strong> ()</dt><dd><p><strong>Returns:</strong> <a class="reference internal" href="cor-mediaplayer.html"><span class="doc">MediaPlayer</span></a></p>
+</dd>
+<dt>connectableDevice.<strong>getExternalInputControl</strong> ()</dt><dd><p><strong>Returns:</strong> <a class="reference internal" href="cor-externalinputcontrol.html"><span class="doc">ExternalInputControl</span></a></p>
+</dd>
+<dt>connectableDevice.<strong>getMediaControl</strong> ()</dt><dd><p><strong>Returns:</strong> <a class="reference internal" href="cor-mediacontrol.html"><span class="doc">MediaControl</span></a></p>
+</dd>
+<dt>connectableDevice.<strong>getKeyControl</strong> ()</dt><dd><p><strong>Returns:</strong> <a class="reference internal" href="cor-keycontrol.html"><span class="doc">KeyControl</span></a></p>
+</dd>
+<dt>connectableDevice.<strong>getMouseControl</strong> ()</dt><dd><p><strong>Returns:</strong> <a class="reference internal" href="cor-mousecontrol.html"><span class="doc">MouseControl</span></a></p>
+</dd>
+<dt>connectableDevice.<strong>getTextInputControl</strong> ()</dt><dd><p><strong>Returns:</strong> <a class="reference internal" href="cor-textinputcontrol.html"><span class="doc">TextInputControl</span></a></p>
+</dd>
+<dt>connectableDevice.<strong>getPowerControl</strong> ()</dt><dd><p><strong>Returns:</strong> <a class="reference internal" href="cor-powercontrol.html"><span class="doc">PowerControl</span></a></p>
+</dd>
+<dt>connectableDevice.<strong>getToastControl</strong> ()</dt><dd><p><strong>Returns:</strong> <a class="reference internal" href="cor-toastcontrol.html"><span class="doc">ToastControl</span></a></p>
+</dd>
+<dt>connectableDevice.<strong>getTVControl</strong> ()</dt><dd><p><strong>Returns:</strong> <a class="reference internal" href="cor-tvcontrol.html"><span class="doc">TVControl</span></a></p>
+</dd>
+<dt>connectableDevice.<strong>getVolumeControl</strong> ()</dt><dd><p><strong>Returns:</strong> <a class="reference internal" href="cor-volumecontrol.html"><span class="doc">VolumeControl</span></a></p>
+</dd>
+<dt>connectableDevice.<strong>getWebAppLauncher</strong> ()</dt><dd><p><strong>Returns:</strong> <a class="reference internal" href="cor-webapplauncher.html"><span class="doc">WebAppLauncher</span></a></p>
+</dd>
+<dt>connectableDevice.<strong>connect</strong> ()</dt><dd><p>Connect to the device.</p>
+</dd>
+<dt>connectableDevice.<strong>disconnect</strong> ()</dt><dd><p>Disconnect from the device.</p>
+</dd>
+<dt>connectableDevice.<strong>setPairingType</strong> (<em>pairingType</em>)</dt><dd><p>Set a desirable pairing type to the device.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>pairingType – (string): PairingType to use</p></li>
+</ul>
+</dd>
+<dt>connectableDevice.<strong>isReady</strong> ()</dt><dd><p>Returns true if device is ready to use.</p>
+</dd>
+<dt>connectableDevice.<strong>getFriendlyName</strong> ()</dt><dd><p>Get the human-readable name of the device.</p>
+<p><strong>Returns:</strong> string</p>
+</dd>
+<dt>connectableDevice.<strong>getIPAddress</strong> ()</dt><dd><p>Get the last known IP address of the device.</p>
+<p><strong>Returns:</strong> string</p>
+</dd>
+<dt>connectableDevice.<strong>getModelName</strong> ()</dt><dd><p>Get the device model name.</p>
+<p><strong>Returns:</strong> string</p>
+</dd>
+<dt>connectableDevice.<strong>getModelNumber</strong> ()</dt><dd><p>Get the device model number.</p>
+<p><strong>Returns:</strong> string</p>
+</dd>
+<dt>connectableDevice.<strong>getCapabilities</strong> ()</dt><dd><p>Get a list of capabilities supported by this device.</p>
+<p><strong>Returns:</strong> string[] – array of capabilities supported by this device</p>
+</dd>
+<dt>connectableDevice.<strong>hasCapability</strong> (<em>name</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>name (string) – of capability. You should use the ConnectSDK.Capabilities constant
+to reference strings.</p></li>
+</ul>
+<p><strong>Returns:</strong> boolean – true if device supports the given capability</p>
+</dd>
+<dt>connectableDevice.<strong>supports</strong> ([<em>…</em>])</dt><dd><p>Flexible version of hasCapability which returns true if all of the
+capabilities specified are supported.</p>
+<ul class="simple">
+<li><p>supports(ConnectSDK.Capabilities.MediaControl.Any)</p></li>
+<li><p>supports(ConnectSDK.Capabilities.VolumeControl.Set,
+ConnectSDK.Capabilities.Launcher.Any)</p></li>
+<li><p>supports([ConnectSDK.Capabilities.TVControl.Any,
+ConnectSDK.Capabilities.Launcher.Any])</p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>… [optional] – array of capability names. You should use the
+ConnectSDK.Capabilities constant to reference strings.</p></li>
+</ul>
+<p><strong>Returns:</strong> boolean – true if all specified capabilities are supported</p>
+</dd>
+<dt>connectableDevice.<strong>supportsAny</strong> ([<em>…</em>])</dt><dd><p>Like supports() but returns true if any specified capability is
+supported.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>… [optional] – array of capability names. You should use the
+ConnectSDK.Capabilities constant to reference strings.</p></li>
+</ul>
+<p><strong>Returns:</strong> boolean – true if any specified capability is supported</p>
+</dd>
+<dt>connectableDevice.<strong>hasService</strong> (<em>serviceName</em>)</dt><dd><p>Returns true if the device supports the specified service. See
+ConnectSDK.Services for a list of constants.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>serviceName (string)</p></li>
+</ul>
+<p><strong>Returns:</strong> boolean – true if service is supported</p>
+</dd>
+<dt>connectableDevice.<strong>getService</strong> (<em>serviceName</em>)</dt><dd><p>Returns a wrapper for a service which gives access to low-level
+functionality. Only a limited subset of the services supported by the
+native SDK are available through this plugin.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>serviceName (string)</p></li>
+</ul>
+<p><strong>Returns:</strong> object – service object or null if not supported</p>
+</dd>
+<dt>connectableDevice.<strong>getId</strong> ()</dt><dd><p>Returns an internal id assigned by the SDK to this device. For
+devices that have been connected to or paired, this id will be
+persisted to disk in the device store to allow the app to identify
+the device later (such as reconnecting to the last connected device
+when starting the app).</p>
+</dd>
+</dl>
+<section id="mixin-methods-simpleeventemitter">
+<h3>Mixin Methods - SimpleEventEmitter<a class="headerlink" href="#mixin-methods-simpleeventemitter" title="Permalink to this heading"></a></h3>
+<dl>
+<dt>connectableDevice.<strong>addListener</strong> (<em>event</em>, <em>callback</em>, [<em>context</em>])</dt><dd><p>Add event listener.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event (string) – name of event</p></li>
+<li><p>callback (function) – function to call when event is fired</p></li>
+<li><p>context (object) [optional] – object to bind to “this” value when calling function</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+<dt>connectableDevice.<strong>removeListener</strong> (<em>event</em>, [<em>callback</em>], [<em>context</em>])</dt><dd><p>Remove event listener with the specified callback and context. If
+callback is null or undefined, all callbacks for this event will be
+removed.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event (string) – name of event</p></li>
+<li><p>callback (function) [optional] – function originally passed to addListener</p></li>
+<li><p>context (object) [optional] – context object originally passed to addListener</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+<dt>connectableDevice.<strong>on</strong> (<em>event</em>, <em>callback</em>, [<em>context</em>])</dt><dd><p>Alias for addListener.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event (string) – name of event</p></li>
+<li><p>callback (function) – function to call when event is fired</p></li>
+<li><p>context (object) [optional] – object to bind to “this” value when calling function</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+<dt>connectableDevice.<strong>off</strong> (<em>event</em>, [<em>callback</em>], [<em>context</em>])</dt><dd><p>Alias for removeListener.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>event (string) – event name</p></li>
+<li><p>callback (function) [optional] – function originally passed to on</p></li>
+<li><p>context (object) [optional] – context object originally passed to on</p></li>
+</ul>
+<p><strong>Returns:</strong> object – reference to the same object to allow chaining</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cor-command.html" class="btn btn-neutral float-left" title="Command" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cor-subscription.html" class="btn btn-neutral float-right" title="Subscription" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

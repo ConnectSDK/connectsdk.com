@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CastService &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DIALService" href="ios-dialservice.html" />
+    <link rel="prev" title="AirPlayServiceMode" href="ios-airplayservicemode.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html">Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device">Device</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#device-services">Device Services</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ios-airplayservice.html">AirPlayService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-airplayservicehttpkeepalive.html">AirPlayServiceHTTPKeepAlive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-airplayservicemode.html">AirPlayServiceMode</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CastService</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inherited-methods">Inherited Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ios-dialservice.html">DIALService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-dlnaservice.html">DLNAService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-deviceservice.html">DeviceService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-deviceservicedelegate.html">DeviceServiceDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-deviceservicepairinglevel.html">DeviceServicePairingLevel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-deviceservicepairingtype.html">DeviceServicePairingType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-firetvservice.html">FireTVService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-netcasttvservice.html">NetcastTVService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-rokuservice.html">RokuService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-webostvservice.html">WebOSTVService</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capabilities">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#info-objects">Info Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#advanced">Advanced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#globals">Globals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#misc">Misc</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../guide-ios/index.html">Getting Started</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Discovery</a></li>
+      <li class="breadcrumb-item active">CastService</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apis-ios/ios-castservice.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="castservice">
+<h1>CastService<a class="headerlink" href="#castservice" title="Permalink to this heading"></a></h1>
+<p><em>extends</em> <a class="reference internal" href="ios-deviceservice.html"><span class="doc">DeviceService</span></a></p>
+<p>CastService provides capabilities for Google Chromecast devices.
+CastService acts as a layer on top of Google’s own Cast SDK, and
+requires the Cast SDK library to function. CastService provides the
+following functionality:</p>
+<ul class="simple">
+<li><p>Media playback</p></li>
+<li><p>Media control</p></li>
+<li><p>Web app launching &amp; two-way communication</p></li>
+<li><p>Volume control</p></li>
+</ul>
+<p>Using Connect SDK for discovery/control of Chromecast devices will
+result in your app complying with the Google Cast SDK <a class="reference external" href="https://developers.google.com/cast/docs/terms">terms of
+service</a>.</p>
+<p>To learn more about Cast SDK, visit the <a class="reference external" href="https://developers.google.com/cast/">Google Cast SDK Developer
+site</a>.</p>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>GCKDeviceManager * castDeviceManager</dt><dd><p>The GCKDeviceManager that CastService is using internally to manage
+devices.</p>
+</dd>
+<dt>GCKDevice * castDevice</dt><dd><p>The GCKDevice object that CastService is using internally for device
+information.</p>
+</dd>
+<dt>CastServiceChannel * castServiceChannel</dt><dd><p>The CastServiceChannel is used for app-to-app communication that is
+handling by the Connect SDK JavaScript Bridge.</p>
+</dd>
+<dt>GCKMediaControlChannel * castMediaControlChannel</dt><dd><p>The GCKMediaControlChannel that the CastService is using to send
+media events to the connected web app.</p>
+</dd>
+<dt>NSString * castWebAppId</dt><dd><p>The CastService will launch the specified web app id.</p>
+</dd>
+</dl>
+</section>
+<section id="inherited-methods">
+<h2>Inherited Methods<a class="headerlink" href="#inherited-methods" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>+ (NSDictionary *) <strong>discoveryParameters</strong></dt><dd><p>A dictionary of keys/values that will be used by the
+DiscoveryProvider used to discover this DeviceService. Some keys that
+are used are: service name, SSDP filter, etc.</p>
+</dd>
+<dt>+ (<a class="reference internal" href="ios-deviceservice.html"><span class="doc">DeviceService</span></a> *) <strong>deviceServiceWithClass</strong>:(Class)<em>_class</em> <strong>serviceConfig</strong>:(ServiceConfig *)<em>serviceConfig</em></dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>_class</p></li>
+<li><p><strong>serviceConfig</strong>: serviceConfig</p></li>
+</ul>
+</dd>
+<dt>+ (BOOL) <strong>shouldDisconnectOnBackground</strong></dt><dd><p>Static property that determines whether a DeviceService subclass
+should shut down communication channels when the app enters a
+background state. This may be helpful for apps that need to
+communicate with web apps from the background. This property may not
+be applicable to all DeviceService subclasses.</p>
+<p>Sets the shouldDisconnectOnBackground static property. This property
+should be set before starting DiscoveryManager for the first time.</p>
+</dd>
+<dt>+ (void) <strong>setShouldDisconnectOnBackround</strong>:(BOOL)<em>shouldDisconnectOnBackground</em></dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>shouldDisconnectOnBackground</p></li>
+</ul>
+</dd>
+<dt>- (instancetype) <strong>initWithServiceConfig</strong>:(ServiceConfig *)<em>serviceConfig</em></dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>serviceConfig</p></li>
+</ul>
+</dd>
+<dt>- (BOOL) <strong>hasCapability</strong>:(NSString *)<em>capability</em></dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>capability</p></li>
+</ul>
+</dd>
+<dt>- (BOOL) <strong>hasCapabilities</strong>:(NSArray *)<em>capabilities</em></dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>capabilities</p></li>
+</ul>
+</dd>
+<dt>- (BOOL) <strong>hasAnyCapability</strong>:(NSArray *)<em>capabilities</em></dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>capabilities</p></li>
+</ul>
+</dd>
+<dt>- (void) <strong>connect</strong></dt><dd><p>Will attempt to connect to the DeviceService. The failure/success
+will be reported back to the DeviceServiceDelegate. If the connection
+attempt reveals that pairing is required, the DeviceServiceDelegate
+will also be notified in that event.</p>
+</dd>
+<dt>- (void) <strong>disconnect</strong></dt><dd><p>Will attempt to disconnect from the DeviceService. The
+failure/success will be reported back to the DeviceServiceDelegate.</p>
+</dd>
+<dt>- (void) <strong>pairWithData</strong>:(id)<em>pairingData</em></dt><dd><p>Will attempt to pair with the DeviceService with the provided
+pairingData. The failure/success will be reported back to the
+DeviceServiceDelegate.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>pairingData –</p>
+<blockquote>
+<div><p>Data to be used for pairing. The type of this parameter will vary
+depending on what type of pairing is required, but is likely to be
+a string (pin code, pairing key, etc).</p>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+<dt>- (void) <strong>closeLaunchSession</strong>:(<a class="reference internal" href="ios-launchsession.html"><span class="doc">LaunchSession</span></a> *)<em>launchSession</em> <strong>success</strong>:(SuccessBlock)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Every LaunchSession object has an associated DeviceService.
+Internally, LaunchSession’s close method proxies to it’s
+DeviceService’s closeLaunchSession method. If, for some reason, your
+LaunchSession loses it’s DeviceService reference, you can call this
+closeLaunchSession method directly.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>launchSession – LaunchSession to be closed</p></li>
+<li><p><strong>success</strong>: success – (optional) SuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – (optional) FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ios-airplayservicemode.html" class="btn btn-neutral float-left" title="AirPlayServiceMode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ios-dialservice.html" class="btn btn-neutral float-right" title="DIALService" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

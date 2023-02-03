@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screen Mirroring &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Remote Camera" href="and-remote-camera.html" />
+    <link rel="prev" title="Resuming Apps" href="and-resuming-apps.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html#developer-guides">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="and-beam-media.html">Beam Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-web-apps.html">Beam Web Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-launch-app.html">Launch App on TV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-discovery-manager.html">Discovery Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-checking-capabilities.html">Checking Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html">Resuming Apps</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Screen Mirroring</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-screen-mirroring">How to Use Screen Mirroring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#check-the-android-version">1. Check the Android Version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#search-devices">2. Search Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#request-permissions">3. Request Permissions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-user-approval-for-screen-capture">4. Get User Approval for Screen Capture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-a-tv">5. Select a TV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#start-screen-mirroring">6. Start Screen Mirroring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stop-screen-mirroring">7. Stop Screen Mirroring</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-dual-screen">How to Use Dual Screen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#define-second-screen">Define Second Screen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#start-dual-screen">Start Dual Screen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="and-remote-camera.html">Remote Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-faq.html">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Screen Mirroring</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide-and/and-screen-mirroring.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="screen-mirroring">
+<h1>Screen Mirroring<a class="headerlink" href="#screen-mirroring" title="Permalink to this heading"></a></h1>
+<p>With Connect SDK integrated in the mobile app, it can cast the screen and sound into the TV screen.
+This allows you to extend the screen of a mobile app to a larger TV screen and share it with your family.
+This guide assumes that you completed the setup described in the <a class="reference internal" href="and-setup-instructions.html"><span class="doc">Setup Instructions</span></a>.</p>
+<p>There are two ways to display the screen to your TV.</p>
+<ul class="simple">
+<li><p>Screen mirroring: A way to dispay the entire app screen to the TV.</p></li>
+<li><p>Dual screen: A way to create a second screen of the app and display it on the TV while leaving the app screen separate. Dual screen is provided as a screen mirroring function.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is only supported on webOS TV 22.</p>
+</div>
+<section id="how-to-use-screen-mirroring">
+<h2>How to Use Screen Mirroring<a class="headerlink" href="#how-to-use-screen-mirroring" title="Permalink to this heading"></a></h2>
+<p>To use screen mirroring, follow these steps.</p>
+<section id="check-the-android-version">
+<h3>1. Check the Android Version<a class="headerlink" href="#check-the-android-version" title="Permalink to this heading"></a></h3>
+<p>Screen mirroring runs on Android version 10 (Q, API Level 29) and higher, so you need to check the OS version when starting the app.
+If the OS version does not support the screen mirroring function, the function will not work or the app will close.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ScreenMirroringControl</span><span class="p">.</span><span class="na">isCompatibleOsVersion</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// The OS version is lower than Android 10</span>
+<span class="w">    </span><span class="c1">// and screen mirroring is not supported</span>
+<span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="search-devices">
+<h3>2. Search Devices<a class="headerlink" href="#search-devices" title="Permalink to this heading"></a></h3>
+<p>Search for devices (TVs) connected to your home network. You can set the filter to only search for TVs that support the screen mirroring function.
+Since the search for TVs takes some time, it should be started as soon as the app is running.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Initializes DiscoveryManager</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+
+<span class="c1">// Sets a device search filter for devices that support screen mirroring (dual screen).</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">capabilities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">capabilities</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">ScreenMirroringControl</span><span class="p">.</span><span class="na">ScreenMirroring</span><span class="p">);</span>
+<span class="n">CapabilityFilter</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CapabilityFilter</span><span class="p">(</span><span class="n">capabilities</span><span class="p">);</span>
+
+<span class="c1">// Searches devices</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">setPairingLevel</span><span class="p">(</span><span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">PairingLevel</span><span class="p">.</span><span class="na">ON</span><span class="p">);</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">setCapabilityFilters</span><span class="p">(</span><span class="n">filter</span><span class="p">);</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">registerDeviceService</span><span class="p">(</span><span class="n">WebOSTVService</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">SSDPDiscoveryProvider</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">start</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="request-permissions">
+<h3>3. Request Permissions<a class="headerlink" href="#request-permissions" title="Permalink to this heading"></a></h3>
+<p>The screen mirroring requires the audio permission (android.permission.RECORD_AUDIO).
+The permission agreement is executed only once on the first run or when there is no permission.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Requests permissions</span>
+<span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">permissions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="p">{</span><span class="n">Manifest</span><span class="p">.</span><span class="na">permission</span><span class="p">.</span><span class="na">RECORD_AUDIO</span><span class="p">};</span>
+<span class="n">ActivityCompat</span><span class="p">.</span><span class="na">requestPermissions</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">permissions</span><span class="p">,</span><span class="w"> </span><span class="n">REQUEST_CODE_ACCESS_PERMISSIONS</span><span class="p">);</span>
+
+<span class="c1">// Delivers request results to onRequestPermissionsResult</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onRequestPermissionsResult</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">requestCode</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">permissions</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">grantResults</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onRequestPermissionsResult</span><span class="p">(</span><span class="n">requestCode</span><span class="p">,</span><span class="w"> </span><span class="n">permissions</span><span class="p">,</span><span class="w"> </span><span class="n">grantResults</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">requestCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">REQUEST_CODE_ACCESS_PERMISSIONS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hasPermission</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Succeeded to get permission</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Failed to get permission</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Checks the permissions</span>
+<span class="kd">private</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">hasPermission</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ActivityCompat</span><span class="p">.</span><span class="na">checkSelfPermission</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">Manifest</span><span class="p">.</span><span class="na">permission</span><span class="p">.</span><span class="na">RECORD_AUDIO</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PackageManager</span><span class="p">.</span><span class="na">PERMISSION_GRANTED</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="get-user-approval-for-screen-capture">
+<h3>4. Get User Approval for Screen Capture<a class="headerlink" href="#get-user-approval-for-screen-capture" title="Permalink to this heading"></a></h3>
+<p>User approval is required to capture the screen.
+Intent data must be delivered to the screen mirroring API when consenting to screen capture.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// User approval is required to capture the screen</span>
+<span class="c1">// Displays the system dialog for user approval</span>
+<span class="n">MediaProjectionManager</span><span class="w"> </span><span class="n">projectionManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">MediaProjectionManager</span><span class="p">)</span><span class="w"> </span><span class="n">getSystemService</span><span class="p">(</span><span class="n">Context</span><span class="p">.</span><span class="na">MEDIA_PROJECTION_SERVICE</span><span class="p">);</span>
+<span class="n">startActivityForResult</span><span class="p">(</span><span class="n">projectionManager</span><span class="p">.</span><span class="na">createScreenCaptureIntent</span><span class="p">(),</span><span class="w"> </span><span class="n">REQUEST_CODE_CAPTURE_CONSENT</span><span class="p">);</span>
+
+<span class="c1">// Passes the user approval result to onActivityResult</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onActivityResult</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">requestCode</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">resultCode</span><span class="p">,</span><span class="w"> </span><span class="nd">@Nullable</span><span class="w"> </span><span class="n">Intent</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onActivityResult</span><span class="p">(</span><span class="n">requestCode</span><span class="p">,</span><span class="w"> </span><span class="n">resultCode</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">requestCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">REQUEST_CODE_CAPTURE_CONSENT</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resultCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Activity</span><span class="p">.</span><span class="na">RESULT_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Succeed to get user approval</span>
+<span class="w">            </span><span class="c1">// Intent data must be saved and delivered to screen mirroring API</span>
+<span class="w">            </span><span class="n">mProjectionData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// User Approval Failed</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="select-a-tv">
+<h3>5. Select a TV<a class="headerlink" href="#select-a-tv" title="Permalink to this heading"></a></h3>
+<p>Select the TV to run the screen mirroring on by using the Picker.
+After selecting a TV, get a ScreenMirroringControl object to use the screen mirroring API.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span><span class="w"> </span><span class="n">ScreenMirroringControl</span><span class="w"> </span><span class="n">mScreenMirroringControl</span><span class="p">;</span>
+
+<span class="n">AdapterView</span><span class="p">.</span><span class="na">OnItemClickListener</span><span class="w"> </span><span class="n">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">adapter</span><span class="p">,</span><span class="w"> </span><span class="n">parent</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ConnectableDevice</span><span class="w"> </span><span class="n">connectableDevice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ConnectableDevice</span><span class="p">)</span><span class="w"> </span><span class="n">adapter</span><span class="p">.</span><span class="na">getItemAtPosition</span><span class="p">(</span><span class="n">position</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mScreenMirroringControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">connectableDevice</span><span class="p">.</span><span class="na">getScreenMirroringControl</span><span class="p">();</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">};</span>
+
+<span class="c1">// Displays a TV search picker dialog</span>
+<span class="n">AlertDialog</span><span class="w"> </span><span class="n">dialog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DevicePicker</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="na">getPickerDialog</span><span class="p">(</span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">dialog_select_tv</span><span class="p">),</span><span class="w"> </span><span class="n">listener</span><span class="p">);</span>
+<span class="n">dialog</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="start-screen-mirroring">
+<h3>6. Start Screen Mirroring<a class="headerlink" href="#start-screen-mirroring" title="Permalink to this heading"></a></h3>
+<p>Now you can run the screen mirroring.
+Pairing is required when you connect to a TV for the first time, and the user is informed about this.</p>
+<p>The following runtime errors might occur while the screen mirroring is running.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When the network connection is terminated</p></li>
+<li><p>When the TV is turned off</p></li>
+<li><p>When the screen mirroring is terminated on the TV</p></li>
+<li><p>When the mobile device’s notification terminates the screen mirroring</p></li>
+<li><p>When other exceptions occurred</p></li>
+</ul>
+</div></blockquote>
+<p>For these errors, it is necessary to receive the error in real-time through the listener and respond appropriately.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ProgressDialog</span><span class="w"> </span><span class="n">progress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProgressDialog</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="n">progress</span><span class="p">.</span><span class="na">setMessage</span><span class="p">(</span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">dialog_connecting_tv</span><span class="p">));</span>
+<span class="n">progress</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+
+<span class="c1">// Displays the pairing pop-up</span>
+<span class="n">AlertDialog</span><span class="w"> </span><span class="n">pairingAlert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AlertDialog</span><span class="p">.</span><span class="na">Builder</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">dialog_title_notice</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setCancelable</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setMessage</span><span class="p">(</span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">dialog_allow_pairing</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setNegativeButton</span><span class="p">(</span><span class="n">android</span><span class="p">.</span><span class="na">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">ok</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">create</span><span class="p">();</span>
+
+<span class="c1">// Start the screen mirroring</span>
+<span class="c1">// Each progress is passed through a callback function</span>
+<span class="n">mScreenMirroringControl</span><span class="p">.</span><span class="na">startScreenMirroring</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">mProjectionData</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ScreenMirroringStartListener</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// When connecting to a TV for the first time, a pop-up about the mobile connection is displayed on the TV,</span>
+<span class="w">    </span><span class="c1">// and a pairing procedure is required once in which the user selects [OK] with the remote control</span>
+<span class="w">    </span><span class="c1">// To do this, the app should display a pop-up with information about pairing</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onPairing</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">pairingAlert</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// This is a callback function when the screen mirroring starts</span>
+<span class="w">    </span><span class="c1">// and whether or not it succeeds is passed through the result parameter</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onStart</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">Presentation</span><span class="w"> </span><span class="n">secondScreen</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">updateButtonVisibility</span><span class="p">();</span>
+<span class="w">        </span><span class="n">pairingAlert</span><span class="p">.</span><span class="na">dismiss</span><span class="p">();</span>
+<span class="w">        </span><span class="n">progress</span><span class="p">.</span><span class="na">dismiss</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">ScreenMirroringActivity</span><span class="p">.</span><span class="na">this</span><span class="p">,</span><span class="w"> </span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">toast_start_completed</span><span class="p">),</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_SHORT</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">ScreenMirroringActivity</span><span class="p">.</span><span class="na">this</span><span class="p">,</span><span class="w"> </span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">toast_start_failed</span><span class="p">),</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_SHORT</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// This is a callback function when an unexpected error occurs while running the screen mirroring</span>
+<span class="c1">// An error occurs when the network is disconnected, or the TV is shut down, etc.</span>
+<span class="n">mScreenMirroringControl</span><span class="p">.</span><span class="na">setErrorListener</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Error occurred</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="stop-screen-mirroring">
+<h3>7. Stop Screen Mirroring<a class="headerlink" href="#stop-screen-mirroring" title="Permalink to this heading"></a></h3>
+<p>When you want to stop mirroring, call stopScreenMirroring.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Stops screen mirroring. Whether or not to stop normally is passed through the result parameter</span>
+<span class="c1">// Abnormal termination is a case in which screen mirroring is stopped without running, etc.</span>
+<span class="n">mScreenMirroringControl</span><span class="p">.</span><span class="na">stopScreenMirroring</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">ScreenMirroringActivity</span><span class="p">.</span><span class="na">this</span><span class="p">,</span><span class="w"> </span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">toast_stopped</span><span class="p">),</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_SHORT</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+<span class="w">    </span><span class="n">updateButtonVisibility</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="c1">// Stops device search</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">stop</span><span class="p">();</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">destroy</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="how-to-use-dual-screen">
+<h2>How to Use Dual Screen<a class="headerlink" href="#how-to-use-dual-screen" title="Permalink to this heading"></a></h2>
+<p>Dual screen is a function that creates a second screen, separate from the app screen, and displays it on the TV.
+The basic procedure is the same as with the screen mirroring above, and only the differences are explained below.
+When mirroring starts, you just need to deliver the user-defined second screen class.</p>
+<section id="define-second-screen">
+<h3>Define Second Screen<a class="headerlink" href="#define-second-screen" title="Permalink to this heading"></a></h3>
+<p>Inherit Android Presentation class to define a second screen class for dual screen.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SecondScreenDemo</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Presentation</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">SnakeGameListener</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="n">mOuterContext</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">SecondScreenDemo</span><span class="p">(</span><span class="nd">@NonNull</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="n">outerContext</span><span class="p">,</span><span class="w"> </span><span class="nd">@NonNull</span><span class="w"> </span><span class="n">Display</span><span class="w"> </span><span class="n">display</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">outerContext</span><span class="p">,</span><span class="w"> </span><span class="n">display</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mOuterContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">outerContext</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="nd">@NonNull</span><span class="w"> </span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">snake_game_second_screen_layout</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="start-dual-screen">
+<h3>Start Dual Screen<a class="headerlink" href="#start-dual-screen" title="Permalink to this heading"></a></h3>
+<p>Dual screen starts mirroring the screen by using the user-defined, Presentation inherited class.
+When the mobile device is connected to the TV, it creates a virtual display for the second screen, creates an instance of the second screen class, and passes it to the onStart callback.
+The user can then access the Second Screen class to control the dual screen.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">mScreenMirroringControl</span><span class="p">.</span><span class="na">startScreenMirroring</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">projectionData</span><span class="p">,</span><span class="w"> </span><span class="n">SecondScreenDemo</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ScreenMirroringControl</span><span class="p">.</span><span class="na">ScreenMirroringStartListener</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="p">...</span>
+
+<span class="w">    </span><span class="c1">// This is a callback function when screen mirroring starts</span>
+<span class="w">    </span><span class="c1">// and whether or not it succeeds is passed through the result parameter</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onStart</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">Presentation</span><span class="w"> </span><span class="n">secondScreen</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">updateButtonVisibility</span><span class="p">();</span>
+<span class="w">        </span><span class="n">pairingAlert</span><span class="p">.</span><span class="na">dismiss</span><span class="p">();</span>
+<span class="w">        </span><span class="n">progress</span><span class="p">.</span><span class="na">dismiss</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">getBaseContext</span><span class="p">(),</span><span class="w"> </span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">toast_start_completed</span><span class="p">),</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_SHORT</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">getBaseContext</span><span class="p">(),</span><span class="w"> </span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">toast_start_failed</span><span class="p">),</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_SHORT</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">secondScreen</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">mSecondScreenDemo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">SecondScreenDemo</span><span class="p">)</span><span class="w"> </span><span class="n">secondScreen</span><span class="p">;</span>
+<span class="w">            </span><span class="n">mSecondScreenDemo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mSecondScreenDemo</span><span class="p">.</span><span class="na">start</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="and-resuming-apps.html" class="btn btn-neutral float-left" title="Resuming Apps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="and-remote-camera.html" class="btn btn-neutral float-right" title="Remote Camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

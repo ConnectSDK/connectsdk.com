@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beam Web Apps &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Launch App on TV" href="ios-launch-app.html" />
+    <link rel="prev" title="Beam Media" href="ios-beam-media.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html#developer-guides">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ios-beam-media.html">Beam Media</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Beam Web Apps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#web-app-ids">Web App IDs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#launch-web-app-with-identifier">Launch web app with identifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#communicate-with-web-app">Communicate with web app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beam-media-to-web-app">Beam media to web app</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ios-launch-app.html">Launch App on TV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-discovery-manager.html">Discovery Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-checking-capabilities.html">Checking Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-resuming-apps.html">Resuming Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-screen-mirroring.html">Screen Mirroring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-remote-camera.html">Remote Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-faq.html">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Beam Web Apps</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide-ios/ios-beam-web-apps.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="beam-web-apps">
+<h1>Beam Web Apps<a class="headerlink" href="#beam-web-apps" title="Permalink to this heading"></a></h1>
+<p>There are several platforms available that support the launching of web
+apps. A web app is typically run on a temporary basis in a full-screen
+browser instance.</p>
+<section id="web-app-ids">
+<h2>Web App IDs<a class="headerlink" href="#web-app-ids" title="Permalink to this heading"></a></h2>
+<p>Both webOS and Chromecast require a web app ID for API calls to launch
+and communicate with web apps. This web app ID is translated into your
+web app’s URL on web app launch.</p>
+<p>For information on creating a web app ID for webOS, please visit the <a class="reference external" href="http://lgsvl.com/connectSDK/index.php">LG
+registration site</a>.</p>
+<p>To learn how to register for a Chromecast web app ID, visit <a class="reference external" href="https://developers.google.com/cast/docs/registration">Google’s
+app ID registration
+site</a>.</p>
+</section>
+<section id="launch-web-app-with-identifier">
+<h2>Launch web app with identifier<a class="headerlink" href="#launch-web-app-with-identifier" title="Permalink to this heading"></a></h2>
+<p>Connect SDK currently supports web app launching on webOS, Chromecast,
+and Apple TV devices. Both webOS and Chromecast will translate a web app
+identifier into your web app’s URL.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="n">webAppId</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">([</span><span class="n">_device</span><span class="w"> </span><span class="n">serviceWithName</span><span class="o">:</span><span class="s">@&quot;webOS TV&quot;</span><span class="p">])</span>
+<span class="w">    </span><span class="n">webAppId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;5G7328DE&quot;</span><span class="p">;</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">([</span><span class="n">_device</span><span class="w"> </span><span class="n">serviceWithName</span><span class="o">:</span><span class="s">@&quot;Chromecast&quot;</span><span class="p">])</span>
+<span class="w">    </span><span class="n">webAppId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;3E5106AB&quot;</span><span class="p">;</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">([</span><span class="n">_device</span><span class="w"> </span><span class="n">serviceWithName</span><span class="o">:</span><span class="s">@&quot;AirPlay&quot;</span><span class="p">])</span>
+<span class="w">    </span><span class="n">webAppId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;http://www.example.com/&quot;</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">webAppId</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+
+<span class="p">[</span><span class="n">_device</span><span class="p">.</span><span class="n">webAppLauncher</span><span class="w"> </span><span class="n">launchWebApp</span><span class="o">:</span><span class="n">webAppId</span><span class="w"> </span><span class="n">success</span><span class="o">:^</span><span class="p">(</span><span class="n">WebAppSession</span><span class="w"> </span><span class="o">*</span><span class="n">webAppSession</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;web app launch success&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="n">failure</span><span class="o">:^</span><span class="p">(</span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;web app launch error: %@&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="p">);</span>
+<span class="p">}];</span>
+</pre></div>
+</div>
+</section>
+<section id="communicate-with-web-app">
+<h2>Communicate with web app<a class="headerlink" href="#communicate-with-web-app" title="Permalink to this heading"></a></h2>
+<p>Bi-directional communication with your web app is made extremely simple.
+Data can be sent and received strongly-typed as a string or a keyed set
+of values (JSON object).</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="n">WebAppSession</span><span class="w"> </span><span class="o">*</span><span class="n">_webAppSession</span><span class="p">;</span>
+
+<span class="p">[</span><span class="n">_device</span><span class="p">.</span><span class="n">webAppLauncher</span><span class="w"> </span><span class="n">launchWebApp</span><span class="o">:</span><span class="n">webAppId</span><span class="w"> </span><span class="n">success</span><span class="o">:^</span><span class="p">(</span><span class="n">WebAppSession</span><span class="w"> </span><span class="o">*</span><span class="n">webAppSession</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;web app launch success&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">_webAppSession</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">webAppSession</span><span class="p">;</span>
+<span class="w">    </span><span class="n">_webAppSession</span><span class="p">.</span><span class="n">delegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">self</span><span class="p">;</span>
+
+<span class="w">    </span><span class="p">[</span><span class="n">_webAppSession</span><span class="w"> </span><span class="n">connectWithSuccess</span><span class="o">:^</span><span class="p">(</span><span class="kt">id</span><span class="w"> </span><span class="n">responseObject</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;web app connect success&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="n">failure</span><span class="o">:^</span><span class="p">(</span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;web app connect error: %@&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}];</span>
+<span class="p">}</span><span class="w"> </span><span class="n">failure</span><span class="o">:^</span><span class="p">(</span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;web app launch error: %@&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="p">);</span>
+<span class="p">}];</span>
+</pre></div>
+</div>
+<p>After successfully establishing a connection, you can send messages to
+your web app.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">_webAppSession</span><span class="w"> </span><span class="n">sendText</span><span class="o">:</span><span class="s">@&quot;This is a test message&quot;</span><span class="w"> </span><span class="n">success</span><span class="o">:</span><span class="nb">nil</span><span class="w"> </span><span class="n">failure</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>You can also send an NSDictionary which will be received by the web app
+as a JSON object.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="bp">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@{</span>
+<span class="w">    </span><span class="s">@&quot;someParameter&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;someValue&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">@&quot;anArray&quot;</span><span class="o">:</span><span class="w"> </span><span class="l">@[</span>
+<span class="w">        </span><span class="s">@&quot;array value 1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">@&quot;array value 2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">@&quot;array value 3&quot;</span>
+<span class="w">    </span><span class="l">]</span><span class="p">,</span>
+<span class="w">    </span><span class="s">@&quot;anotherObject&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="l">@{</span>
+<span class="w">        </span><span class="s">@&quot;anotherParameter&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;anotherValue&quot;</span>
+<span class="w">    </span><span class="l">}</span>
+<span class="l">}</span><span class="p">;</span>
+
+<span class="p">[</span><span class="n">_webAppSession</span><span class="w"> </span><span class="n">sendJSON</span><span class="o">:</span><span class="n">message</span><span class="w"> </span><span class="n">success</span><span class="o">:</span><span class="nb">nil</span><span class="w"> </span><span class="n">failure</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>WebAppSessionDelegate allows you to receive messages from your web app.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;::</span>
+
+<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="n">webAppSession</span><span class="o">:</span><span class="p">(</span><span class="n">WebAppSession</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">webAppSession</span><span class="w"> </span><span class="n">didReceiveMessage</span><span class="o">:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">message</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="c1">// message may be either an NSString or an NSDictionary, depending on what was sent from the web app</span>
+<span class="w">     </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;Received message from web app %@&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">);</span>
+<span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="beam-media-to-web-app">
+<h2>Beam media to web app<a class="headerlink" href="#beam-media-to-web-app" title="Permalink to this heading"></a></h2>
+<p>A common use case for web apps is the playback and control of media
+files. Connect SDK provides capabilities for directly
+playing/controlling media on a WebAppSession, provided that web app has
+integrated the <a class="reference internal" href="../guide-web/index.html"><span class="doc">Connect SDK JavaScript
+Bridge</span></a>.</p>
+<p>Rather than calling playMedia on your device’s mediaPlayer,
+webAppSession provides its own mediaPlayer. After media has been beamed
+into the web app, the control is just like any other media session.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="n">MediaInfo</span><span class="w"> </span><span class="o">*</span><span class="n">mediaInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">MediaInfo</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">initWithURL</span><span class="o">:</span><span class="n">mediaURL</span><span class="w"> </span><span class="n">mimeType</span><span class="o">:</span><span class="n">mimeType</span><span class="p">];</span>
+<span class="n">mediaInfo</span><span class="p">.</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="n">mediaInfo</span><span class="p">.</span><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">description</span><span class="p">;</span>
+<span class="n">ImageInfo</span><span class="w"> </span><span class="o">*</span><span class="n">imageInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">ImageInfo</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">initWithURL</span><span class="o">:</span><span class="n">iconURL</span><span class="w"> </span><span class="n">type</span><span class="o">:</span><span class="n">ImageTypeThumb</span><span class="p">];</span>
+<span class="p">[</span><span class="n">mediaInfo</span><span class="w"> </span><span class="n">addImage</span><span class="o">:</span><span class="n">imageInfo</span><span class="p">];</span>
+
+<span class="p">[</span><span class="n">webAppSession</span><span class="p">.</span><span class="n">mediaPlayer</span><span class="w"> </span><span class="n">playMediaWithMediaInfo</span><span class="o">:</span><span class="n">mediaInfo</span>
+<span class="w">                                       </span><span class="nl">shouldLoop</span><span class="p">:</span><span class="nb">NO</span>
+<span class="w">                                          </span><span class="nl">success</span><span class="p">:</span>
+<span class="w"> </span><span class="o">^</span><span class="p">(</span><span class="n">MediaLaunchObject</span><span class="w"> </span><span class="o">*</span><span class="n">mediaLaunchObject</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;play video success&quot;</span><span class="p">);</span>
+
+<span class="w">     </span><span class="c1">// save the object reference to control media playback</span>
+<span class="w">     </span><span class="n">launchObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mediaLaunchObject</span><span class="p">;</span>
+
+<span class="w">     </span><span class="c1">// enable your media control UI elements here</span>
+<span class="w"> </span><span class="p">}</span>
+<span class="w">                                          </span><span class="nl">failure</span><span class="p">:</span>
+<span class="w"> </span><span class="o">^</span><span class="p">(</span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;play video failure: %@&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="p">);</span>
+<span class="w"> </span><span class="p">}];</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For beaming media to AirPlay devices, you must set the
+<a class="reference internal" href="../apis-ios/ios-airplayservicemode.html"><span class="doc">AirPlayServiceMode</span></a> to
+AirPlayServiceModeMedia. See the <a class="reference internal" href="../apis-ios/ios-airplayservice.html"><span class="doc">API
+docs</span></a> for more information.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ios-beam-media.html" class="btn btn-neutral float-left" title="Beam Media" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ios-launch-app.html" class="btn btn-neutral float-right" title="Launch App on TV" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screen Mirroring &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Remote Camera" href="ios-remote-camera.html" />
+    <link rel="prev" title="Resuming Apps" href="ios-resuming-apps.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html#developer-guides">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ios-beam-media.html">Beam Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-beam-web-apps.html">Beam Web Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-launch-app.html">Launch App on TV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-discovery-manager.html">Discovery Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-checking-capabilities.html">Checking Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-resuming-apps.html">Resuming Apps</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Screen Mirroring</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-screen-mirroring">How to Use Screen Mirroring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#search-devices">1. Search Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-a-tv">2. Select a TV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#start-screen-mirroring">3. Start Screen Mirroring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#broadcast-upload-extension-handling">4. Broadcast Upload Extension Handling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stop-screen-mirroring">5. Stop Screen Mirroring</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ios-remote-camera.html">Remote Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-faq.html">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Screen Mirroring</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide-ios/ios-screen-mirroring.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="screen-mirroring">
+<h1>Screen Mirroring<a class="headerlink" href="#screen-mirroring" title="Permalink to this heading"></a></h1>
+<p>With Connect SDK integrated in the mobile app, it can cast the screen and sound into the TV screen.
+This allows you to extend the screen of a mobile app to a larger TV screen and share it with your family.
+Screen mirroring is a way to display the entire app screen to the TV.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is only supported on webOS TV 22.</p>
+</div>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
+<p><strong>Including the Connect SDK using CocoaPods and setting up for screen mirroring</strong></p>
+<p>Add <code class="docutils literal notranslate"><span class="pre">pod</span> <span class="pre">&quot;ConnectSDK&quot;</span></code> to your <code class="docutils literal notranslate"><span class="pre">Podfile</span></code>, and run <code class="docutils literal notranslate"><span class="pre">pod</span> <span class="pre">install</span></code>. Open the workspace file and run your project.</p>
+<p>Note that screen mirroring runs on iOS 12 and higher. In case of Broadcast Upload Extension for
+Screen Mirroring, set the APPLICATION_EXTENSION_API_ONLY value to NO. Refer to the <code class="docutils literal notranslate"><span class="pre">Podfile</span></code> example below.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span>platform :ios, &#39;12.0&#39;
+
+def app_pods
+    pod &#39;ConnectSDK/Core&#39;, :git =&gt; &#39;https://github.com/ConnectSDK/Connect-SDK-iOS.git&#39;, :branch =&gt; &#39;master&#39;, :submodules =&gt; true
+end
+
+target &#39;ScreenMirroring-Sampler&#39; do
+  use_frameworks!
+  app_pods
+
+end
+
+target &#39;ScreenMirroring-Extension-Sampler&#39; do
+  use_frameworks!
+  app_pods
+
+    post_install do |installer|
+      installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+          config.build_settings[&#39;APPLICATION_EXTENSION_API_ONLY&#39;] = &#39;No&#39;
+        end
+      end
+    end
+end
+</pre></div>
+</div>
+<p><strong>ReplayKit - Broadcast Upload Extension</strong></p>
+<p>To capture iPhone screen, you need to implement Broadcast Upload Extension using Replay Kit.
+Refer to the link below.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://developer.apple.com/documentation/replaykit">AppleDeveloper - ReplayKit</a></p></li>
+<li><p><a class="reference external" href="https://developer.apple.com/videos/play/wwdc2020/10633">WWDC2020 Capture and stream apps on the Mac with ReplayKit</a></p></li>
+</ul>
+</section>
+<section id="how-to-use-screen-mirroring">
+<h2>How to Use Screen Mirroring<a class="headerlink" href="#how-to-use-screen-mirroring" title="Permalink to this heading"></a></h2>
+<p>To use screen mirroring, follow these steps.</p>
+<section id="search-devices">
+<h3>1. Search Devices<a class="headerlink" href="#search-devices" title="Permalink to this heading"></a></h3>
+<p>Search for devices (TVs) connected to your home network. You can set the filter to only search for TVs that support the screen mirroring function.
+Since the search for TVs takes some time, it should be started as soon as the app is running.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startDiscoveryTV</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">_isDiscoveringTV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">YES</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">_discoveryManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">DiscoveryManager</span><span class="w"> </span><span class="n">sharedManager</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Sets a device search filter (Screen Mirroring Capability) for devices that support screen mirroring</span>
+<span class="w">    </span><span class="bp">NSArray</span><span class="w"> </span><span class="o">*</span><span class="n">capabilities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@[</span>
+<span class="w">        </span><span class="n">kScreenMirroringControlScreenMirroring</span>
+<span class="w">    </span><span class="l">]</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">CapabilityFilter</span><span class="w"> </span><span class="o">*</span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">CapabilityFilter</span><span class="w"> </span><span class="n">filterWithCapabilities</span><span class="o">:</span><span class="n">capabilities</span><span class="p">];</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">setCapabilityFilters</span><span class="o">:</span><span class="l">@[</span><span class="n">filter</span><span class="l">]</span><span class="p">];</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">setPairingLevel</span><span class="o">:</span><span class="n">DeviceServicePairingLevelOn</span><span class="p">];</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">registerDeviceService</span><span class="o">:</span><span class="p">[</span><span class="n">WebOSTVService</span><span class="w"> </span><span class="k">class</span><span class="p">]</span><span class="w"> </span><span class="n">withDiscovery</span><span class="o">:</span><span class="p">[</span><span class="n">SSDPDiscoveryProvider</span><span class="w"> </span><span class="k">class</span><span class="p">]];</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">startDiscovery</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="select-a-tv">
+<h3>2. Select a TV<a class="headerlink" href="#select-a-tv" title="Permalink to this heading"></a></h3>
+<p>Select the TV to run the screen mirroring on by using the Picker.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="n">_discoveryManager</span><span class="p">.</span><span class="n">devicePicker</span><span class="p">.</span><span class="n">delegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">self</span><span class="p">;</span>
+<span class="p">[</span><span class="n">_discoveryManager</span><span class="p">.</span><span class="n">devicePicker</span><span class="w"> </span><span class="n">showPicker</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>Once the user has selected a device, the application needs to store that device identifier to find it. This sample code uses NSUserDefaults to store its device identifier.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// MARK: DevicePickerDelegate</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">devicePicker:</span><span class="p">(</span><span class="n">DevicePicker</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">picker</span><span class="w"> </span><span class="nf">didSelectDevice:</span><span class="p">(</span><span class="n">ConnectableDevice</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">device</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="n">groupId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;YOUR APP GROUP ID&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="bp">NSUserDefaults</span><span class="w"> </span><span class="o">*</span><span class="n">sharedDefaults</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="bp">NSUserDefaults</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">initWithSuiteName</span><span class="o">:</span><span class="n">groupId</span><span class="p">];</span>
+<span class="w">        </span><span class="p">[</span><span class="n">sharedDefaults</span><span class="w"> </span><span class="n">setObject</span><span class="o">:</span><span class="n">device</span><span class="p">.</span><span class="n">address</span><span class="w"> </span><span class="n">forKey</span><span class="o">:</span><span class="n">kConnectableDeviceIpAddressKey</span><span class="p">];</span>
+<span class="w">        </span><span class="p">[</span><span class="n">sharedDefaults</span><span class="w"> </span><span class="n">synchronize</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="start-screen-mirroring">
+<h3>3. Start Screen Mirroring<a class="headerlink" href="#start-screen-mirroring" title="Permalink to this heading"></a></h3>
+<p>Now you can run the screen mirroring. Start capturing the screen by creating an RPSystemBroadcastPickerView.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(@</span><span class="n">available</span><span class="p">(</span><span class="n">iOS</span><span class="w"> </span><span class="mf">12.0</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="bp">RPSystemBroadcastPickerView</span><span class="w"> </span><span class="o">*</span><span class="n">rpPickerView</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="bp">RPSystemBroadcastPickerView</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">initWithFrame</span><span class="o">:</span><span class="n">_rpPickerView</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
+<span class="w">    </span><span class="n">rpPickerView</span><span class="p">.</span><span class="n">preferredExtension</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;YOUR EXTENSION BUNDLE ID&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">rpPickerView</span><span class="p">.</span><span class="n">showsMicrophoneButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NO</span><span class="p">;</span>
+<span class="w">    </span><span class="bp">UIButton</span><span class="w"> </span><span class="o">*</span><span class="n">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rpPickerView</span><span class="p">.</span><span class="n">subviews</span><span class="p">.</span><span class="n">firstObject</span><span class="p">;</span>
+<span class="w">    </span><span class="n">button</span><span class="p">.</span><span class="n">imageView</span><span class="p">.</span><span class="n">tintColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">UIColor</span><span class="p">.</span><span class="n">whiteColor</span><span class="p">;</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_rpPickerView</span><span class="w"> </span><span class="n">addSubview</span><span class="o">:</span><span class="n">rpPickerView</span><span class="p">];</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* UNAVAILABLE */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>After the screen capture starts, you need to search once again with the information of selected TV device stored in the application.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">instancetype</span><span class="p">)</span><span class="nf">init</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">self</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nb">super</span><span class="w"> </span><span class="n">init</span><span class="p">];</span>
+
+<span class="w">    </span><span class="n">_discoveryManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">DiscoveryManager</span><span class="w"> </span><span class="n">sharedManager</span><span class="p">];</span>
+
+<span class="w">        </span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="n">groupId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;YOUR APP GROUP ID&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="bp">NSUserDefaults</span><span class="w"> </span><span class="o">*</span><span class="n">sharedDefaults</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="bp">NSUserDefaults</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">initWithSuiteName</span><span class="o">:</span><span class="n">groupId</span><span class="p">];</span>
+<span class="w">        </span><span class="n">_deviceAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">sharedDefaults</span><span class="w"> </span><span class="n">stringForKey</span><span class="o">:</span><span class="n">kConnectableDeviceIpAddressKey</span><span class="p">];</span>
+
+<span class="w">    </span><span class="bp">NSArray</span><span class="w"> </span><span class="o">*</span><span class="n">capabilities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@[</span><span class="w"> </span><span class="n">kScreenMirroringControlScreenMirroring</span><span class="w"> </span><span class="l">]</span><span class="p">;</span>
+<span class="w">    </span><span class="n">CapabilityFilter</span><span class="w"> </span><span class="o">*</span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">CapabilityFilter</span><span class="w"> </span><span class="n">filterWithCapabilities</span><span class="o">:</span><span class="n">capabilities</span><span class="p">];</span>
+<span class="w">        </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">setCapabilityFilters</span><span class="o">:</span><span class="l">@[</span><span class="n">filter</span><span class="l">]</span><span class="p">];</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">setPairingLevel</span><span class="o">:</span><span class="n">DeviceServicePairingLevelOn</span><span class="p">];</span>
+<span class="w">        </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">registerDeviceService</span><span class="o">:</span><span class="p">[</span><span class="n">WebOSTVService</span><span class="w"> </span><span class="k">class</span><span class="p">]</span><span class="w"> </span><span class="n">withDiscovery</span><span class="o">:</span><span class="p">[</span><span class="n">SSDPDiscoveryProvider</span><span class="w"> </span><span class="k">class</span><span class="p">]];</span>
+<span class="w">        </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">startDiscovery</span><span class="p">];</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">setDelegate</span><span class="o">:</span><span class="nb">self</span><span class="p">];</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">self</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If you find your TV again, get a ScreenMirroringControl object to use the screen mirroring API. And then, you should immediately call the startScreenMirroring method.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// MARK: DiscoveryManagerDelegate</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">discoveryManager:</span><span class="p">(</span><span class="n">DiscoveryManager</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">manager</span><span class="w"> </span><span class="nf">didFindDevice:</span><span class="p">(</span><span class="n">ConnectableDevice</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">device</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">([</span><span class="n">device</span><span class="p">.</span><span class="n">address</span><span class="w"> </span><span class="n">caseInsensitiveCompare</span><span class="o">:</span><span class="n">_deviceAddress</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">NSOrderedSame</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">_device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">device</span><span class="p">;</span>
+<span class="w">    </span><span class="n">_screenMirroringControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">_device</span><span class="w"> </span><span class="n">screenMirroringControl</span><span class="p">];</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_screenMirroringControl</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">[</span><span class="n">_screenMirroringControl</span><span class="w"> </span><span class="n">startScreenMirroring</span><span class="p">];</span>
+<span class="w">        </span><span class="p">[</span><span class="n">_screenMirroringControl</span><span class="w"> </span><span class="n">setScreenMirroringDelegate</span><span class="o">:</span><span class="nb">self</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">stopDiscovery</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Handle Runtime Errors</strong></p>
+<p>The following runtime errors might occur while the screen mirroring is running.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When the network connection is terminated</p></li>
+<li><p>When the TV is turned off</p></li>
+<li><p>When the screen mirroring is terminated on the TV</p></li>
+<li><p>When the mobile device’s notification terminates the screen mirroring</p></li>
+<li><p>When other exceptions occurred</p></li>
+</ul>
+</div></blockquote>
+<p>For these errors, it is necessary to receive the error in real-time through the listener and respond appropriately.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// MARK: ScreenMirroringControlDelegate</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">screenMirroringDidStart:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">result</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;screenMirroringDidStart %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">screenMirroringDidStop:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">result</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;screenMirroringDidStop %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">screenMirroringErrorDidOccur:</span><span class="p">(</span><span class="n">ScreenMirroringError</span><span class="p">)</span><span class="nv">error</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;screenMirroringErrorDidOccur %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+<span class="w">    </span><span class="p">[</span><span class="nb">self</span><span class="w"> </span><span class="n">finishBroadcastWithError</span><span class="o">:</span><span class="nb">NULL</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="broadcast-upload-extension-handling">
+<h3>4. Broadcast Upload Extension Handling<a class="headerlink" href="#broadcast-upload-extension-handling" title="Permalink to this heading"></a></h3>
+<p>You can get CMSampleBufferRef and RPSampleBufferType via SampleHandler’s processSampleBuffer:withType:. It must be delivered to the screen mirroring API.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">processSampleBuffer:</span><span class="p">(</span><span class="n">CMSampleBufferRef</span><span class="p">)</span><span class="nv">sampleBuffer</span><span class="w"> </span><span class="nf">withType:</span><span class="p">(</span><span class="n">RPSampleBufferType</span><span class="p">)</span><span class="nv">sampleBufferType</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Handle video sample buffer and audio sample buffer for app</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_screenMirroringControl</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">[</span><span class="n">_screenMirroringControl</span><span class="w"> </span><span class="n">pushSampleBuffer</span><span class="o">:</span><span class="n">sampleBuffer</span><span class="w"> </span><span class="n">with</span><span class="o">:</span><span class="n">sampleBufferType</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="stop-screen-mirroring">
+<h3>5. Stop Screen Mirroring<a class="headerlink" href="#stop-screen-mirroring" title="Permalink to this heading"></a></h3>
+<p>When you want to stop mirroring, call stopScreenMirroring.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">broadcastFinished</span><span class="w"> </span><span class="p">{</span>
+<span class="c1">// User has requested to finish the broadcast.</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_screenMirroringControl</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_screenMirroringControl</span><span class="w"> </span><span class="n">stopScreenMirroring</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ios-resuming-apps.html" class="btn btn-neutral float-left" title="Resuming Apps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ios-remote-camera.html" class="btn btn-neutral float-right" title="Remote Camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

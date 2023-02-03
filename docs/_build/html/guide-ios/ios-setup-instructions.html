@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setup Instructions &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Discover &amp; Connect to Device" href="ios-discover-connect.html" />
+    <link rel="prev" title="Modularization" href="ios-modularization.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ios-modularization.html">Modularization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Setup Instructions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-cocoapods">Using CocoaPods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#without-cocoapods">Without CocoaPods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#include-strings-file-for-localization-optional">Include Strings File for Localization (optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ios-discover-connect.html">Discover &amp; Connect to Device</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Setup Instructions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide-ios/ios-setup-instructions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setup-instructions">
+<h1>Setup Instructions<a class="headerlink" href="#setup-instructions" title="Permalink to this heading"></a></h1>
+<section id="using-cocoapods">
+<h2>Using CocoaPods<a class="headerlink" href="#using-cocoapods" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">pod</span> <span class="pre">&quot;ConnectSDK&quot;</span></code> to your <code class="docutils literal notranslate"><span class="pre">Podfile</span></code></p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">pod</span> <span class="pre">install</span></code></p></li>
+<li><p>Open the workspace file and run your project</p></li>
+</ol>
+<p><strong>Important</strong>: Unfortunately, Amazon Fling SDK is not distributed via
+CocoaPods, so we cannot include its support in a subspec in an automated
+way. If you need it, please use the source ConnectSDK project directly.</p>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">pod</span> <span class="pre">&quot;ConnectSDK/Core&quot;</span></code> to get the <a class="reference external" href="https://github.com/ConnectSDK/Connect-SDK-iOS-Lite">lite
+version</a>.</p>
+</section>
+<section id="without-cocoapods">
+<h2>Without CocoaPods<a class="headerlink" href="#without-cocoapods" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Clone the repository
+(<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/ConnectSDK/Connect-SDK-iOS.git</span></code>)</p></li>
+<li><p>Set up the submodules by running the following command (in the
+<code class="docutils literal notranslate"><span class="pre">Connect-SDK-iOS/</span></code> directory in this example):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">submodule</span> <span class="pre">update</span> <span class="pre">--init</span></code></p></li>
+<li><p>Open your project in Xcode</p></li>
+<li><p>Locate the Connect SDK Xcode project in Finder</p></li>
+<li><p>Drag the Connect SDK Xcode project (<code class="docutils literal notranslate"><span class="pre">ConnectSDK.xcodeproj</span></code>) into
+your project’s Xcode library</p></li>
+<li><p>Navigate to your target’s settings screen, then navigate to the
+“Build Phases” tab</p></li>
+<li><p>Add the following in the “Link Binary With Libraries” section:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">libConnectSDK.a</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">libz.dylib</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">libicucore.dylib</span></code></p></li>
+</ul>
+</li>
+<li><p>Navigate to the “Build Settings” tab and add <code class="docutils literal notranslate"><span class="pre">-ObjC</span></code> to your
+target’s “Other Linker Flags”</p></li>
+<li><p>Follow the setup instructions for the service submodules:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ConnectSDK/Connect-SDK-iOS-Google-Cast">Connect-SDK-iOS-Google-Cast</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ConnectSDK/Connect-SDK-iOS-FireTV">Connect-SDK-iOS-FireTV</a></p></li>
+</ul>
+</li>
+</ol>
+<p>If these steps are failing, try checking the <a class="reference external" href="https://github.com/ConnectSDK/Connect-SDK-iOS/">repository</a> for the
+latest setup instructions.</p>
+</section>
+<section id="include-strings-file-for-localization-optional">
+<h2>Include Strings File for Localization (optional)<a class="headerlink" href="#include-strings-file-for-localization-optional" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Locate the Connect SDK Xcode project in the Finder</p></li>
+<li><p>Drag the ConnectSDKStrings folder into your project’s Resources
+folder</p></li>
+<li><p>You may make whatever changes you would like to the values and the
+SDK will use your strings file</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ios-modularization.html" class="btn btn-neutral float-left" title="Modularization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ios-discover-connect.html" class="btn btn-neutral float-right" title="Discover &amp; Connect to Device" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

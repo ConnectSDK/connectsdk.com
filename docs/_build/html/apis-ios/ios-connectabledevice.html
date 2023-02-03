@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConnectableDevice &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ConnectableDeviceDelegate" href="ios-connectabledevicedelegate.html" />
+    <link rel="prev" title="DiscoveryManagerDelegate" href="ios-discoverymanagerdelegate.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html">Discovery</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#device">Device</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ConnectableDevice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#in-depth">In Depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ios-connectabledevicedelegate.html">ConnectableDeviceDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-servicecommand.html">ServiceCommand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-servicesubscription.html">ServiceSubscription</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device-services">Device Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capabilities">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#info-objects">Info Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#advanced">Advanced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#globals">Globals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#misc">Misc</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../guide-ios/index.html">Getting Started</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Discovery</a></li>
+      <li class="breadcrumb-item active">ConnectableDevice</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apis-ios/ios-connectabledevice.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="connectabledevice">
+<h1>ConnectableDevice<a class="headerlink" href="#connectabledevice" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>ConnectableDevice serves as a normalization layer between your app and
+each of the device’s services. It consolidates a lot of key data about
+the physical device and provides access to underlying functionality.</p>
+</section>
+<section id="in-depth">
+<h2>In Depth<a class="headerlink" href="#in-depth" title="Permalink to this heading"></a></h2>
+<p>ConnectableDevice consolidates some key information about the physical
+device, including model name, friendly name, ip address, connected
+DeviceService names, etc. In some cases, it is not possible to
+accurately select which DeviceService has the best friendly name, model
+name, etc. In these cases, the values of these properties are dependent
+upon the order of DeviceService discovery.</p>
+<p>To be informed of any ready/pairing/disconnect messages from each of the
+DeviceService, you must set a delegate.</p>
+<p>ConnectableDevice exposes capabilities that exist in the underlying
+DeviceServices such as TV Control, Media Player, Media Control, Volume
+Control, etc. These capabilities, when accessed through the
+ConnectableDevice, will be automatically chosen from the most suitable
+DeviceService by using that DeviceService’s CapabilityPriorityLevel.</p>
+</section>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>id&lt;<a class="reference internal" href="ios-connectabledevicedelegate.html"><span class="doc">ConnectableDeviceDelegate</span></a> &gt; delegate</dt><dd><p>Delegate which should receive messages on certain events.</p>
+</dd>
+<dt>NSString * id</dt><dd><p>Universally unique ID of this particular ConnectableDevice object,
+persists between sessions in ConnectableDeviceStore for connected
+devices</p>
+</dd>
+<dt>NSString * address</dt><dd><p>Current IP address of the ConnectableDevice.</p>
+</dd>
+<dt>NSString * friendlyName</dt><dd><p>An estimate of the ConnectableDevice’s current friendly name.</p>
+</dd>
+<dt>NSString * modelName</dt><dd><p>An estimate of the ConnectableDevice’s current model name.</p>
+</dd>
+<dt>NSString * modelNumber</dt><dd><p>An estimate of the ConnectableDevice’s current model number.</p>
+</dd>
+<dt>NSString * lastKnownIPAddress</dt><dd><p>Last IP address this ConnectableDevice was discovered at.</p>
+</dd>
+<dt>NSString * lastSeenOnWifi</dt><dd><p>Name of the last wireless network this ConnectableDevice was
+discovered on.</p>
+</dd>
+<dt>double lastConnected</dt><dd><p>Last time (in seconds from 1970) that this ConnectableDevice was
+connected to.</p>
+</dd>
+<dt>double lastDetection</dt><dd><p>Last time (in seconds from 1970) that this ConnectableDevice was
+detected.</p>
+</dd>
+<dt>BOOL isConnectable</dt><dd><p>Whether the device has any DeviceServices that require an active
+connection (websocket, HTTP registration, etc)</p>
+</dd>
+<dt>BOOL connected</dt><dd><p>Whether all the DeviceServices are connected.</p>
+</dd>
+<dt>NSArray * services</dt><dd><p>Array of all currently discovered DeviceServices this
+ConnectableDevice has associated with it.</p>
+</dd>
+<dt>BOOL hasServices</dt><dd><p>Whether the ConnectableDevice has any running DeviceServices
+associated with it.</p>
+</dd>
+<dt>NSArray * capabilities</dt><dd><p>A combined list of all capabilities that are supported among the
+detected DeviceServices.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>- (void) <strong>connect</strong></dt><dd><p>Enumerates through all DeviceServices and attempts to connect to each
+of them. When all of a ConnectableDevice’s DeviceServices are ready
+to receive commands, the ConnectableDevice will send a
+connectableDeviceReady: message to its delegate.</p>
+<p>It is always necessary to call connect on a ConnectableDevice, even
+if it contains no connectable DeviceServices.</p>
+</dd>
+<dt>- (void) <strong>disconnect</strong></dt><dd><p>Enumerates through all DeviceServices and attempts to disconnect from
+each of them.</p>
+</dd>
+<dt>- (void) <strong>addService</strong>:(<a class="reference internal" href="ios-deviceservice.html"><span class="doc">DeviceService</span></a> *)<em>service</em></dt><dd><p>Adds a DeviceService to the ConnectableDevice instance. Only one
+instance of each DeviceService type (webOS, Netcast, etc) may be
+attached to a single ConnectableDevice instance. If a device contains
+your service type already, your service will not be added.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>service – DeviceService to be added to the ConnectableDevice</p></li>
+</ul>
+</dd>
+<dt>- (void) <strong>removeServiceWithId</strong>:(NSString *)<em>serviceId</em></dt><dd><p>Removes a DeviceService from the ConnectableDevice instance.
+serviceId is used as the identifier because only one instance of each
+DeviceService type may be attached to a single ConnectableDevice
+instance.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>serviceId – Id of the DeviceService to be removed from the ConnectableDevice</p></li>
+</ul>
+</dd>
+<dt>- (<a class="reference internal" href="ios-deviceservice.html"><span class="doc">DeviceService</span></a> *) <strong>serviceWithName</strong>:(NSString *)<em>serviceId</em></dt><dd><p>Obtains a service from the device with the provided serviceId</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>serviceId – Service ID of the targeted DeviceService (webOS, Netcast, DLNA, etc)</p></li>
+</ul>
+<p><strong>Returns:</strong> DeviceService with the specified serviceId or nil, if none exists</p>
+</dd>
+<dt>- (BOOL) <strong>hasCapability</strong>:(NSString *)<em>capability</em></dt><dd><p>Test to see if the capabilities array contains a given capability.
+See the individual Capability classes for acceptable capability
+values.</p>
+<p>It is possible to append a wildcard search term <code class="docutils literal notranslate"><span class="pre">.Any</span></code> to the end
+of the search term. This method will return true for capabilities
+that match the term up to the wildcard.</p>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">Launcher.App.Any</span></code></p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>capability – Capability to test against</p></li>
+</ul>
+</dd>
+<dt>- (BOOL) <strong>hasCapabilities</strong>:(NSArray *)<em>capabilities</em></dt><dd><p>Test to see if the capabilities array contains a given set of
+capabilities. See the individual Capability classes for acceptable
+capability values.</p>
+<p>See hasCapability: for a description of the wildcard feature provided
+by this method.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>capabilities – Array of capabilities to test against</p></li>
+</ul>
+</dd>
+<dt>- (BOOL) <strong>hasAnyCapability</strong>:(NSArray *)<em>capabilities</em></dt><dd><p>Test to see if the capabilities array contains at least one
+capability in a given set of capabilities. See the individual
+Capability classes for acceptable capability values.</p>
+<p>See hasCapability: for a description of the wildcard feature provided
+by this method.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>capabilities – Array of capabilities to test against</p></li>
+</ul>
+</dd>
+<dt>- (void) <strong>setPairingType</strong>:(<a class="reference internal" href="ios-deviceservicepairingtype.html"><span class="doc">DeviceServicePairingType</span></a>)<em>pairingType</em></dt><dd><p>Set the type of pairing for the ConnectableDevice services. By
+default the value will be DeviceServicePairingTypeNone</p>
+<p>For WebOSTV’s If pairingType is set to
+DeviceServicePairingTypeFirstScreen(default), the device will prompt
+the user to pair when connecting to the ConnectableDevice.</p>
+<p>If pairingType is set to DeviceServicePairingTypePinCode, the device
+will prompt the user to enter a pin to pair when connecting to the
+ConnectableDevice.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>pairingType – value to be set for the device service from DeviceServicePairingType</p></li>
+</ul>
+</dd>
+</dl>
+<p>- (id&lt;<a class="reference internal" href="ios-launcher.html"><span class="doc">Launcher</span></a> &gt;) <strong>launcher</strong></p>
+<dl class="simple">
+<dt>- (id&lt;<a class="reference internal" href="ios-externalinputcontrol.html"><span class="doc">ExternalInputControl</span></a> &gt;) <strong>externalInputControl</strong></dt><dd><p>Accessor for highest priority Launcher object</p>
+</dd>
+<dt>- (id&lt;<a class="reference internal" href="ios-mediaplayer.html"><span class="doc">MediaPlayer</span></a> &gt;) <strong>mediaPlayer</strong></dt><dd><p>Accessor for highest priority ExternalInputControl object</p>
+</dd>
+<dt>- (id&lt;<a class="reference internal" href="ios-mediacontrol.html"><span class="doc">MediaControl</span></a> &gt;) <strong>mediaControl</strong></dt><dd><p>Accessor for highest priority MediaPlayer object</p>
+</dd>
+<dt>- (id&lt;<a class="reference internal" href="ios-volumecontrol.html"><span class="doc">VolumeControl</span></a> &gt;) <strong>volumeControl</strong></dt><dd><p>Accessor for highest priority MediaControl object</p>
+</dd>
+<dt>- (id&lt;<a class="reference internal" href="ios-tvcontrol.html"><span class="doc">TVControl</span></a> &gt;) <strong>tvControl</strong></dt><dd><p>Accessor for highest priority VolumeControl object</p>
+</dd>
+<dt>- (id&lt;<a class="reference internal" href="ios-keycontrol.html"><span class="doc">KeyControl</span></a> &gt;) <strong>keyControl</strong></dt><dd><p>Accessor for highest priority TVControl object</p>
+</dd>
+<dt>- (id&lt;<a class="reference internal" href="ios-textinputcontrol.html"><span class="doc">TextInputControl</span></a> &gt;) <strong>textInputControl</strong></dt><dd><p>Accessor for highest priority KeyControl object</p>
+</dd>
+<dt>- (id&lt;<a class="reference internal" href="ios-mousecontrol.html"><span class="doc">MouseControl</span></a> &gt;) <strong>mouseControl</strong></dt><dd><p>Accessor for highest priority TextInputControl object</p>
+</dd>
+<dt>- (id&lt;<a class="reference internal" href="ios-powercontrol.html"><span class="doc">PowerControl</span></a> &gt;) <strong>powerControl</strong></dt><dd><p>Accessor for highest priority MouseControl object</p>
+</dd>
+<dt>- (id&lt;<a class="reference internal" href="ios-toastcontrol.html"><span class="doc">ToastControl</span></a> &gt;) <strong>toastControl</strong></dt><dd><p>Accessor for highest priority PowerControl object</p>
+</dd>
+<dt>- (id&lt;<a class="reference internal" href="ios-webapplauncher.html"><span class="doc">WebAppLauncher</span></a> &gt;) <strong>webAppLauncher</strong></dt><dd><p>Accessor for highest priority ToastControl object</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ios-discoverymanagerdelegate.html" class="btn btn-neutral float-left" title="DiscoveryManagerDelegate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ios-connectabledevicedelegate.html" class="btn btn-neutral float-right" title="ConnectableDeviceDelegate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

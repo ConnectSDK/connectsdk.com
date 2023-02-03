@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discovery &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CapabilityFilter" href="ios-capabilityfilter.html" />
+    <link rel="prev" title="FAQ" href="../guide-ios/ios-faq.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Discovery</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ios-capabilityfilter.html">CapabilityFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-devicepicker.html">DevicePicker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-devicepickerdelegate.html">DevicePickerDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-discoverymanager.html">DiscoveryManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-discoverymanagerdelegate.html">DiscoveryManagerDelegate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#device">Device</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ios-connectabledevice.html">ConnectableDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-connectabledevicedelegate.html">ConnectableDeviceDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-servicecommand.html">ServiceCommand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-servicesubscription.html">ServiceSubscription</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#device-services">Device Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ios-airplayservice.html">AirPlayService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-airplayservicehttpkeepalive.html">AirPlayServiceHTTPKeepAlive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-airplayservicemode.html">AirPlayServiceMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-castservice.html">CastService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-dialservice.html">DIALService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-dlnaservice.html">DLNAService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-deviceservice.html">DeviceService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-deviceservicedelegate.html">DeviceServiceDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-deviceservicepairinglevel.html">DeviceServicePairingLevel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-deviceservicepairingtype.html">DeviceServicePairingType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-firetvservice.html">FireTVService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-netcasttvservice.html">NetcastTVService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-rokuservice.html">RokuService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-webostvservice.html">WebOSTVService</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#capabilities">Capabilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ios-capabilityprioritylevel.html">CapabilityPriorityLevel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-externalinputcontrol.html">ExternalInputControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-keycontrol.html">KeyControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-launcher.html">Launcher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-mediacontrol.html">MediaControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-mediaplayer.html">MediaPlayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-mousecontrol.html">MouseControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-playlistcontrol.html">PlayListControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-powercontrol.html">PowerControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-tvcontrol.html">TVControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-textinputcontrol.html">TextInputControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-toastcontrol.html">ToastControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-volumecontrol.html">VolumeControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-webapplauncher.html">WebAppLauncher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-screenmirroringcontrol.html">ScreenMirroringControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-screenmirroringcontroldelegate.html">ScreenMirroringControlDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-remotecameracontrol.html">RemoteCameraControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-remotecameracontroldelegate.html">RemoteCameraControlDelegate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sessions">Sessions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ios-launchsession.html">LaunchSession</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-launchsessiontype.html">LaunchSessionType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-webappsession.html">WebAppSession</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-webappsessiondelegate.html">WebAppSessionDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-webappstatus.html">WebAppStatus</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#info-objects">Info Objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ios-appinfo.html">AppInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-channelinfo.html">ChannelInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-externalinputinfo.html">ExternalInputInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-imageinfo.html">ImageInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-mediacontrolplaystate.html">MediaControlPlayState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-mediainfo.html">MediaInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-medialaunchobject.html">MediaLaunchObject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-programinfo.html">ProgramInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-subtitleinfo.html">SubtitleInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-subtitleinfobuilder.html">SubtitleInfoBuilder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-textinputstatusinfo.html">TextInputStatusInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-screenmirroringerror.html">ScreenMirroringError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-remotecameraproperty.html">RemoteCameraProperty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-remotecameraerror.html">RemoteCameraError</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced">Advanced</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ios-connectabledevicestore.html">ConnectableDeviceStore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-defaultconnectabledevicestore.html">DefaultConnectableDeviceStore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#globals">Globals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ios-connectstatuscode.html">ConnectStatusCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-globals.html">Globals</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#misc">Misc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ios-appstatechangenotifier.html">AppStateChangeNotifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-blockrunner.html">BlockRunner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-dispatchqueueblockrunner.html">DispatchQueueBlockRunner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-subscriptiondeduplicator.html">SubscriptionDeduplicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-synchronousblockrunner.html">SynchronousBlockRunner</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../guide-ios/index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Discovery</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apis-ios/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="discovery">
+<h1>Discovery<a class="headerlink" href="#discovery" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ios-capabilityfilter.html">CapabilityFilter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-devicepicker.html">DevicePicker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-devicepickerdelegate.html">DevicePickerDelegate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-discoverymanager.html">DiscoveryManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-discoverymanagerdelegate.html">DiscoveryManagerDelegate</a></li>
+</ul>
+</div>
+</section>
+<section id="device">
+<h1>Device<a class="headerlink" href="#device" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ios-connectabledevice.html">ConnectableDevice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-connectabledevicedelegate.html">ConnectableDeviceDelegate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-servicecommand.html">ServiceCommand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-servicesubscription.html">ServiceSubscription</a></li>
+</ul>
+</div>
+</section>
+<section id="device-services">
+<h1>Device Services<a class="headerlink" href="#device-services" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ios-airplayservice.html">AirPlayService</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-airplayservicehttpkeepalive.html">AirPlayServiceHTTPKeepAlive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-airplayservicemode.html">AirPlayServiceMode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-castservice.html">CastService</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-dialservice.html">DIALService</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-dlnaservice.html">DLNAService</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-deviceservice.html">DeviceService</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-deviceservicedelegate.html">DeviceServiceDelegate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-deviceservicepairinglevel.html">DeviceServicePairingLevel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-deviceservicepairingtype.html">DeviceServicePairingType</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-firetvservice.html">FireTVService</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-netcasttvservice.html">NetcastTVService</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-rokuservice.html">RokuService</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-webostvservice.html">WebOSTVService</a></li>
+</ul>
+</div>
+</section>
+<section id="capabilities">
+<h1>Capabilities<a class="headerlink" href="#capabilities" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ios-capabilityprioritylevel.html">CapabilityPriorityLevel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-externalinputcontrol.html">ExternalInputControl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-keycontrol.html">KeyControl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-launcher.html">Launcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-mediacontrol.html">MediaControl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-mediaplayer.html">MediaPlayer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-mousecontrol.html">MouseControl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-playlistcontrol.html">PlayListControl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-powercontrol.html">PowerControl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-tvcontrol.html">TVControl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-textinputcontrol.html">TextInputControl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-toastcontrol.html">ToastControl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-volumecontrol.html">VolumeControl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-webapplauncher.html">WebAppLauncher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-screenmirroringcontrol.html">ScreenMirroringControl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-screenmirroringcontroldelegate.html">ScreenMirroringControlDelegate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-remotecameracontrol.html">RemoteCameraControl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-remotecameracontroldelegate.html">RemoteCameraControlDelegate</a></li>
+</ul>
+</div>
+</section>
+<section id="sessions">
+<h1>Sessions<a class="headerlink" href="#sessions" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ios-launchsession.html">LaunchSession</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-launchsessiontype.html">LaunchSessionType</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-webappsession.html">WebAppSession</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-webappsessiondelegate.html">WebAppSessionDelegate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-webappstatus.html">WebAppStatus</a></li>
+</ul>
+</div>
+</section>
+<section id="info-objects">
+<h1>Info Objects<a class="headerlink" href="#info-objects" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ios-appinfo.html">AppInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-channelinfo.html">ChannelInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-externalinputinfo.html">ExternalInputInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-imageinfo.html">ImageInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-mediacontrolplaystate.html">MediaControlPlayState</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-mediainfo.html">MediaInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-medialaunchobject.html">MediaLaunchObject</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-programinfo.html">ProgramInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-subtitleinfo.html">SubtitleInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-subtitleinfobuilder.html">SubtitleInfoBuilder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-textinputstatusinfo.html">TextInputStatusInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-screenmirroringerror.html">ScreenMirroringError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-remotecameraproperty.html">RemoteCameraProperty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-remotecameraerror.html">RemoteCameraError</a></li>
+</ul>
+</div>
+</section>
+<section id="advanced">
+<h1>Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ios-connectabledevicestore.html">ConnectableDeviceStore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-defaultconnectabledevicestore.html">DefaultConnectableDeviceStore</a></li>
+</ul>
+</div>
+</section>
+<section id="globals">
+<h1>Globals<a class="headerlink" href="#globals" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ios-connectstatuscode.html">ConnectStatusCode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-globals.html">Globals</a></li>
+</ul>
+</div>
+</section>
+<section id="misc">
+<h1>Misc<a class="headerlink" href="#misc" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ios-appstatechangenotifier.html">AppStateChangeNotifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-blockrunner.html">BlockRunner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-dispatchqueueblockrunner.html">DispatchQueueBlockRunner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-subscriptiondeduplicator.html">SubscriptionDeduplicator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios-synchronousblockrunner.html">SynchronousBlockRunner</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../guide-ios/ios-faq.html" class="btn btn-neutral float-left" title="FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ios-capabilityfilter.html" class="btn btn-neutral float-right" title="CapabilityFilter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

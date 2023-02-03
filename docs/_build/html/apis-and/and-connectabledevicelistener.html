@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConnectableDeviceListener &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ServiceSubscription" href="and-servicesubscription.html" />
+    <link rel="prev" title="ConnectableDevice" href="and-connectabledevice.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html">Discovery</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#device">Device</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="and-connectabledevice.html">ConnectableDevice</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ConnectableDeviceListener</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="and-servicesubscription.html">ServiceSubscription</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device-services">Device Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capabilities">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capability-listeners">Capability Listeners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#errors">Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#info-objects">Info Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#advanced">Advanced</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../guide-and/index.html">Getting Started</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Discovery</a></li>
+      <li class="breadcrumb-item active">ConnectableDeviceListener</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apis-and/and-connectabledevicelistener.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="connectabledevicelistener">
+<h1>ConnectableDeviceListener<a class="headerlink" href="#connectabledevicelistener" title="Permalink to this heading"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">com.connectsdk.device.ConnectableDeviceListener</span></code></p>
+<p>ConnectableDeviceListener allows for a class to receive messages about
+ConnectableDevice connection, disconnect, and update events.</p>
+<p>It also serves as a proxy for message handling when connecting and
+pairing with each of a ConnectableDevice’s DeviceServices. Each of the
+DeviceService proxy methods are optional and would only be useful in a
+few use cases.</p>
+<ul class="simple">
+<li><p>providing your own UI for the pairing process.</p></li>
+<li><p>interacting directly and exclusively with a single type of DeviceService</p></li>
+</ul>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>void <strong>onDeviceReady</strong> (<a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a> <em>device</em>)</dt><dd><p>A ConnectableDevice sends out a ready message when all of its
+connectable DeviceServices have been connected and are ready to
+receive commands.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>device – ConnectableDevice that is ready for commands.</p></li>
+</ul>
+</dd>
+<dt>void <strong>onDeviceDisconnected</strong> (<a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a> <em>device</em>)</dt><dd><p>When all of a ConnectableDevice’s DeviceServices have become
+disconnected, the disconnected message is sent.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>device – ConnectableDevice that has been disconnected.</p></li>
+</ul>
+</dd>
+<dt>void <strong>onPairingRequired</strong> (<a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a> <em>device</em>, <a class="reference internal" href="and-deviceservice.html"><span class="doc">DeviceService</span></a> <em>service</em>, <a class="reference internal" href="and-pairingtype.html"><span class="doc">PairingType</span></a> <em>pairingType</em>)</dt><dd><p>DeviceService listener proxy method.</p>
+<p>This method is called when a DeviceService tries to connect and finds
+out that it requires pairing information from the user.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>device – ConnectableDevice containing the DeviceService</p></li>
+<li><p>service – DeviceService that requires pairing</p></li>
+<li><p>pairingType – DeviceServicePairingType that the DeviceService requires</p></li>
+</ul>
+</dd>
+<dt>void <strong>onCapabilityUpdated</strong> (<a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a> <em>device</em>, List&lt;String&gt; <em>added</em>, List&lt;String&gt; <em>removed</em>)</dt><dd><p>When a ConnectableDevice finds &amp; loses DeviceServices, that
+ConnectableDevice will experience a change in its collective
+capabilities list. When such a change occurs, this message will be
+sent with arrays of capabilities that were added &amp; removed.</p>
+<p>This message will allow you to decide when to stop/start interacting
+with a ConnectableDevice, based off of its supported capabilities.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>device – ConnectableDevice that has experienced a change in capabilities</p></li>
+<li><p>added – List&lt;String&gt; of capabilities that are new to the ConnectableDevice</p></li>
+<li><p>removed – List&lt;String&gt; of capabilities that the ConnectableDevice has lost</p></li>
+</ul>
+</dd>
+<dt>void <strong>onConnectionFailed</strong> (<a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a> <em>device</em>, <a class="reference internal" href="and-servicecommanderror.html"><span class="doc">ServiceCommandError</span></a> <em>error</em>)</dt><dd><p>This method is called when the connection to the ConnectableDevice
+has failed.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>device – ConnectableDevice that has failed to connect</p></li>
+<li><p>error – ServiceCommandError with a description of the failure</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="and-connectabledevice.html" class="btn btn-neutral float-left" title="ConnectableDevice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="and-servicesubscription.html" class="btn btn-neutral float-right" title="ServiceSubscription" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

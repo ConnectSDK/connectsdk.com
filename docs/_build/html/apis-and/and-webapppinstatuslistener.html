@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebAppPinStatusListener &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="WebAppSession" href="and-webappsession.html" />
+    <link rel="prev" title="StatusListener" href="and-statuslistener.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html">Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device-services">Device Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capabilities">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capability-listeners">Capability Listeners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#errors">Errors</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#sessions">Sessions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="and-launchsession.html">LaunchSession</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-launchsessiontype.html">LaunchSessionType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-statuslistener.html">StatusListener</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">WebAppPinStatusListener</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inherited-methods">Inherited Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="and-webappsession.html">WebAppSession</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-webappsession-launchlistener.html">WebAppSession.LaunchListener</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-webappsessionlistener.html">WebAppSessionListener</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-webappstatus.html">WebAppStatus</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#info-objects">Info Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#advanced">Advanced</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../guide-and/index.html">Getting Started</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Discovery</a></li>
+      <li class="breadcrumb-item active">WebAppPinStatusListener</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apis-and/and-webapppinstatuslistener.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="webapppinstatuslistener">
+<h1>WebAppPinStatusListener<a class="headerlink" href="#webapppinstatuslistener" title="Permalink to this heading"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">com.connectsdk.service.sessions.WebAppSession.WebAppPinStatusListener</span></code></p>
+<p><em>extends</em> <a class="reference internal" href="and-responselistener.html"><span class="doc">ResponseListener</span></a></p>
+<p>Success block that is called upon successfully getting a web app’s
+status.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>status</dt><dd><p>The current running &amp; foreground status of the web app</p>
+</dd>
+</dl>
+</li>
+</ul>
+<section id="inherited-methods">
+<h2>Inherited Methods<a class="headerlink" href="#inherited-methods" title="Permalink to this heading"></a></h2>
+<p>void <strong>onSuccess</strong> (T <em>object</em>)</p>
+<blockquote>
+<div><p>Returns the success of the call of type T.</p>
+<dl class="simple">
+<dt><strong>Parameters:</strong></dt><dd><ul class="simple">
+<li><p>object – Response object, can be any number of object types, depending on the protocol/capability/etc</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p>void <strong>onError</strong> (<a class="reference internal" href="and-servicecommanderror.html"><span class="doc">ServiceCommandError</span></a> <em>error</em>)</p>
+<blockquote>
+<div><p>Method to return the error that was generated. Will pass an error
+object with a helpful status code and error message.</p>
+<dl class="simple">
+<dt><strong>Parameters:</strong></dt><dd><ul class="simple">
+<li><p>error – ServiceCommandError describing the error</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="and-statuslistener.html" class="btn btn-neutral float-left" title="StatusListener" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="and-webappsession.html" class="btn btn-neutral float-right" title="WebAppSession" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

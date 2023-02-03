@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TVControl &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TextInputControl" href="ios-textinputcontrol.html" />
+    <link rel="prev" title="PowerControl" href="ios-powercontrol.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html">Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device-services">Device Services</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#capabilities">Capabilities</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ios-capabilityprioritylevel.html">CapabilityPriorityLevel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-externalinputcontrol.html">ExternalInputControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-keycontrol.html">KeyControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-launcher.html">Launcher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-mediacontrol.html">MediaControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-mediaplayer.html">MediaPlayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-mousecontrol.html">MouseControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-playlistcontrol.html">PlayListControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-powercontrol.html">PowerControl</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">TVControl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#typedefs">Typedefs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ios-textinputcontrol.html">TextInputControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-toastcontrol.html">ToastControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-volumecontrol.html">VolumeControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-webapplauncher.html">WebAppLauncher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-screenmirroringcontrol.html">ScreenMirroringControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-screenmirroringcontroldelegate.html">ScreenMirroringControlDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-remotecameracontrol.html">RemoteCameraControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ios-remotecameracontroldelegate.html">RemoteCameraControlDelegate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#info-objects">Info Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#advanced">Advanced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#globals">Globals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#misc">Misc</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../guide-ios/index.html">Getting Started</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Discovery</a></li>
+      <li class="breadcrumb-item active">TVControl</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apis-ios/ios-tvcontrol.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tvcontrol">
+<h1>TVControl<a class="headerlink" href="#tvcontrol" title="Permalink to this heading"></a></h1>
+<p>The TVControl capability protocol serves to define the methods required
+for normalizing common TV-specific commands (channel up/down, channel
+list, channel info, etc).</p>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading"></a></h2>
+<p>- (id&lt;<a class="reference internal" href="#"><span class="doc">TVControl</span></a>&gt;) <strong>tvControl</strong></p>
+<p>- (<a class="reference internal" href="ios-capabilityprioritylevel.html"><span class="doc">CapabilityPriorityLevel</span></a>) <strong>tvControlPriority</strong></p>
+<dl>
+<dt>- (void) <strong>channelUpWithSuccess</strong>:(SuccessBlock)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Sends a channel up command to the TV.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.Channel.Up</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>success – Optional SuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+<dt>- (void) <strong>channelDownWithSuccess</strong>:(SuccessBlock)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Sends a channel down command to the TV.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.Channel.Down</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>success – Optional SuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+<dt>- (void) <strong>setChannel</strong>:(<a class="reference internal" href="ios-channelinfo.html"><span class="doc">ChannelInfo</span></a> *)<em>channelInfo</em> <strong>success</strong>:(SuccessBlock)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Sets the current channel to the channel provided by the ChannelInfo
+object provided.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.Channel.Set</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>channelInfo – ChannelInfo object containing information about the desired
+channel</p></li>
+<li><p><strong>success</strong>: success – Optional SuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+<dt>- (void) <strong>getCurrentChannelWithSuccess</strong>:(<a class="reference external" href="#currentchannelsuccessblock">CurrentChannelSuccessBlock</a>)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Gets the current channel info from the TV.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.Channel.Get</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>success – Optional CurrentChannelSuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+<dt>- (<a class="reference internal" href="ios-servicesubscription.html"><span class="doc">ServiceSubscription</span></a> *) <strong>subscribeCurrentChannelWithSuccess</strong>:(<a class="reference external" href="#currentchannelsuccessblock">CurrentChannelSuccessBlock</a>)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Subscribes to any changes in the current channel. Each time the
+channel is changed, the new channel’s info will be provided to the
+success callback.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.Channel.Subscribe</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>success – Optional CurrentChannelSuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+<dt>- (void) <strong>getChannelListWithSuccess</strong>:(<a class="reference external" href="#channellistsuccessblock">ChannelListSuccessBlock</a>)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Get a list of available channels from the TV.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.Channel.List</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>success – Optional ChannelListSuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+<dt>- (void) <strong>getProgramInfoWithSuccess</strong>:(<a class="reference external" href="#programinfosuccessblock">ProgramInfoSuccessBlock</a>)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Gets the current program info from the TV.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.Program.Get</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>success – Optional ProgramInfoSuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+<dt>- (<a class="reference internal" href="ios-servicesubscription.html"><span class="doc">ServiceSubscription</span></a> *) <strong>subscribeProgramInfoWithSuccess</strong>:(<a class="reference external" href="#programinfosuccessblock">ProgramInfoSuccessBlock</a>)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Subscribes to any changes in the current program. Each time the
+channel is changed or a new program starts, the new program’s info
+will be provided to the success callback.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.Program.Subscribe</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>success – Optional ProgramInfoSuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+<dt>- (void) <strong>getProgramListWithSuccess</strong>:(<a class="reference external" href="#programlistsuccessblock">ProgramListSuccessBlock</a>)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Gets a list of all programs scheduled to play on the current channel.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.Program.List</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>success – Optional ProgramListSuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+<dt>- (<a class="reference internal" href="ios-servicesubscription.html"><span class="doc">ServiceSubscription</span></a> *) <strong>subscribeProgramListWithSuccess</strong>:(<a class="reference external" href="#programlistsuccessblock">ProgramListSuccessBlock</a>)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Subscribes to any changes in the current program. Each time the
+channel is changed or a new program starts, the new program’s info
+will be provided to the success callback.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.Program.List.Subscribe</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>success – Optional ProgramListSuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+<dt>- (void) <strong>get3DEnabledWithSuccess</strong>:(<a class="reference external" href="#tv3denabledsuccessblock">TV3DEnabledSuccessBlock</a>)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Gets the current 3D status of the TV.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.3D.Get</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>success – Optional TV3DEnabledSuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+<dt>- (void) <strong>set3DEnabled</strong>:(BOOL)<em>enabled</em> <strong>success</strong>:(SuccessBlock)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Sets the current 3D status of the TV.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.3D.Set</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>enabled – Whether the TV’s 3D mode should be on or off</p></li>
+<li><p><strong>success</strong>: success – Optional SuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+<dt>- (<a class="reference internal" href="ios-servicesubscription.html"><span class="doc">ServiceSubscription</span></a> *) <strong>subscribe3DEnabledWithSuccess</strong>:(<a class="reference external" href="#tv3denabledsuccessblock">TV3DEnabledSuccessBlock</a>)<em>success</em> <strong>failure</strong>:(FailureBlock)<em>failure</em></dt><dd><p>Subscribes to changes in the TV’s 3D status.</p>
+<p><strong>Related capabilities:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">TVControl.3D.Subscribe</span></code></p></li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>success – Optional TV3DEnabledSuccessBlock to be called on success</p></li>
+<li><p><strong>failure</strong>: failure – Optional FailureBlock to be called on failure</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this heading"></a></h2>
+<section id="currentchannelsuccessblock">
+<h3>CurrentChannelSuccessBlock<a class="headerlink" href="#currentchannelsuccessblock" title="Permalink to this heading"></a></h3>
+<p>void(^)(<a class="reference internal" href="ios-channelinfo.html"><span class="doc">ChannelInfo</span></a> *channelInfo)</p>
+<p>Success block that is called upon successfully getting the current
+channel’s information.</p>
+<ul>
+<li><p>channelInfo</p>
+<p>Object containing information about the current channel</p>
+</li>
+</ul>
+</section>
+<section id="channellistsuccessblock">
+<h3>ChannelListSuccessBlock<a class="headerlink" href="#channellistsuccessblock" title="Permalink to this heading"></a></h3>
+<p>void(^)(NSArray *channelList)</p>
+<p>Success block that is called upon successfully getting the channel list.</p>
+<ul>
+<li><p>channelList</p>
+<p>Array containing a ChannelInfo object for each available channel on
+the TV</p>
+</li>
+</ul>
+</section>
+<section id="programinfosuccessblock">
+<h3>ProgramInfoSuccessBlock<a class="headerlink" href="#programinfosuccessblock" title="Permalink to this heading"></a></h3>
+<p>void(^)(<a class="reference internal" href="ios-programinfo.html"><span class="doc">ProgramInfo</span></a> *programInfo)</p>
+<p>Success block that is called upon successfully getting the current
+program’s information.</p>
+<ul>
+<li><p>programInfo</p>
+<p>Object containing information about the current program</p>
+</li>
+</ul>
+</section>
+<section id="programlistsuccessblock">
+<h3>ProgramListSuccessBlock<a class="headerlink" href="#programlistsuccessblock" title="Permalink to this heading"></a></h3>
+<p>void(^)(NSArray *programList)</p>
+<p>Success block that is called upon successfully getting the program list
+for the current channel.</p>
+<ul>
+<li><p>programList</p>
+<p>Array containing a ProgramInfo object for each available program on
+the TV’s current channel</p>
+</li>
+</ul>
+</section>
+<section id="tv3denabledsuccessblock">
+<h3>TV3DEnabledSuccessBlock<a class="headerlink" href="#tv3denabledsuccessblock" title="Permalink to this heading"></a></h3>
+<p>void(^)(BOOL tv3DEnabled)</p>
+<p>Success block that is called upon successfully getting the TV’s 3D mode</p>
+<ul>
+<li><p>tv3DEnabled</p>
+<p>Whether 3D mode is currently enabled on the TV</p>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ios-powercontrol.html" class="btn btn-neutral float-left" title="PowerControl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ios-textinputcontrol.html" class="btn btn-neutral float-right" title="TextInputControl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DiscoveryManager &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DiscoveryManagerListener" href="and-discoverymanagerlistener.html" />
+    <link rel="prev" title="DevicePicker" href="and-devicepicker.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Discovery</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="and-capabilityfilter.html">CapabilityFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-devicepicker.html">DevicePicker</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DiscoveryManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#in-depth">In depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inner-classes">Inner Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inherited-methods">Inherited Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="and-discoverymanagerlistener.html">DiscoveryManagerListener</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-pairinglevel.html">PairingLevel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="and-pairingtype.html">PairingType</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device-services">Device Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capabilities">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#capability-listeners">Capability Listeners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#errors">Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#sessions">Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#info-objects">Info Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#advanced">Advanced</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../guide-and/index.html">Getting Started</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Discovery</a></li>
+      <li class="breadcrumb-item active">DiscoveryManager</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apis-and/and-discoverymanager.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="discoverymanager">
+<h1>DiscoveryManager<a class="headerlink" href="#discoverymanager" title="Permalink to this heading"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">com.connectsdk.discovery.DiscoveryManager</span></code></p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>At the heart of Connect SDK is DiscoveryManager, a multi-protocol
+service discovery engine with a pluggable architecture. Much of your
+initial experience with Connect SDK will be with the DiscoveryManager
+class, as it consolidates discovered service information into
+ConnectableDevice objects.</p>
+</section>
+<section id="in-depth">
+<h2>In depth<a class="headerlink" href="#in-depth" title="Permalink to this heading"></a></h2>
+<p>DiscoveryManager supports discovering services of differing protocols by
+using DiscoveryProviders. Many services are discoverable over
+<a class="reference external" href="http://tools.ietf.org/html/draft-cai-ssdp-v1-03">SSDP</a> and are
+registered to be discovered with the SSDPDiscoveryProvider class.</p>
+<p>As services are discovered on the network, the DiscoveryProviders will
+notify DiscoveryManager. DiscoveryManager is capable of attributing
+multiple services, if applicable, to a single ConnectableDevice
+instance. Thus, it is possible to have a mixed-mode ConnectableDevice
+object that is theoretically capable of more functionality than a single
+service can provide.</p>
+<p>DiscoveryManager keeps a running list of all discovered devices and
+maintains a filtered list of devices that have satisfied any of your
+CapabilityFilters. This filtered list is used by the DevicePicker when
+presenting the user with a list of devices.</p>
+<p>Only one instance of the DiscoveryManager should be in memory at a time.
+To assist with this, DiscoveryManager has static method at
+sharedManager.</p>
+<p>Example:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">());</span>
+<span class="n">DiscoveryManager</span><span class="w"> </span><span class="n">discoveryManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">();</span>
+<span class="n">discoveryManager</span><span class="p">.</span><span class="na">addListener</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="n">discoveryManager</span><span class="p">.</span><span class="na">start</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="inner-classes">
+<h2>Inner Classes<a class="headerlink" href="#inner-classes" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="and-pairinglevel.html"><span class="doc">PairingLevel</span></a></p></li>
+</ul>
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>static void <strong>init</strong> (Context <em>context</em>)</dt><dd><p>Initilizes the Discovery manager with a valid context. This should be
+done as soon as possible and it should use getApplicationContext() as
+the Discovery manager could persist longer than the current Activity.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">());</span>
+</pre></div>
+</div>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>context</p></li>
+</ul>
+</dd>
+</dl>
+<p>static void <strong>destroy</strong> ()</p>
+<dl>
+<dt>static void <strong>init</strong> (Context <em>context</em>, <a class="reference internal" href="and-connectabledevicestore.html"><span class="doc">ConnectableDeviceStore</span></a> <em>connectableDeviceStore</em>)</dt><dd><p>Initilizes the Discovery manager with a valid context. This should be
+done as soon as possible and it should use getApplicationContext() as
+the Discovery manager could persist longer than the current Activity.</p>
+<p>This accepts a ConnectableDeviceStore to use instead of the default
+device store.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">MyConnectableDeviceStore</span><span class="w"> </span><span class="n">myDeviceStore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyConnectableDeviceStore</span><span class="p">();</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span><span class="w"> </span><span class="n">myDeviceStore</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>context</p></li>
+<li><p>connectableDeviceStore</p></li>
+</ul>
+</dd>
+<dt>static <a class="reference internal" href="#"><span class="doc">DiscoveryManager</span></a> <strong>getInstance</strong> ()</dt><dd><p>Get a shared instance of DiscoveryManager.</p>
+</dd>
+<dt>void <strong>addListener</strong> (<a class="reference internal" href="and-discoverymanagerlistener.html"><span class="doc">DiscoveryManagerListener</span></a> <em>listener</em>)</dt><dd><p>Listener which should receive discovery updates. It is not necessary
+to set this listener property unless you are implementing your own
+device picker. Connect SDK provides a default DevicePicker which acts
+as a DiscoveryManagerListener, and should work for most cases.</p>
+<p>If you have provided a capabilityFilters array, the listener will
+only receive update messages for ConnectableDevices which satisfy at
+least one of the CapabilityFilters. If no capabilityFilters array is
+provided, the listener will receive update messages for all
+ConnectableDevice objects that are discovered.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) DiscoveryManagerListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>removeListener</strong> (<a class="reference internal" href="and-discoverymanagerlistener.html"><span class="doc">DiscoveryManagerListener</span></a> <em>listener</em>)</dt><dd><p>Removes a previously added listener</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>listener – (optional) DiscoveryManagerListener with methods to be called on success or failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>setCapabilityFilters</strong> (<a class="reference internal" href="and-capabilityfilter.html"><span class="doc">CapabilityFilter</span></a>… <em>capabilityFilters</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>capabilityFilters</p></li>
+</ul>
+</dd>
+<dt>void <strong>setCapabilityFilters</strong> (List&lt;<a class="reference internal" href="and-capabilityfilter.html"><span class="doc">CapabilityFilter</span></a>&gt; <em>capabilityFilters</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>capabilityFilters</p></li>
+</ul>
+</dd>
+<dt>List&lt;<a class="reference internal" href="and-capabilityfilter.html"><span class="doc">CapabilityFilter</span></a>&gt; <strong>getCapabilityFilters</strong> ()</dt><dd><p>Returns the list of capability filters.</p>
+</dd>
+<dt>boolean <strong>deviceIsCompatible</strong> (<a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a> <em>device</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>device</p></li>
+</ul>
+</dd>
+<dt>void <strong>start</strong> ()</dt><dd><p>Start scanning for devices on the local network.</p>
+</dd>
+<dt>void <strong>stop</strong> ()</dt><dd><p>Stop scanning for devices.</p>
+</dd>
+<dt>void <strong>setConnectableDeviceStore</strong> (<a class="reference internal" href="and-connectabledevicestore.html"><span class="doc">ConnectableDeviceStore</span></a> <em>connectableDeviceStore</em>)</dt><dd><p>ConnectableDeviceStore object which loads &amp; stores references to all
+discovered devices. Pairing codes/keys, SSL certificates, recent
+access times, etc are kept in the device store.</p>
+<p>ConnectableDeviceStore is a protocol which may be implemented as
+needed. A default implementation, DefaultConnectableDeviceStore,
+exists for convenience and will be used if no other device store is
+provided.</p>
+<p>In order to satisfy user privacy concerns, you should provide a UI
+element in your app which exposes the ConnectableDeviceStore
+removeAll method.</p>
+<p>To disable the ConnectableDeviceStore capabilities of Connect SDK,
+set this value to nil. This may be done at the time of instantiation
+with <code class="docutils literal notranslate"><span class="pre">DiscoveryManager.init(context,</span> <span class="pre">null);</span></code>.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>connectableDeviceStore</p></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="and-connectabledevicestore.html"><span class="doc">ConnectableDeviceStore</span></a> <strong>getConnectableDeviceStore</strong> ()</dt><dd><p>ConnectableDeviceStore object which loads &amp; stores references to all
+discovered devices. Pairing codes/keys, SSL certificates, recent
+access times, etc are kept in the device store.</p>
+<p>ConnectableDeviceStore is a protocol which may be implemented as
+needed. A default implementation, DefaultConnectableDeviceStore,
+exists for convenience and will be used if no other device store is
+provided.</p>
+<p>In order to satisfy user privacy concerns, you should provide a UI
+element in your app which exposes the ConnectableDeviceStore
+removeAll method.</p>
+<p>To disable the ConnectableDeviceStore capabilities of Connect SDK,
+set this value to nil. This may be done at the time of instantiation
+with <code class="docutils literal notranslate"><span class="pre">DiscoveryManager.init(context,</span> <span class="pre">null);</span></code>.</p>
+</dd>
+<dt>Map&lt;String, <a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a>&gt; <strong>getAllDevices</strong> ()</dt><dd><p>List of all devices discovered by DiscoveryManager. Each
+ConnectableDevice object is keyed against its current IP address.</p>
+</dd>
+<dt>Map&lt;String, <a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a>&gt; <strong>getCompatibleDevices</strong> ()</dt><dd><p>Filtered list of discovered ConnectableDevices, limited to devices
+that match at least one of the CapabilityFilters in the
+capabilityFilters array. Each ConnectableDevice object is keyed
+against its current IP address.</p>
+</dd>
+<dt><a class="reference internal" href="and-pairinglevel.html"><span class="doc">PairingLevel</span></a> <strong>getPairingLevel</strong> ()</dt><dd><p>The pairingLevel property determines whether capabilities that
+require pairing (such as entering a PIN) will be available.</p>
+<p>If pairingLevel is set to ConnectableDevicePairingLevelOn,
+ConnectableDevices that require pairing will prompt the user to pair
+when connecting to the ConnectableDevice.</p>
+<p>If pairingLevel is set to ConnectableDevicePairingLevelOff (the
+default), connecting to the device will avoid requiring pairing if
+possible but some capabilities may not be available.</p>
+</dd>
+<dt>void <strong>setPairingLevel</strong> (<a class="reference internal" href="and-pairinglevel.html"><span class="doc">PairingLevel</span></a> <em>pairingLevel</em>)</dt><dd><p>The pairingLevel property determines whether capabilities that
+require pairing (such as entering a PIN) will be available.</p>
+<p>If pairingLevel is set to ConnectableDevicePairingLevelOn,
+ConnectableDevices that require pairing will prompt the user to pair
+when connecting to the ConnectableDevice.</p>
+<p>If pairingLevel is set to ConnectableDevicePairingLevelOff (the
+default), connecting to the device will avoid requiring pairing if
+possible but some capabilities may not be available.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>pairingLevel</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="inherited-methods">
+<h2>Inherited Methods<a class="headerlink" href="#inherited-methods" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>void <strong>onDeviceReady</strong> (<a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a> <em>device</em>)</dt><dd><p>A ConnectableDevice sends out a ready message when all of its
+connectable DeviceServices have been connected and are ready to
+receive commands.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>device – ConnectableDevice that is ready for commands.</p></li>
+</ul>
+</dd>
+<dt>void <strong>onDeviceDisconnected</strong> (<a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a> <em>device</em>)</dt><dd><p>When all of a ConnectableDevice’s DeviceServices have become
+disconnected, the disconnected message is sent.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>device – ConnectableDevice that has been disconnected.</p></li>
+</ul>
+</dd>
+<dt>void <strong>onPairingRequired</strong> (<a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a> <em>device</em>, <a class="reference internal" href="and-deviceservice.html"><span class="doc">DeviceService</span></a> <em>service</em>, <a class="reference internal" href="and-pairingtype.html"><span class="doc">PairingType</span></a> <em>pairingType</em>)</dt><dd><p>DeviceService listener proxy method.</p>
+<p>This method is called when a DeviceService tries to connect and finds
+out that it requires pairing information from the user.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>device – ConnectableDevice containing the DeviceService</p></li>
+<li><p>service – DeviceService that requires pairing</p></li>
+<li><p>pairingType – DeviceServicePairingType that the DeviceService requires</p></li>
+</ul>
+</dd>
+<dt>void <strong>onCapabilityUpdated</strong> (<a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a> <em>device</em>, List&lt;String&gt; <em>added</em>, List&lt;String&gt; <em>removed</em>)</dt><dd><p>When a ConnectableDevice finds &amp; loses DeviceServices, that
+ConnectableDevice will experience a change in its collective
+capabilities list. When such a change occurs, this message will be
+sent with arrays of capabilities that were added &amp; removed.</p>
+<p>This message will allow you to decide when to stop/start interacting
+with a ConnectableDevice, based off of its supported capabilities.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>device – ConnectableDevice that has experienced a change in capabilities</p></li>
+<li><p>added – List&lt;String&gt; of capabilities that are new to the ConnectableDevice</p></li>
+<li><p>removed – List&lt;String&gt; of capabilities that the ConnectableDevice has lost</p></li>
+</ul>
+</dd>
+<dt>void <strong>onConnectionFailed</strong> (<a class="reference internal" href="and-connectabledevice.html"><span class="doc">ConnectableDevice</span></a> <em>device</em>, <a class="reference internal" href="and-servicecommanderror.html"><span class="doc">ServiceCommandError</span></a> <em>error</em>)</dt><dd><p>This method is called when the connection to the ConnectableDevice
+has failed.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>device – ConnectableDevice that has failed to connect</p></li>
+<li><p>error – ServiceCommandError with a description of the failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>onServiceAdded</strong> (DiscoveryProvider <em>provider</em>, ServiceDescription <em>serviceDescription</em>)</dt><dd><p>This method is called when the DiscoveryProvider discovers a service
+that matches one of its DeviceService filters. The ServiceDescription
+is created and passed to the listener (which should be the
+DiscoveryManager). The ServiceDescription is used to create a
+DeviceService, which is then attached to a ConnectableDevice object.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>provider – DiscoveryProvider that found the service</p></li>
+<li><p>serviceDescription</p></li>
+</ul>
+</dd>
+<dt>void <strong>onServiceRemoved</strong> (DiscoveryProvider <em>provider</em>, ServiceDescription <em>serviceDescription</em>)</dt><dd><p>This method is called when the DiscoveryProvider’s internal mechanism
+loses reference to a service that matches one of its DeviceService
+filters.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>provider – DiscoveryProvider that lost the service</p></li>
+<li><p>serviceDescription</p></li>
+</ul>
+</dd>
+<dt>void <strong>onServiceDiscoveryFailed</strong> (DiscoveryProvider <em>provider</em>, <a class="reference internal" href="and-servicecommanderror.html"><span class="doc">ServiceCommandError</span></a> <em>error</em>)</dt><dd><p>This method is called on any error/failure within the
+DiscoveryProvider.</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>provider – DiscoveryProvider that failed</p></li>
+<li><p>error – ServiceCommandError providing a information about the failure</p></li>
+</ul>
+</dd>
+<dt>void <strong>onServiceConfigUpdate</strong> (ServiceConfig <em>serviceConfig</em>)</dt><dd><p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>serviceConfig</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="and-devicepicker.html" class="btn btn-neutral float-left" title="DevicePicker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="and-discoverymanagerlistener.html" class="btn btn-neutral float-right" title="DiscoveryManagerListener" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

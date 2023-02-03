@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Create a TV Web App" href="webapp-create-tv-web-app.html" />
+    <link rel="prev" title="TV Web Apps" href="index.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">TV Web Apps</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-are-tv-web-apps">What are TV web apps?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-tv-web-apps">Why TV web apps?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#web-app-ids">Web app IDs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interaction-with-tv-web-apps">Interaction with TV web apps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#web-runtimes-on-various-tv-platforms-may-not-be-the-same">Web runtimes on various TV platforms may not be the same</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="webapp-create-tv-web-app.html">Create a TV Web App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webapp-port-receiver-app.html">Port a Receiver App to webOS</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">TV Web Apps</a></li>
+      <li class="breadcrumb-item active">Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide-web/webapp-overview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h1>
+<section id="what-are-tv-web-apps">
+<h2>What are TV web apps?<a class="headerlink" href="#what-are-tv-web-apps" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Most TV apps are web apps that are packaged to run on the TV. They
+are developed using standard web technologies.</p></li>
+<li><p>TV web apps can be viewed on a TV without a browser, since they
+execute inside a web runtime environment.</p></li>
+</ul>
+</section>
+<section id="why-tv-web-apps">
+<h2>Why TV web apps?<a class="headerlink" href="#why-tv-web-apps" title="Permalink to this heading"></a></h2>
+<p>webOS TV, Chromecast, and Apple TV allow synchronized experience across
+multiple devices through web sockets. This enables users to interact
+with a TV web app using their mobile devices.</p>
+<p>For example, if you created a TV chess board game app, users would not
+only interact with the app on the TV, they would also be able to
+interact with the app using their mobile devices.</p>
+</section>
+<section id="web-app-ids">
+<h2>Web app IDs<a class="headerlink" href="#web-app-ids" title="Permalink to this heading"></a></h2>
+<p>Mobile web apps require a web app id in order to launch on webOS TV and
+Chromecast. This web app id is translated into the mobile web app’s URL
+when it is launched on the TV.</p>
+<table class="colwidths-auto docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Paltform</p></th>
+<th class="head"><p>URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Web app id for webOS TV</p></th>
+<td><p><a class="reference external" href="http://lgsvl.com/connectSDK/index.php">http://lgsvl.com/connectSDK/index.php</a></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Web app id for Chromecast</p></th>
+<td><p><a class="reference external" href="https://developers.google.com/cast/docs/registration">https://developers.google.com/cast/docs/registration</a></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Apple TV</p></th>
+<td><p>Apple TV does not require a web app id.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When designing your TV web app, be mindful of
+<a class="reference external" href="http://en.wikipedia.org/wiki/Overscan">Overscan</a>. To avoid having
+parts of your web app cut off, we recommend not placing UI elements near
+the corner of the screen and always test your web apps to ensure they
+display properly on each targeted platform.</p>
+</div>
+</section>
+<section id="interaction-with-tv-web-apps">
+<h2>Interaction with TV web apps<a class="headerlink" href="#interaction-with-tv-web-apps" title="Permalink to this heading"></a></h2>
+<p>All interactions with Chromecast and Apple TV web apps occur from a
+mobile device or laptop since the device does not support external
+remote controls. On other platforms such as webOS, the TV ships with
+traditional and <a class="reference external" href="http://webostv.developer.lge.com/design/webos-tv-system-ui/remote-control/">Magic Remotes</a>.
+When designing your web app, make sure to design for the platforms you intend
+to support. On Chromecast and Apple TV, avoid using UI elements that
+make users think they are clickable. On webOS, make UI elements
+clickable since users may use their Magic Remote to interact with your
+web app.</p>
+<p>Make sure to review all design guidelines for each platform you intend
+to support.</p>
+</section>
+<section id="web-runtimes-on-various-tv-platforms-may-not-be-the-same">
+<h2>Web runtimes on various TV platforms may not be the same<a class="headerlink" href="#web-runtimes-on-various-tv-platforms-may-not-be-the-same" title="Permalink to this heading"></a></h2>
+<p>While the HTML5 spec brings us one step closer to the “write once, run
+everywhere” utopia, we still recommend that you test your web app on
+each TV platform you intend to support.</p>
+<ul class="simple">
+<li><p>Web rendering engines vary which may cause inconsistency across
+platforms. For example, webOS uses WebKit 2.0 and it is not
+officially documented what Chromecast and others use.</p></li>
+<li><p>Hardware differences between dongles, set-top boxes, and Smart TVs
+can be significant - therefore, complex animations and computations
+should be reviewed.</p></li>
+<li><p>Screen resolution can vary between platforms and devices. webOS Smart
+TVs run at 1080P (1920x1080) while Chromecast currently renders
+WebView in 720P (1280x720). Apple TV automatically adjusts to match
+the resolution of the connected TV.</p></li>
+<li><p>Lastly, video and audio codec support can also cause fragmentation
+across multiple platforms.</p></li>
+</ul>
+<p>Our experience has shown that using standard design patterns such as
+responsive design and standard video formats (MP4) - there is little
+variation between most platforms.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="TV Web Apps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="webapp-create-tv-web-app.html" class="btn btn-neutral float-right" title="Create a TV Web App" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

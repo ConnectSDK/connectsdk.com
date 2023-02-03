@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remote Camera &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FAQ" href="and-faq.html" />
+    <link rel="prev" title="Screen Mirroring" href="and-screen-mirroring.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html#developer-guides">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="and-beam-media.html">Beam Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-web-apps.html">Beam Web Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-launch-app.html">Launch App on TV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-discovery-manager.html">Discovery Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-checking-capabilities.html">Checking Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html">Resuming Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-screen-mirroring.html">Screen Mirroring</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Remote Camera</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-remote-camera">How to Use Remote Camera</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#check-the-android-version">1. Check the Android Version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#search-devices">2. Search Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#request-permissions">3. Request Permissions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-a-tv">4. Select a TV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#start-remote-camera">5. Start Remote Camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#start-camera-playback">6. Start Camera Playback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stop-remote-camera">7. Stop Remote Camera</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#features">Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#change-camera-property">Change Camera Property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#handle-runtime-errors">Handle Runtime Errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-the-microphone-mute-state">Set the Microphone Mute State</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#switch-between-front-and-back-cameras">Switch between Front and Back Cameras</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="and-faq.html">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Remote Camera</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide-and/and-remote-camera.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="remote-camera">
+<h1>Remote Camera<a class="headerlink" href="#remote-camera" title="Permalink to this heading"></a></h1>
+<p>With Connect SDK integrated in the mobile app, it can display camera preview on the TV screen.
+This allows you to use your mobile device’s camera as a remote camera for the TV that does not have an internal or USB camera.
+This guide assumes that you completed the setup described in the <a class="reference internal" href="and-setup-instructions.html"><span class="doc">Setup Instructions</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is only supported on webOS TV 22.</p>
+</div>
+<section id="how-to-use-remote-camera">
+<h2>How to Use Remote Camera<a class="headerlink" href="#how-to-use-remote-camera" title="Permalink to this heading"></a></h2>
+<p>To use a remote camera, follow the steps below.</p>
+<section id="check-the-android-version">
+<h3>1. Check the Android Version<a class="headerlink" href="#check-the-android-version" title="Permalink to this heading"></a></h3>
+<p>The remote camera function is supported by Android 7 (N, API Level 24) and higher.
+When you run the app, check the OS version to see if the remote camera is available.
+If the OS version does not support the remote camera function, the function will not work or the app will close.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">RemoteCameraApi</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">isCompatibleOsVersion</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// The OS version is lower than Android 7</span>
+<span class="w">    </span><span class="c1">// and remote camera is not supported</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="search-devices">
+<h3>2. Search Devices<a class="headerlink" href="#search-devices" title="Permalink to this heading"></a></h3>
+<p>Search for devices (TVs) connected to your home network. You can set the filter to only search for TVs that support the remote camera function.
+Since the search for TVs takes some time, it should be started as soon as the app is running.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Initializes DiscoveryManager</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+
+<span class="c1">// Sets a device search filter for devices that support remote camera</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">capabilities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">capabilities</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">RemoteCameraControl</span><span class="p">.</span><span class="na">RemoteCamera</span><span class="p">);</span>
+<span class="n">CapabilityFilter</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CapabilityFilter</span><span class="p">(</span><span class="n">capabilities</span><span class="p">);</span>
+
+<span class="c1">// Searches devices</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">setPairingLevel</span><span class="p">(</span><span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">PairingLevel</span><span class="p">.</span><span class="na">ON</span><span class="p">);</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">setCapabilityFilters</span><span class="p">(</span><span class="n">filter</span><span class="p">);</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">registerDeviceService</span><span class="p">(</span><span class="n">WebOSTVService</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">SSDPDiscoveryProvider</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">start</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="request-permissions">
+<h3>3. Request Permissions<a class="headerlink" href="#request-permissions" title="Permalink to this heading"></a></h3>
+<p>The remote camera function requires the camera permission (android.permission.CAMERA) and audio permission (android.permission.RECORD_AUDIO).
+The user must grant these permissions when the remote camera is first executed.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Requests permissions</span>
+<span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">permissions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="p">{</span><span class="n">android</span><span class="p">.</span><span class="na">permission</span><span class="p">.</span><span class="na">CAMERA</span><span class="p">,</span><span class="w"> </span><span class="n">Manifest</span><span class="p">.</span><span class="na">permission</span><span class="p">.</span><span class="na">RECORD_AUDIO</span><span class="p">};</span>
+<span class="n">ActivityCompat</span><span class="p">.</span><span class="na">requestPermissions</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">permissions</span><span class="p">,</span><span class="w"> </span><span class="n">REQUEST_CODE_ACCESS_PERMISSIONS</span><span class="p">);</span>
+
+<span class="c1">// Delivers request results to onRequestPermissionsResult</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onRequestPermissionsResult</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">requestCode</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">permissions</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">grantResults</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">onRequestPermissionsResult</span><span class="p">(</span><span class="n">requestCode</span><span class="p">,</span><span class="w"> </span><span class="n">permissions</span><span class="p">,</span><span class="w"> </span><span class="n">grantResults</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">requestCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">REQUEST_CODE_ACCESS_PERMISSIONS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hasPermission</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Succeeded to get permission</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Failed to get permission</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Checks the permissions</span>
+<span class="kd">private</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">hasPermission</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ActivityCompat</span><span class="p">.</span><span class="na">checkSelfPermission</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">Manifest</span><span class="p">.</span><span class="na">permission</span><span class="p">.</span><span class="na">CAMERA</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PackageManager</span><span class="p">.</span><span class="na">PERMISSION_GRANTED</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">        </span><span class="n">ActivityCompat</span><span class="p">.</span><span class="na">checkSelfPermission</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">Manifest</span><span class="p">.</span><span class="na">permission</span><span class="p">.</span><span class="na">RECORD_AUDIO</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PackageManager</span><span class="p">.</span><span class="na">PERMISSION_GRANTED</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="select-a-tv">
+<h3>4. Select a TV<a class="headerlink" href="#select-a-tv" title="Permalink to this heading"></a></h3>
+<p>Select the TV to run the remote camera on by using the Picker.
+After selecting a TV, get a RemoteCameraControl object to use the remote camera API.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span><span class="w"> </span><span class="n">RemoteCameraControl</span><span class="w"> </span><span class="n">mRemoteCameraControl</span><span class="w"> </span><span class="p">;</span>
+
+<span class="n">AdapterView</span><span class="p">.</span><span class="na">OnItemClickListener</span><span class="w"> </span><span class="n">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">adapter</span><span class="p">,</span><span class="w"> </span><span class="n">parent</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ConnectableDevice</span><span class="w"> </span><span class="n">connectableDevice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ConnectableDevice</span><span class="p">)</span><span class="w"> </span><span class="n">adapter</span><span class="p">.</span><span class="na">getItemAtPosition</span><span class="p">(</span><span class="n">position</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mRemoteCameraControl</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">connectableDevice</span><span class="p">.</span><span class="na">getRemoteCameraControlControl</span><span class="p">();</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">};</span>
+
+<span class="c1">// Displays a TV search picker dialog</span>
+<span class="n">AlertDialog</span><span class="w"> </span><span class="n">dialog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DevicePicker</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="na">getPickerDialog</span><span class="p">(</span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">dialog_select_tv</span><span class="p">),</span><span class="w"> </span><span class="n">listener</span><span class="p">);</span>
+<span class="n">dialog</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="start-remote-camera">
+<h3>5. Start Remote Camera<a class="headerlink" href="#start-remote-camera" title="Permalink to this heading"></a></h3>
+<p>Now you can run the remote camera.
+First, create a SurfaceView component to show a camera preview, and then pass its Surface as a parameter.
+If the preview is not needed, set the Surface to null. In addition, set initial values such as the microphone mute settings or the camera lens direction and pass them as parameters.
+Pairing is required when you connect to a TV for the first time, and the user is informed about it.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a SurfaceView to display the camera preview</span>
+<span class="n">SurfaceView</span><span class="w"> </span><span class="n">surfaceView</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">surfaceView</span><span class="p">);</span>
+<span class="n">SurfaceHolder</span><span class="w"> </span><span class="n">holder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">surfaceView</span><span class="p">.</span><span class="na">getHolder</span><span class="p">();</span>
+
+<span class="n">holder</span><span class="p">.</span><span class="na">addCallback</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">SurfaceHolder</span><span class="p">.</span><span class="na">Callback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">surfaceCreated</span><span class="p">(</span><span class="n">SurfaceHolder</span><span class="w"> </span><span class="n">holder</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// When the SurfaceView is created, pass it as an argument to request the remote camera to start</span>
+<span class="w">        </span><span class="n">startRemoteCamera</span><span class="p">(</span><span class="n">holder</span><span class="p">.</span><span class="na">getSurface</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">...</span>
+<span class="p">});</span>
+
+<span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">startRemoteCamera</span><span class="p">(</span><span class="n">Surface</span><span class="w"> </span><span class="n">surface</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">AlertDialog</span><span class="w"> </span><span class="n">pairingAlert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AlertDialog</span><span class="p">.</span><span class="na">Builder</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">dialog_title_notice</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setCancelable</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setMessage</span><span class="p">(</span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">dialog_allow_pairing</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setNegativeButton</span><span class="p">(</span><span class="n">android</span><span class="p">.</span><span class="na">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">ok</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">create</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Starts the remote camera</span>
+<span class="w">    </span><span class="c1">// Each progress is passed through a callback function</span>
+<span class="w">    </span><span class="n">mRemoteCameraControl</span><span class="p">.</span><span class="na">startRemoteCamera</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">surface</span><span class="p">,</span><span class="w"> </span><span class="n">mMicMute</span><span class="p">,</span><span class="w"> </span><span class="n">mLensFacing</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RemoteCameraStartListener</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// When connecting to a TV for the first time, a pop-up about the mobile connection is displayed on the TV,</span>
+<span class="w">        </span><span class="c1">// and a pairing procedure procedure is required once in which the user selects [OK] with the remote control.</span>
+<span class="w">        </span><span class="c1">// To do this, the app should display a pop-up with information about pairing</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onPairing</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">pairingAlert</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// This is a callback function when the remote camera starts</span>
+<span class="w">        </span><span class="c1">// and whether or not it succeeds is passed through the result parameter</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onStart</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">mPlayingAlert</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">CameraPreviewActivity</span><span class="p">.</span><span class="na">this</span><span class="p">,</span><span class="w"> </span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">toast_start_failed</span><span class="p">),</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_SHORT</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+<span class="w">                </span><span class="n">finish</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">pairingAlert</span><span class="p">.</span><span class="na">dismiss</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+
+
+
+<span class="w">    </span><span class="c1">// Handles the callback when camera properties are changed on the TV</span>
+<span class="w">    </span><span class="n">mRemoteCameraControl</span><span class="p">.</span><span class="na">setPropertyChangeListener</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">toast_property_changed</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">property</span><span class="p">,</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_SHORT</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="c1">// This is a callback function when an unexpected error occurs while running the remote camera</span>
+<span class="w">    </span><span class="c1">// An error occurs when the network is disconnected, the TV is shut down, etc.</span>
+<span class="w">    </span><span class="n">mRemoteCameraControl</span><span class="p">.</span><span class="na">setErrorListener</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">toast_running_error</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">error</span><span class="p">,</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_SHORT</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+<span class="w">        </span><span class="n">mPlayingAlert</span><span class="p">.</span><span class="na">dismiss</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="start-camera-playback">
+<h3>6. Start Camera Playback<a class="headerlink" href="#start-camera-playback" title="Permalink to this heading"></a></h3>
+<p>You can designate setCameraPlayingListener to receive a callback when camera stream transmission and playback start by selecting the mobile device’s camera on the TV.
+When the camera playback starts on the TV, take appropriate actions such as removing pop-ups.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Handles the callback function when the remote camera preview screen starts by selecting the mobile on the TV</span>
+<span class="n">mRemoteCameraControl</span><span class="p">.</span><span class="na">setCameraPlayingListener</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">toast_play_started</span><span class="p">),</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_SHORT</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+<span class="w">    </span><span class="n">mPlayingAlert</span><span class="p">.</span><span class="na">dismiss</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="stop-remote-camera">
+<h3>7. Stop Remote Camera<a class="headerlink" href="#stop-remote-camera" title="Permalink to this heading"></a></h3>
+<p>When you want to stop the remote camera, call stopRemoteCamera.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">mRemoteCameraControl</span><span class="p">.</span><span class="na">stopRemoteCamera</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="o">-&gt;</span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading"></a></h2>
+<section id="change-camera-property">
+<h3>Change Camera Property<a class="headerlink" href="#change-camera-property" title="Permalink to this heading"></a></h3>
+<p>You can change camera properties such as brightness and AWB on the TV, and you can receive callbacks by designating a setPropertyChangeListener listener.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Handles the callback function when changing camera properties on the TV</span>
+<span class="n">mRemoteCameraControl</span><span class="p">.</span><span class="na">setPropertyChangeListener</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">toast_property_changed</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">property</span><span class="p">,</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_SHORT</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="handle-runtime-errors">
+<h3>Handle Runtime Errors<a class="headerlink" href="#handle-runtime-errors" title="Permalink to this heading"></a></h3>
+<p>The following runtime error might occur while the remote camera is running.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When the network connection is terminated</p></li>
+<li><p>When the TV is turned off</p></li>
+<li><p>When the remote camera is terminated on the TV</p></li>
+<li><p>When the mobile device’s notification terminates the remote camera</p></li>
+<li><p>When other exceptions occurred</p></li>
+</ul>
+</div></blockquote>
+<p>For these errors, it is necessary to receive the error in real-time through the listener and respond appropriately.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// This is a callback function when an unexpected error occurs while running a remote camera</span>
+<span class="c1">// An error occurs when the network connection is disconnected, the TV is shut down, etc.</span>
+<span class="n">mRemoteCameraControl</span><span class="p">.</span><span class="na">setErrorListener</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">string</span><span class="p">.</span><span class="na">toast_running_error</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">error</span><span class="p">,</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_SHORT</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+<span class="w">    </span><span class="n">mPlayingAlert</span><span class="p">.</span><span class="na">dismiss</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="set-the-microphone-mute-state">
+<h3>Set the Microphone Mute State<a class="headerlink" href="#set-the-microphone-mute-state" title="Permalink to this heading"></a></h3>
+<p>If you change the microphone mute state, it must be transmitted. The app must maintain the current mute setting value.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">mRemoteCameraControl</span><span class="p">.</span><span class="na">setMicMute</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">mMicMute</span><span class="p">);</span><span class="w"> </span><span class="c1">// true or false</span>
+</pre></div>
+</div>
+</section>
+<section id="switch-between-front-and-back-cameras">
+<h3>Switch between Front and Back Cameras<a class="headerlink" href="#switch-between-front-and-back-cameras" title="Permalink to this heading"></a></h3>
+<p>When the direction of the camera is switched between front and rear, the camera direction is transmitted.
+The app must maintain the current camera direction value.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">mRemoteCameraControl</span><span class="p">.</span><span class="na">setLensFacing</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">mLensFacing</span><span class="p">);</span><span class="w"> </span><span class="c1">// RemoteCameraApi.LENS_FACING_BACK or RemoteCameraApi.LENS_FACING_FRONT</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="and-screen-mirroring.html" class="btn btn-neutral float-left" title="Screen Mirroring" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="and-faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

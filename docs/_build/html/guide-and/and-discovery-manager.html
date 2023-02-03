@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discovery Manager &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Checking Capabilities" href="and-checking-capabilities.html" />
+    <link rel="prev" title="Launch App on TV" href="and-launch-app.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html#developer-guides">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="and-beam-media.html">Beam Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-beam-web-apps.html">Beam Web Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-launch-app.html">Launch App on TV</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Discovery Manager</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#features">Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#filtering-devices-by-capability">Filtering devices by capability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deviceservice-registration">DeviceService registration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pairing-level">Pairing level</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#device-store">Device store</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="and-checking-capabilities.html">Checking Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-resuming-apps.html">Resuming Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-screen-mirroring.html">Screen Mirroring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-remote-camera.html">Remote Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="and-faq.html">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Discovery Manager</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide-and/and-discovery-manager.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="discovery-manager">
+<h1>Discovery Manager<a class="headerlink" href="#discovery-manager" title="Permalink to this heading"></a></h1>
+<p>At the heart of Connect SDK is DiscoveryManager, a multi-protocol
+service discovery engine with a pluggable architecture. Much of your
+initial experience with Connect SDK will be with the DiscoveryManager
+class, as it consolidates discovered service information into
+ConnectableDevice objects.</p>
+<p>DiscoveryManager supports discovering services of differing protocols by
+using DiscoveryProviders. Many services are discoverable over SSDP and
+are registered to be discovered with the SSDPDiscoveryProvider class.</p>
+<p>As services are discovered on the network, the DiscoveryProviders will
+notify DiscoveryManager. DiscoveryManager is capable of attributing
+multiple services, if applicable, to a single ConnectableDevice
+instance. Thus, it is possible to have a mixed-mode ConnectableDevice
+object that is theoretically capable of more functionality than a single
+service can provide.</p>
+<p>DiscoveryManager keeps a running list of all discovered devices and
+maintains a filtered list of devices that have satisfied any of your
+CapabilityFilters. This filtered list is used by the DevicePicker when
+presenting the user with a list of devices.</p>
+<p>Connect SDK device discovery can be started in one line.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">start</span><span class="p">();</span>
+</pre></div>
+</div>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading"></a></h2>
+<section id="filtering-devices-by-capability">
+<h3>Filtering devices by capability<a class="headerlink" href="#filtering-devices-by-capability" title="Permalink to this heading"></a></h3>
+<p>It will be necessary in many cases to filter out devices that don’t
+support a desired feature-set. DiscoveryManager provides the
+setCapabilityFilters method to provide for this ability.</p>
+<p>Here is a simple example that discovers devices that support (video
+playback AND any media controls AND volume up/down) OR (image display).</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">CapabilityFilter</span><span class="w"> </span><span class="n">videoFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CapabilityFilter</span><span class="p">(</span>
+<span class="w">        </span><span class="n">MediaPlayer</span><span class="p">.</span><span class="na">Display_Video</span><span class="p">,</span>
+<span class="w">        </span><span class="n">MediaControl</span><span class="p">.</span><span class="na">Any</span><span class="p">,</span>
+<span class="w">        </span><span class="n">VolumeControl</span><span class="p">.</span><span class="na">Volume_Up_Down</span>
+<span class="p">);</span>
+
+<span class="n">CapabilityFilter</span><span class="w"> </span><span class="n">imageCapabilities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CapabilityFilter</span><span class="p">(</span>
+<span class="w">        </span><span class="n">MediaPlayer</span><span class="p">.</span><span class="na">Display_Image</span>
+<span class="p">);</span>
+
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">setCapabilityFilters</span><span class="p">(</span><span class="n">videoFilter</span><span class="p">,</span><span class="w"> </span><span class="n">imageCapabilities</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="deviceservice-registration">
+<h3>DeviceService registration<a class="headerlink" href="#deviceservice-registration" title="Permalink to this heading"></a></h3>
+<p>By default, Connect SDK is configured to discover all the services that
+it supports (webOS, Netcast, Chromecast, DIAL, &amp; Roku). It is possible
+to support only a subset of these services by manually registering those
+services before starting DiscoveryManager for the first time.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">registerDeviceService</span><span class="p">(</span><span class="n">AirPlayService</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">ZeroconfDiscoveryProvider</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">registerDeviceService</span><span class="p">(</span><span class="n">CastService</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">CastDiscoveryProvider</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">registerDeviceService</span><span class="p">(</span><span class="n">DIALService</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">SSDPDiscoveryProvider</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">registerDeviceService</span><span class="p">(</span><span class="n">RokuService</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">SSDPDiscoveryProvider</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">registerDeviceService</span><span class="p">(</span><span class="n">DLNAService</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">SSDPDiscoveryProvider</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w"> </span><span class="c1">// LG TV devices only, includes NetcastTVService</span>
+<span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">registerDeviceService</span><span class="p">(</span><span class="n">WebOSTVService</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">SSDPDiscoveryProvider</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="pairing-level">
+<h3>Pairing level<a class="headerlink" href="#pairing-level" title="Permalink to this heading"></a></h3>
+<p>Connect SDK has support for pairing with certain devices. Having pairing
+disabled may reduce the number of supported capabilities that a
+ConnectableDevice has. Certain devices, although they may support the
+features you are filtering for, may not pass your CapabilityFilter if
+pairing is disabled.</p>
+<p>See the <a class="reference internal" href="../fundamentals/supported-feature.html"><span class="doc">Supported Features</span></a> list for information on what devices
+require pairing for certain capabilities.</p>
+<p>For the best user experience, Connect SDK has disabled pairing by
+default. Pairing can be enabled very easily, but it must be enabled
+before DiscoveryManager is started for the first time.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">DiscoveryManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">setPairingLevel</span><span class="p">(</span><span class="n">PairingLevel</span><span class="p">.</span><span class="na">ON</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="device-store">
+<h3>Device store<a class="headerlink" href="#device-store" title="Permalink to this heading"></a></h3>
+<p>When devices are connected to, there is certain information that is
+retained. This information is helpful for app relaunches, pairing,
+remembering commonly-used devices, and more. Connect SDK provides a
+ConnectableDeviceStore protocol to allow you to store ConnectableDevice
+information in a manner that suits your use case.</p>
+<p>A default implementation, DefaultConnectableDeviceStore, will be used by
+DiscoveryManager if no other ConnectableDeviceStore is provided to
+DiscoveryManager when startDiscovery is called.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../apis-and/and-discoverymanager.html"><span class="doc">DiscoveryManager</span></a></p></li>
+<li><p><a class="reference internal" href="../apis-and/and-capabilityfilter.html"><span class="doc">CapabilityFilter</span></a></p></li>
+<li><p><a class="reference internal" href="../apis-and/and-pairinglevel.html"><span class="doc">PairingLevel</span></a></p></li>
+<li><p><a class="reference internal" href="../apis-and/and-connectabledevicestore.html"><span class="doc">ConnectableDeviceStore</span></a></p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="and-launch-app.html" class="btn btn-neutral float-left" title="Launch App on TV" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="and-checking-capabilities.html" class="btn btn-neutral float-right" title="Checking Capabilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

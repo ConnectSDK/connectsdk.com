@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remote Camera &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FAQ" href="ios-faq.html" />
+    <link rel="prev" title="Screen Mirroring" href="ios-screen-mirroring.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-and/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html#developer-guides">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ios-beam-media.html">Beam Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-beam-web-apps.html">Beam Web Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-launch-app.html">Launch App on TV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-discovery-manager.html">Discovery Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-checking-capabilities.html">Checking Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-resuming-apps.html">Resuming Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios-screen-mirroring.html">Screen Mirroring</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Remote Camera</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-remote-camera">How to Use Remote Camera</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#search-devices">1. Search Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#request-permissions">2. Request Permissions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-a-tv">3. Select a TV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#start-remote-camera">4. Start Remote Camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#start-camera-playback">5. Start Camera Playback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stop-remote-camera">6. Stop Remote Camera</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#features">Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#change-camera-property">Change Camera Property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#handle-runtime-errors">Handle Runtime Errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-the-microphone-mute-state">Set the Microphone Mute State</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#switch-between-front-and-back-cameras">Switch between Front and Back Cameras</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ios-faq.html">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Remote Camera</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide-ios/ios-remote-camera.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="remote-camera">
+<h1>Remote Camera<a class="headerlink" href="#remote-camera" title="Permalink to this heading"></a></h1>
+<p>With Connect SDK integrated in the mobile app, it can display camera preview on the TV screen.
+This allows you to use your mobile device’s camera as a remote camera for the TV that does not have an internal or USB camera.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is only supported on webOS TV 22.</p>
+</div>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
+<p><strong>Including the Connect SDK using CocoaPods and setting up for remote camera</strong></p>
+<p>Add <code class="docutils literal notranslate"><span class="pre">pod</span> <span class="pre">&quot;ConnectSDK&quot;</span></code> to your <code class="docutils literal notranslate"><span class="pre">Podfile</span></code>, and run <code class="docutils literal notranslate"><span class="pre">pod</span> <span class="pre">install</span></code>. Open the workspace file and run your project.</p>
+<p>Note that remote camera runs on iOS 12 and higher. Refer to the <code class="docutils literal notranslate"><span class="pre">Podfile</span></code> example below.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span>platform :ios, &#39;12.0&#39;
+
+def app_pods
+    pod &#39;ConnectSDK/Core&#39;, :git =&gt; &#39;https://github.com/ConnectSDK/Connect-SDK-iOS.git&#39;, :branch =&gt; &#39;master&#39;, :submodules =&gt; true
+end
+
+target &#39;RemoteCamera-Sampler&#39; do
+  use_frameworks!
+  app_pods
+
+end
+</pre></div>
+</div>
+</section>
+<section id="how-to-use-remote-camera">
+<h2>How to Use Remote Camera<a class="headerlink" href="#how-to-use-remote-camera" title="Permalink to this heading"></a></h2>
+<p>To use a remote camera, follow the steps below.</p>
+<section id="search-devices">
+<h3>1. Search Devices<a class="headerlink" href="#search-devices" title="Permalink to this heading"></a></h3>
+<p>Search for devices (TVs) connected to your home network. You can set the filter to only search for TVs that support the remote camera function.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+
+<span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startDiscoveryTV</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">_isDiscoveringTV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">YES</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">_discoveryManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">DiscoveryManager</span><span class="w"> </span><span class="n">sharedManager</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="bp">NSArray</span><span class="w"> </span><span class="o">*</span><span class="n">capabilities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@[</span>
+<span class="w">        </span><span class="n">kRemoteCameraControlRemoteCamera</span>
+<span class="w">    </span><span class="l">]</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">CapabilityFilter</span><span class="w"> </span><span class="o">*</span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">CapabilityFilter</span><span class="w"> </span><span class="n">filterWithCapabilities</span><span class="o">:</span><span class="n">capabilities</span><span class="p">];</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">setCapabilityFilters</span><span class="o">:</span><span class="l">@[</span><span class="n">filter</span><span class="l">]</span><span class="p">];</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">setPairingLevel</span><span class="o">:</span><span class="n">DeviceServicePairingLevelOn</span><span class="p">];</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">registerDeviceService</span><span class="o">:</span><span class="p">[</span><span class="n">WebOSTVService</span><span class="w"> </span><span class="k">class</span><span class="p">]</span><span class="w"> </span><span class="n">withDiscovery</span><span class="o">:</span><span class="p">[</span><span class="n">SSDPDiscoveryProvider</span><span class="w"> </span><span class="k">class</span><span class="p">]];</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_discoveryManager</span><span class="w"> </span><span class="n">startDiscovery</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="request-permissions">
+<h3>2. Request Permissions<a class="headerlink" href="#request-permissions" title="Permalink to this heading"></a></h3>
+<p>The remote camera function requires the camera and microphone permission. The user must grant these permissions when the remote camera is first executed.
+Register NSCameraUsageDescription and NSMicrophoneUsageDescription in <code class="docutils literal notranslate"><span class="pre">Info.plist</span></code>.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSCameraUsageDescription</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&lt;/</span><span class="n">string</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSMicrophoneUsageDescription</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&lt;/</span><span class="n">string</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="select-a-tv">
+<h3>3. Select a TV<a class="headerlink" href="#select-a-tv" title="Permalink to this heading"></a></h3>
+<p>Select the TV to run the remote camera on by using the Picker. Implement DevicePickerDelegate to receive TV selection events.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="n">_discoveryManager</span><span class="p">.</span><span class="n">devicePicker</span><span class="p">.</span><span class="n">delegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">self</span><span class="p">;</span>
+<span class="p">[</span><span class="n">_discoveryManager</span><span class="p">.</span><span class="n">devicePicker</span><span class="w"> </span><span class="n">showPicker</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>Create a ViewController to display the camera preview after the TV is selected. You need to make ViewController work only in landscape mode.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// MARK: DevicePickerDelegate</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">devicePicker:</span><span class="p">(</span><span class="n">DevicePicker</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">picker</span><span class="w"> </span><span class="nf">didSelectDevice:</span><span class="p">(</span><span class="n">ConnectableDevice</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">device</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">RemoteCameraViewController</span><span class="w"> </span><span class="o">*</span><span class="n">vc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">storyboard</span><span class="w"> </span><span class="n">instantiateViewControllerWithIdentifier</span><span class="o">:</span><span class="s">@&quot;RemoteCameraViewController&quot;</span><span class="p">];</span>
+<span class="w">    </span><span class="p">[</span><span class="n">vc</span><span class="w"> </span><span class="n">setDevice</span><span class="o">:</span><span class="n">device</span><span class="p">];</span>
+<span class="w">    </span><span class="p">[</span><span class="nb">self</span><span class="w"> </span><span class="n">presentViewController</span><span class="o">:</span><span class="n">vc</span><span class="w"> </span><span class="n">animated</span><span class="o">:</span><span class="nb">YES</span><span class="w"> </span><span class="n">completion</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Get a RemoteCameraControl object to use the remote camera API. And implement RemoteCameraControlDelegate to receive events that occur during remote camera operation.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">_device</span><span class="w"> </span><span class="n">remoteCameraControl</span><span class="p">];</span>
+<span class="p">[</span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="n">setRemoteCameraDelegate</span><span class="o">:</span><span class="nb">self</span><span class="p">];</span>
+</pre></div>
+</div>
+</section>
+<section id="start-remote-camera">
+<h3>4. Start Remote Camera<a class="headerlink" href="#start-remote-camera" title="Permalink to this heading"></a></h3>
+<p>Now you can run the remote camera.
+First, connect with the selected TV device through startRemoteCamera of RemoteCameraControl. Then show the camera preview in the returned UIView.
+Paring is required if this is the first time connecting to a TV.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="bp">UIView</span><span class="w"> </span><span class="o">*</span><span class="n">previewView</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="n">startRemoteCamera</span><span class="p">];</span>
+<span class="p">[</span><span class="n">previewView</span><span class="w"> </span><span class="n">setFrame</span><span class="o">:</span><span class="bp">UIScreen</span><span class="p">.</span><span class="n">mainScreen</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
+<span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="w"> </span><span class="n">addSubview</span><span class="o">:</span><span class="n">previewView</span><span class="p">];</span>
+<span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="w"> </span><span class="n">sendSubviewToBack</span><span class="o">:</span><span class="n">previewView</span><span class="p">];</span>
+</pre></div>
+</div>
+</section>
+<section id="start-camera-playback">
+<h3>5. Start Camera Playback<a class="headerlink" href="#start-camera-playback" title="Permalink to this heading"></a></h3>
+<p>Select iPhone camera on your TV. It will start sending and playing the camera stream. At this time, you can receive callbacks by designating a delegate.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// MARK: RemoteCameraControlDelegate</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">remoteCameraDidPlay</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;remoteCameraDidPlay&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">remoteCameraDidChange:</span><span class="p">(</span><span class="n">RemoteCameraProperty</span><span class="p">)</span><span class="nv">property</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;remoteCameraDidChange&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="stop-remote-camera">
+<h3>6. Stop Remote Camera<a class="headerlink" href="#stop-remote-camera" title="Permalink to this heading"></a></h3>
+<p>When you want to stop the remote camera, call stopRemoteCamera.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="n">stopRemoteCamera</span><span class="p">];</span>
+<span class="w">        </span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nil</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading"></a></h2>
+<section id="change-camera-property">
+<h3>Change Camera Property<a class="headerlink" href="#change-camera-property" title="Permalink to this heading"></a></h3>
+<p>You can change camera properties such as brightness and AWB on the TV, and you can receive callbacks by designating a delegate.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// MARK: RemoteCameraControlDelegate</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">remoteCameraDidChange:</span><span class="p">(</span><span class="n">RemoteCameraProperty</span><span class="p">)</span><span class="nv">property</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;remoteCameraDidChange&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="handle-runtime-errors">
+<h3>Handle Runtime Errors<a class="headerlink" href="#handle-runtime-errors" title="Permalink to this heading"></a></h3>
+<p>The following runtime error might occur while the remote camera is running.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When the network connection is terminated</p></li>
+<li><p>When the TV is turned off</p></li>
+<li><p>When the remote camera is terminated on the TV</p></li>
+<li><p>When the mobile device’s notification terminates the remote camera</p></li>
+<li><p>When other exceptions occurred</p></li>
+</ul>
+</div></blockquote>
+<p>For these errors, it is necessary to receive the error in real-time through the listener and respond appropriately.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">remoteCameraErrorDidOccur:</span><span class="p">(</span><span class="n">RemoteCameraError</span><span class="p">)</span><span class="nv">error</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;remoteCameraErrorDidOccur&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">[</span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="n">stopRemoteCamera</span><span class="p">];</span>
+<span class="w">        </span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nil</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Also, if the app is in the background state, the remote camera function does not work, so you have to handle these situations appropriately.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidAppear:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">animated</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">[</span><span class="nb">super</span><span class="w"> </span><span class="n">viewDidAppear</span><span class="o">:</span><span class="n">animated</span><span class="p">];</span>
+
+<span class="w">    </span><span class="p">...</span>
+
+<span class="w">    </span><span class="p">[[</span><span class="bp">NSNotificationCenter</span><span class="w"> </span><span class="n">defaultCenter</span><span class="p">]</span><span class="w"> </span><span class="n">addObserver</span><span class="o">:</span><span class="nb">self</span>
+<span class="w">                                         </span><span class="nl">selector</span><span class="p">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">didEnterBackground</span><span class="p">)</span>
+<span class="w">                                             </span><span class="nl">name</span><span class="p">:</span><span class="n">UIApplicationDidEnterBackgroundNotification</span><span class="w"> </span><span class="n">object</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didEnterBackground</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">[</span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="n">stopRemoteCamera</span><span class="p">];</span>
+<span class="w">            </span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nil</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewWillDisappear:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">animated</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">[</span><span class="nb">super</span><span class="w"> </span><span class="n">viewWillDisappear</span><span class="o">:</span><span class="n">animated</span><span class="p">];</span>
+
+<span class="w">    </span><span class="p">[[</span><span class="bp">NSNotificationCenter</span><span class="w"> </span><span class="n">defaultCenter</span><span class="p">]</span><span class="w"> </span><span class="n">removeObserver</span><span class="o">:</span><span class="nb">self</span>
+<span class="w">                                                </span><span class="nl">name</span><span class="p">:</span><span class="n">UIApplicationDidEnterBackgroundNotification</span>
+<span class="w">                                              </span><span class="nl">object</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="set-the-microphone-mute-state">
+<h3>Set the Microphone Mute State<a class="headerlink" href="#set-the-microphone-mute-state" title="Permalink to this heading"></a></h3>
+<p>If you change the microphone mute state, it must be transmitted. The app must maintain the current mute setting value.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">[</span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="n">setMicMute</span><span class="o">:</span><span class="n">_isMuted</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="switch-between-front-and-back-cameras">
+<h3>Switch between Front and Back Cameras<a class="headerlink" href="#switch-between-front-and-back-cameras" title="Permalink to this heading"></a></h3>
+<p>When the direction of the camera is switched between front and rear, the camera direction is transmitted.
+The app must maintain the current camera direction value.</p>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">[</span><span class="n">_remoteCameraControl</span><span class="w"> </span><span class="n">setLensFacing</span><span class="o">:</span><span class="n">lensFacing</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ios-screen-mirroring.html" class="btn btn-neutral float-left" title="Screen Mirroring" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ios-faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

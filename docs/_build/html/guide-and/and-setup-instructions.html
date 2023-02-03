@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setup Instructions &mdash; connectSDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Discover &amp; Connect to Device" href="and-discover-connect.html" />
+    <link rel="prev" title="Modularization" href="and-modularization.html" />
+ 
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/e2161b46916dc50affb53e3fe8e7d56c.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L240ET5MQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L240ET5MQ8');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">DISCOVER</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/overview.html">Connect SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discover/use-cases.html">Use Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FUNDAMENTALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/supported-feature.html">Supported features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/beam-icon.html">Beam Icon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/sample-apps.html">Sample Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/testing-debugging.html">Testing &amp; Debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK DOWNLOAD</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download-connect-sdk.html">Download Connect SDK</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: ANDROID</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="and-modularization.html">Modularization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Setup Instructions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-connect-sdk-in-android-studio">Setup Connect SDK in Android Studio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-connect-sdk-in-android-studio-from-sources">Setup Connect SDK in Android Studio from sources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-to-include-in-manifest">Permissions to include in manifest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#metadata-for-application-tag">Metadata for application tag</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="and-discover-connect.html">Discover &amp; Connect to Device</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: CORDOVA</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-cor/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: IOS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#developer-guides">Developer Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide-ios/index.html#api-references">API References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">GUIDE:: WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide-web/index.html">TV Web Apps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">BLOG</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html#article">Article</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ABOUT CONNECT SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions.html">Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookie-policy.html">Cookie Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">connectSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Setup Instructions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide-and/and-setup-instructions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setup-instructions">
+<h1>Setup Instructions<a class="headerlink" href="#setup-instructions" title="Permalink to this heading"></a></h1>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h2>
+<p>This project has the following dependencies, some of which require manual setup.
+If you would like to use a version of the SDK which has no manual setup, consider
+using the <a class="reference external" href="https://github.com/ConnectSDK/Connect-SDK-Android-Lite">lite version</a> of the SDK. This project can be built in Android Studio or
+directly with Gradle. Eclipse IDE is not supported since 1.5.0 version.</p>
+<p>This project has the following dependencies.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ConnectSDK/Connect-SDK-Android-Core">Connect-SDK-Android-Core</a> submodule</p>
+<ul>
+<li><p>Requires <a class="reference external" href="https://github.com/TooTallNate/Java-WebSocket">Java-WebSocket library</a></p></li>
+<li><p>Requires <a class="reference external" href="https://github.com/jmdns/jmdns">jmDNS library</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/ConnectSDK/Connect-SDK-Android-Google-Cast">Connect-SDK-Android-Google-Cast</a> submodule</p>
+<ul>
+<li><p>Requires <a class="reference external" href="https://developers.google.com/cast">GoogleCast.framework</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/ConnectSDK/Connect-SDK-Android-FireTV">Connect-SDK-Android-FireTV</a> submodule</p>
+<ul>
+<li><p>Requires Amazon Fling SDK</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="setup-connect-sdk-in-android-studio">
+<h2>Setup Connect SDK in Android Studio<a class="headerlink" href="#setup-connect-sdk-in-android-studio" title="Permalink to this heading"></a></h2>
+<p>Edit your project’s build.gradle to add this in the “dependencies” section.</p>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">allprojects</span><span class="w"> </span><span class="o">{</span>
+<span class="w"> </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
+<span class="w">     </span><span class="n">google</span><span class="o">()</span>
+<span class="w">     </span><span class="n">jcenter</span><span class="o">()</span>
+<span class="w">     </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://jitpack.io&quot;</span><span class="w"> </span><span class="o">}</span>
+<span class="w"> </span><span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//...</span>
+
+<span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<span class="w">   </span><span class="c1">//...</span>
+<span class="w">   </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.github.ConnectSDK:Connect-SDK-Android:master-SNAPSHOT&#39;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+<section id="setup-connect-sdk-in-android-studio-from-sources">
+<h2>Setup Connect SDK in Android Studio from sources<a class="headerlink" href="#setup-connect-sdk-in-android-studio-from-sources" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Open your terminal and execute these commands</p>
+<ul class="simple">
+<li><p>cd your_project_folder</p></li>
+<li><p>git clone <a class="reference external" href="https://github.com/ConnectSDK/Connect-SDK-Android.git">https://github.com/ConnectSDK/Connect-SDK-Android.git</a></p></li>
+<li><p>cd Connect-SDK-Android</p></li>
+<li><p>git submodule init</p></li>
+<li><p>git submodule update</p></li>
+</ul>
+</li>
+<li><p>On the root of your project directory create/modify the
+settings.gradle file. It should contain something like the following:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">include</span> <span class="s1">&#39;:app&#39;</span><span class="p">,</span> <span class="s1">&#39;:Connect-SDK-Android&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Edit your project’s build.gradle to add this in the “dependencies”
+section:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="p">{</span>
+ <span class="o">//...</span>
+ <span class="n">implementation</span> <span class="n">project</span><span class="p">(</span><span class="s1">&#39;:Connect-SDK-Android&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Sync project with gradle files</p></li>
+<li><p>Add permissions to your manifest</p></li>
+</ol>
+<section id="permissions-to-include-in-manifest">
+<h3>Permissions to include in manifest<a class="headerlink" href="#permissions-to-include-in-manifest" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p>Required for SSDP &amp; Chromecast/Zeroconf discovery</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">android.permission.INTERNET</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">android.permission.CHANGE_WIFI_MULTICAST_STATE</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Required for interacting with devices</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">android.permission.ACCESS_NETWORK_STATE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">android.permission.ACCESS_WIFI_STATE</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Required for storing device pairing information</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">android.permission.WRITE_EXTERNAL_STORAGE</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Required for Screen Mirroring and Remote Camera</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">android.permission.RECORD_AUDIO</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">android.permission.FOREGROUND_SERVICE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">android.permission.CAMERA</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.INTERNET&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.ACCESS_WIFI_STATE&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.CHANGE_WIFI_MULTICAST_STATE&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.RECORD_AUDIO&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.FOREGROUND_SERVICE&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.CAMERA&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="metadata-for-application-tag">
+<h3>Metadata for application tag<a class="headerlink" href="#metadata-for-application-tag" title="Permalink to this heading"></a></h3>
+<p>This metadata tag is necessary to enable Chromecast support.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;application</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">    </span>...
+
+<span class="w">    </span><span class="nt">&lt;meta-data</span>
+<span class="w">        </span><span class="na">android:name=</span><span class="s">&quot;com.google.android.gms.version&quot;</span>
+<span class="w">        </span><span class="na">android:value=</span><span class="s">&quot;@integer/google_play_services_version&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/application&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="and-modularization.html" class="btn btn-neutral float-left" title="Modularization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="and-discover-connect.html" class="btn btn-neutral float-right" title="Discover &amp; Connect to Device" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 LG Electronics. All Rights Reserved..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
