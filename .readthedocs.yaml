@@ -9,7 +9,6 @@ build:
 python:
   install:
     - requirements: docs/requirements.txt
-  system_packages: false
 
 sphinx:
   configuration: docs/conf.py
