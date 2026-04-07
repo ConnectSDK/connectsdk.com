@@ -1,5 +1,5 @@
 Connect SDK
-=============
+==============
 One SDK Eight Media Platforms
 ------------------------------
 .. image:: https://readthedocs.org/projects/connectsdk/badge/?version=latest
