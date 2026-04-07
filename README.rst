@@ -2,6 +2,12 @@ Connect SDK
 ==============
 One SDK Eight Media Platforms
 ------------------------------
+
+.. warning::
+   **Deprecation Notice:** Connect SDK will be officially deprecated as of December 31, 2027.
+   After this date, no further maintenance or updates will be provided.
+   We encourage all users to plan their migration accordingly.
+
 .. image:: https://readthedocs.org/projects/connectsdk/badge/?version=latest
    :target: https://connectsdk.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
