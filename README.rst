@@ -4,6 +4,8 @@ One SDK Eight Media Platforms
 ------------------------------
 
 .. warning::
+   **Beam Web App Deprecation Notice:** Beam Web App functionality and Redirect WAS related services 
+   will be officially discontinued as of December 31, 2026. Existing Web App IDs will become invalid after this date.
    **Deprecation Notice:** Connect SDK will be officially deprecated as of December 31, 2027.
    After this date, no further maintenance or updates will be provided.
    We encourage all users to plan their migration accordingly.
